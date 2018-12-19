@@ -18,7 +18,9 @@ or die("Error: ". mysqli_connect_error());
 
 $queryAll = "SELECT * FROM pending_requests"; // fix this later, code still works
 
+
 $result = mysqli_query($db, $queryAll);
+
 
 // Create array & store from the database
 
@@ -28,7 +30,7 @@ while($row = mysqli_fetch_assoc($result)) {
     $pending_requests[] = $row;
 }
 
-print_r($pending_requests);
+
 
 // Close connection
 
