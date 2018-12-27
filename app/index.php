@@ -49,11 +49,11 @@ or die("Error: ". mysqli_connect_error());
             $_SESSION['name'] = $row['first_name'];
 
             if($_SESSION['type'] == 'admin') { // admin word straks een variable die je hebt geconnect met database.
-              header("Location: ./users/admin/admin.php");
+              header("Location: ./users/admin/home.php");
               exit;
 
             } else if($_SESSION['type'] == 'employee') {
-              header("Location: ./users/employee/employee.php");
+              header("Location: ./users/employee/home.php");
               exit;
             }
 
