@@ -17,13 +17,13 @@
 
           <div>
               Reden aanvraag: <br>
-              <input type="text" name="request">
+              <input type="text" name="request1"  classname="inputje">
               <br><br><br>
           </div>
 
       </div>
 
-            <button id="add_request"> Add  </button>
+      <button id="add_request"> Add  </button>
 
       <button name="submit"> Submit </input>
 
