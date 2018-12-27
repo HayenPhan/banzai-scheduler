@@ -19,13 +19,13 @@
               Reden aanvraag: <br>
               <input type="text" name="request">
               <br><br><br>
-              <button id="add_request"> Add  </button>
           </div>
-          <div id="requests">
-              
-           </div>
 
       </div>
+
+            <button id="add_request"> Add  </button>
+
+      <button name="submit"> Submit </input>
 
  </body>
  </html>
