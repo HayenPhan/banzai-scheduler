@@ -47,7 +47,6 @@ or die("Error: ". mysqli_connect_error());
             // Nog van de opdracht
             $_SESSION['type'] = $row['user_type'];
 
-
         }
 
         if($_SESSION['type'] == 'admin') { // admin word straks een variable die je hebt geconnect met database.
@@ -57,8 +56,8 @@ or die("Error: ". mysqli_connect_error());
         } else if($_SESSION['type'] == 'employee') {
           header("Location: secure2.php");
           exit;
-
         }
+
     }
 
     // Am I loggin in? Please go to secure page
