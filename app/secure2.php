@@ -10,6 +10,8 @@ if($_SESSION['type'] =! 'employee') {
     exit;
 }
 
+$name = $_SESSION['name'];
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +22,7 @@ if($_SESSION['type'] =! 'employee') {
 </head>
 <body>
     <h1> Heel belangrijk! </h1>
-    <p> U bent ingelogd als medewerker </p>
+    <p> U bent ingelogd als <?= $name ?> </p>
     <a href="logout.php"> Uitloggen </a>
 </body>
 </html>

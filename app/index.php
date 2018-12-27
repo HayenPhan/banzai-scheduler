@@ -46,17 +46,20 @@ or die("Error: ". mysqli_connect_error());
 
             // Nog van de opdracht
             $_SESSION['type'] = $row['user_type'];
+            $_SESSION['name'] = $row['first_name'];
+
+            if($_SESSION['type'] == 'admin') { // admin word straks een variable die je hebt geconnect met database.
+              header("Location: secure.php");
+              exit;
+
+            } else if($_SESSION['type'] == 'employee') {
+              header("Location: secure2.php");
+              exit;
+            }
 
         }
 
-        if($_SESSION['type'] == 'admin') { // admin word straks een variable die je hebt geconnect met database.
-          header("Location: secure.php");
-          exit;
 
-        } else if($_SESSION['type'] == 'employee') {
-          header("Location: secure2.php");
-          exit;
-        }
 
     }
 

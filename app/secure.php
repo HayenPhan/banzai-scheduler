@@ -10,6 +10,7 @@ if($_SESSION['type'] != 'admin') {
     exit;
 }
 
+$name = $_SESSION['name'];
 
 ?>
 
@@ -21,7 +22,7 @@ if($_SESSION['type'] != 'admin') {
 </head>
 <body>
     <h1> Heel belangrijk! </h1>
-    <p> U bent ingelogd als admin ?> </p>
+    <p> U bent ingelogd als <?= $name ?> </p>
     <a href="logout.php"> Uitloggen </a>
 </body>
 </html>
