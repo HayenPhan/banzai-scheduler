@@ -23,6 +23,6 @@ $name = $_SESSION['name'];
 <body>
     <h1> Heel belangrijk! </h1>
     <p> U bent ingelogd als <?= $name ?> </p>
-    <a href="logout.php"> Uitloggen </a>
+    <a href="../../logout.php"> Uitloggen </a>
 </body>
 </html>
