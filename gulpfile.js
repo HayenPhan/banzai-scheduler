@@ -2,6 +2,7 @@ const gulp = require('gulp');  // gulp runs on node that's why we use the requir
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
+const babel = require('gulp-babel');
 
 
 // Start BrowserSync // Not working yet
@@ -23,8 +24,19 @@ gulp.task('watch', () => {    // It's better to set this on default, because you
   gulp.watch('app/assets/styles/**/*.scss', gulp.series('styles'));      // This watches your styles task too.
 });
 
+// Compiling to ES6
+
+gulp.task('scripts', () =>  {
+  return gulp.src(
+  ['node_modules/babel-polyfill/dist/polyfill.js','js/*.js']).pipe(babel({
+      presets: ['es2015'],
+      plugins: ["syntax-dynamic-import"]
+  }))
+  .pipe(gulp.dest('compiled'));
+});
+
 // Find out how to minify files
 
 // Find out how let BrowserSync work
 
-gulp.task('default', gulp.series('styles', 'watch'));
+gulp.task('default', gulp.series('styles', 'watch', 'scripts'));
