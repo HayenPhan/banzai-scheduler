@@ -6,7 +6,7 @@
 
     // The first and lastname of employee
     // By starting session, it knows who you are and for example also knows that your last_name is Phan.
-    
+
     $first_name = $_SESSION['name'];
     $last_name = $_SESSION['last_name'];
 
@@ -14,11 +14,14 @@
     $db = mysqli_connect($host, $user, $password, $database)
     or die("Error: ". mysqli_connect_error());
 
-    foreach ($_POST['request'] as $key => $value) {
-      $sql = "INSERT INTO pending_requests (first_name, last_name, request)  /* Now all you have to add is the date and name and lastname */
-      VALUES ('$first_name', '$last_name','$value')";
-
+    if (isset($_POST['request'])) {
+        foreach($_POST['request'] as $key => $value) {
+          $v = mysql_real_escape_string($_POST['request']);
+          $sql = "INSERT INTO pending_requests (first_name, last_name, request)  /* Now all you have to add is the date and name and lastname */
+          VALUES ('$first_name', '$last_name','$value')";
+        }
     }
+
 
     if(mysqli_query($db, $sql)){
         echo "Requests inserted succesfully.";
