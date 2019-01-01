@@ -18,7 +18,7 @@
 
             <div>
                 Reden aanvraag: <br>
-                <input type="text" name="request1"  classname="inputje">
+                <input type="text" name="request[]"  classname="inputje">
                 <br><br><br>
             </div>
 
