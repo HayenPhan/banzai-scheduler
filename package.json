@@ -25,7 +25,8 @@
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "tiny-date-picker": "^3.2.8"
   },
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0"

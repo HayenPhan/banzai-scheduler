@@ -8,8 +8,6 @@ export const addRequest = () => {
       document.getElementById("request").innerHTML += '<div> Reden aanvraag: <br> <input type="text" name="request' + inputNumber + '"> <br> <br> <br> </div>';
       inputNumber++;
 
-      console.log('click');
-
       // 1. Everytime addRequest gets executed it will ++ the InputNumber, so this is how we get unique input numbers.
 
 });

@@ -13,19 +13,19 @@
  <body>
    <h1> Aanvragen </h1>
 
-     <div id="request">
+   <form action="requests_succes.php" method="post">
+       <div id="request">
 
-          <div>
-              Reden aanvraag: <br>
-              <input type="text" name="request1"  classname="inputje">
-              <br><br><br>
-          </div>
+            <div>
+                Reden aanvraag: <br>
+                <input type="text" name="request1"  classname="inputje">
+                <br><br><br>
+            </div>
 
-      </div>
-
-      <button id="add_request"> Add  </button>
-
-      <button name="submit"> Submit </input>
+        </div>
+        <button name="submit"> Submit </input>
+  </form>
+  <button id="add_request"> Add  </button>
 
  </body>
  </html>
