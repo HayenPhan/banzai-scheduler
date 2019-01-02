@@ -37,9 +37,14 @@
                       print_r("Het is gelukt!");
                   }
 
+
               }
             }
         }
+
+        // Close
+
+        mysqli_close($msqli); // 
 
     }
 
