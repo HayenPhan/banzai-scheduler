@@ -8,25 +8,39 @@
     // By starting session, it knows who you are and for example also knows that your last_name is Phan.
 
     $first_name = $_SESSION['name'];
-    $last_name = $_SESSION['last_name'];
 
 
-    $db = mysqli_connect($host, $user, $password, $database)
-    or die("Error: ". mysqli_connect_error());
+    if(isset($_POST['submit'])) {
+        $msqli = mysqli_connect($host, $user, $password, $database)
+        or die("Error: ". mysqli_connect_error());
 
-    if (isset($_POST['request'])) {
-        foreach($_POST['request'] as $key => $value) {
-          $v = mysql_real_escape_string($_POST['request']);
-          $sql = "INSERT INTO pending_requests (first_name, last_name, request)  /* Now all you have to add is the date and name and lastname */
-          VALUES ('$first_name', '$last_name','$value')";
+
+        $request = $_POST['request'];
+
+
+        if (isset($_POST['request'])) {
+            foreach($request as $key => $value) {
+
+              $query = "SELECT id FROM pending_requests";
+
+              $result = $msqli->query($query);
+
+              if($result->num_rows) {
+                  //Perform inserted
+                  $sql = "INSERT INTO pending_requests(first_name,request) VALUES ('$first_name','" . $msqli->real_escape_string($value) . "')";
+
+                  $insert = $msqli->query($sql);
+
+                  if (!$insert) {
+                      echo $msqli->error;
+                  } else {
+                      print_r("Het is gelukt!");
+                  }
+
+              }
+            }
         }
-    }
 
-
-    if(mysqli_query($db, $sql)){
-        echo "Requests inserted succesfully.";
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
     }
 
 
@@ -43,7 +57,7 @@
  </head>
  <body>
      <div>
-        <h1> Aanvragen is gelukt! Bedankt </h1>
+        <h1>  </h1>
       </div>
 
  </body>
