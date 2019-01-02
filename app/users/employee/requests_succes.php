@@ -25,7 +25,7 @@
 
               $result = $msqli->query($query);
 
-              if($result->num_rows) {
+              if($result) {
                   //Perform inserted
                   $sql = "INSERT INTO pending_requests(first_name,request) VALUES ('$first_name','" . $msqli->real_escape_string($value) . "')";
 
@@ -36,15 +36,13 @@
                   } else {
                       print_r("Het is gelukt!");
                   }
-
-
               }
             }
         }
 
         // Close
 
-        mysqli_close($msqli); // 
+        mysqli_close($msqli); //
 
     }
 
