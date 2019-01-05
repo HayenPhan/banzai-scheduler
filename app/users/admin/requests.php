@@ -11,7 +11,6 @@ or die("Error: ". mysqli_connect_error());
 
 $queryAll = "SELECT * FROM pending_requests WHERE status ='0'"; // fix this later, code still works
 
-
 $result = mysqli_query($db, $queryAll);
 
 
@@ -43,18 +42,6 @@ mysqli_close($db);
   <ul>
 
     <?php foreach($pending_requests as $key => $items) { ?>
-
-       <?=
-           $status = '';
-
-             if($items['status'] == 0) {
-                 $status = 'In behandeling';
-             } else if($items['status'] == 1) {
-                 $status = 'Geaccepteerd';
-             } else if($items['status'] == 2) {
-                 $status = 'Geweigerd';
-             }
-       ?>
         <li>
             <p><?= $items['first_name'] ?></p>
             <p><?= $items['request'] ?></p>
