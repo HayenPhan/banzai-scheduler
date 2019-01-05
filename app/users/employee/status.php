@@ -4,26 +4,6 @@
     // Start session because I need the first and Last name of employee.
     session_start();
 
-    $msqli = mysqli_connect($host, $user, $password, $database)
-    or die("Error: ". mysqli_connect_error());
-
-    $queryAll = "SELECT * FROM pending_requests"; // fix this later, code still works
-
-
-    $result = mysqli_query($msqli, $queryAll);
-
-
-    // Create array & store from the database
-
-    $pending_requests = [];
-
-    while($row = mysqli_fetch_assoc($result)) {
-        $pending_requests[] = $row;
-    }
-
-    $status = '';
-
-
 ?>
 
  <!DOCTYPE html>
@@ -37,6 +17,7 @@
    <h1> Bekijk de status van je aanvragen </h1>
 
    <ul>
+
      <?php foreach($pending_requests as $key => $items) { ?>
 
         <?=
@@ -57,6 +38,7 @@
          </li>
      <?php }
      ?>
+
    </ul>
  </body>
  </html>
