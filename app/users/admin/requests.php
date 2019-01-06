@@ -23,8 +23,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 
 
-// Get current ID
-
 
 // Update status to 1 (accepted)
 
