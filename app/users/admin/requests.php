@@ -23,15 +23,40 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 
 
-// Close connection
+// Get current ID
 
-mysqli_close($db);
 
-// PHP SELF (GET the currentID)
+// Update status to 1 (accepted)
 
-$currentId = $_GET['id'];
+if(isset($_POST['accepted'])) {
+      $currentId = $_POST['id'];
+      $acceptedQuery = "UPDATE pending_requests SET status = '1' WHERE id = '$currentId'";
+      $result = mysqli_query($db, $acceptedQuery);
 
-print_r($currentId);
+      if($result) {
+          print_r('Het is gelukt');
+      }else {
+          print_r('Aanvraag accepteren is niet gelukt.');
+      }
+
+}
+
+
+// Update status to 2 (rejected)
+
+if(isset($_POST['rejected'])) {
+
+      $currentId = $_POST['id'];
+      $rejectedQuery = "UPDATE pending_requests SET status = '2' WHERE id = '$currentId'";
+      $result = mysqli_query($db, $rejectedQuery);
+
+      if($result) {
+          print_r('Het is gelukt');
+      }else {
+          print_r('Aanvraag weigeren is niet gelukt.');
+      }
+
+}
 
 
 ?>
@@ -53,12 +78,15 @@ print_r($currentId);
             <p><?= $items['first_name'] ?></p>
             <p><?= $items['request'] ?></p>
             <p><?= $items['date'] ?></p>
-            <a href="?id=<?= $items['id'] ?>">
-                <button>WEIGEREN</button>
-            </a>
-            <a href="?id=<?= $items['id'] ?>">
-                <button>ACCEPTEREN</button>
-            </a>
+            <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+                <input type="submit" name="rejected" value="Weigeren"> </input>
+                <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+                <p> <?= $items['id']?></p>
+            </form>
+            <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+                <input type="submit" name="accepted" value="Accepteren"> </input>
+                <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+            </form>
         </li>
     <?php }
     ?>
