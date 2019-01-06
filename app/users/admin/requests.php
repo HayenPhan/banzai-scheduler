@@ -27,6 +27,13 @@ while($row = mysqli_fetch_assoc($result)) {
 
 mysqli_close($db);
 
+// PHP SELF (GET the currentID)
+
+$currentId = $_GET['id'];
+
+print_r($currentId);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +53,12 @@ mysqli_close($db);
             <p><?= $items['first_name'] ?></p>
             <p><?= $items['request'] ?></p>
             <p><?= $items['date'] ?></p>
-            <input type="button" name="reject"><p> WEIGEREN </p></input>
-            <input type="button" name="accept"><p> ACCEPTEREN </p> </input>
+            <a href="?id=<?= $items['id'] ?>">
+                <button>WEIGEREN</button>
+            </a>
+            <a href="?id=<?= $items['id'] ?>">
+                <button>ACCEPTEREN</button>
+            </a>
         </li>
     <?php }
     ?>
