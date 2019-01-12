@@ -82,24 +82,33 @@ or die("Error: ". mysqli_connect_error());
 
     <body>
 
-      <div class="login__logo">
-          <img src="../app/assets/images/sumo.png" />
-          <h1 class="swag"> swag </h1>
-      </div>
+      <div class="login__container">
 
-      <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
-          <div>
-              <label>Username:</label>
-              <input id="username" type="username" name="username" />
+          <div class="login__logo-wrapper">
+              <div class="login__logo">
+                  <img class="login__logo-img" src="../app/assets/images/sumo.png" />
+              </div>
           </div>
-          <div>
-              <label>Wachtwoord:</label>
-              <input id="password" type="password" name="password" />
-          </div>
-          <div>
-              <input type="submit" name="submit" value="login" />
-          </div>
-      </form>
+
+          <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
+              <div class="login__input-container">
+                  <div class="login__input-wrapper">
+                      <div class="login__input">
+                          <input class="login__username" id="username" type="username" name="username" placeholder="Gebruikersnaam"/>
+                      </div>
+                      <div class="login__input">
+                          <input class="login__password" id="password" type="password" name="password" placeholder="Wachtwoord"/>
+                      </div>
+                      <div class="login__input">
+                          <button class="login__submit" type="submit" name="submit">
+                              <h2> Login </h2>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+
+      </div>
 
     </body>
 

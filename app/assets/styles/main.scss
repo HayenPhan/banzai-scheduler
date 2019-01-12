@@ -1,9 +1,13 @@
-// Atoms
-@import
-    '../styles/atoms/logo.scss';
-// Organisms
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
 
+// Atoms
+
+// Organisms
+@import
+    '../styles/organisms/login';
 // Variables
 @import
     '../styles/variables/breakpoints',
-    '../styles/variables/colors';
+    '../styles/variables/colors',
+    '../styles/variables/typography'
+    ;

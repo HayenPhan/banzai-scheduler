@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 .login__container {
   width: 100%;
   display: flex;
@@ -36,10 +34,3 @@
   border: none;
   font-family: Arial;
   font-size: 10px; }
-
-/* ===============================================
-   Breakpoint
-   =============================================== */
-/* ===============================================
-   Typography settings
-   =============================================== */

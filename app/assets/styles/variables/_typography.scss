@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
+
+
+/* ===============================================
+   Typography settings
+   =============================================== */
+
+$typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+);
