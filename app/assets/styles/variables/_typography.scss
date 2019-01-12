@@ -5,7 +5,7 @@
    Typography settings
    =============================================== */
 
-$typo: (
+ /* $typo: (
     // fonts
     'font': (
         'head': '"PT Sans", sans-serif',
@@ -26,4 +26,10 @@ $typo: (
     'large': (
         'xs': 16px,
     ),
-);
+); */
+
+// Doesn't work yet.. doesn't understand the map-get-deep function: get this error:
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */

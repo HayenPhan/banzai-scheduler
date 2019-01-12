@@ -1,5 +1,70 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+/* ===============================================
+   Breakpoint
+   =============================================== */
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+/* ===============================================
+   Typography settings
+   =============================================== */
+/* $typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+); */
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */
+/* ===============================================
+   Breakpoint
+   =============================================== */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+/* ===============================================
+   Typography settings
+   =============================================== */
+/* $typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+); */
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */
 .login__container {
   width: 100%;
   display: flex;
@@ -10,6 +75,9 @@
   height: 150px;
   background-color: blue;
   margin-bottom: 40px; }
+  @media (min-width: 64em) {
+    .login__logo {
+      background-color: yellow; } }
 
 .login__logo-wrapper {
   display: flex;
@@ -34,12 +102,8 @@
   width: 270px;
   height: 50px;
   border: none;
-  font-family: Arial;
-  font-size: 10px; }
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px; }
 
-/* ===============================================
-   Breakpoint
-   =============================================== */
-/* ===============================================
-   Typography settings
-   =============================================== */
+.login__submit {
+  font-size: 12px; }

@@ -2,11 +2,21 @@
    Breakpoint
    =============================================== */
 
-$breakpoints: (
-    'xs': 480px,
-    'sm': 768px,
-    'md': 980px,
-    'lg': 1200px,
-    'xl': 1440px,
-    'xxl': 1600px
-);
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
