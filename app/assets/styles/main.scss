@@ -1,9 +1,9 @@
 // Atoms
 @import
-    'atoms/logo';
+    '../styles/atoms/logo.scss';
 // Organisms
 
 // Variables
 @import
-    'variables/breakpoints',
-    'variables/colors';
+    '../styles/variables/breakpoints',
+    '../styles/variables/colors';

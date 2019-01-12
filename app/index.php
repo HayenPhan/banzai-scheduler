@@ -77,13 +77,14 @@ or die("Error: ". mysqli_connect_error());
 
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="./assets/styles/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../app/assets/styles/css/main.css">
     </head>
 
     <body>
 
       <div class="login__logo">
           <img src="../app/assets/images/sumo.png" />
+          <h1 class="swag"> swag </h1>
       </div>
 
       <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
