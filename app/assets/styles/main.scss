@@ -1,5 +1,9 @@
-.test {
-  &__one {
-    color: blue;
-  }
-}
+// Atoms
+@import
+    'atoms/logo';
+// Organisms
+
+// Variables
+@import
+    'variables/breakpoints',
+    'variables/colors';

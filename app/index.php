@@ -9,6 +9,8 @@ session_start();
 $db = mysqli_connect($host, $user, $password, $database)
 or die("Error: ". mysqli_connect_error());
 
+    // Check if user is logged in
+
     // Check if post isset
 
     if (isset($_POST['submit'])) {
@@ -79,6 +81,10 @@ or die("Error: ". mysqli_connect_error());
     </head>
 
     <body>
+
+      <div class="login__logo">
+          <img src="../app/assets/images/sumo.png" />
+      </div>
 
       <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
           <div>
