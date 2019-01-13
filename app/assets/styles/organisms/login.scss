@@ -14,10 +14,39 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        background-color: purple;
+
+        @include breakpoint(laptop) {
+            flex-direction: row;
+            height: 100vh;
+	      }
     }
+
+    &__left-square {
+        @include breakpoint(laptop) {
+            width: 40%;
+            height: 100%;
+            background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+	      }
+    }
+
+    &__right-square {
+      @include breakpoint(laptop) {
+          width: 60%;
+          height: 100%;
+          background-color: red;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+      }
+    }
+
     &__logo {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
         @include breakpoint(laptop) {
             background-color: yellow;
 	      }
@@ -26,6 +55,11 @@
     &__logo-wrapper {
         display: flex;
         justify-content: center;
+
+        @include breakpoint(laptop) {
+            margin-bottom: 300px;
+        }
+
     }
 
     &__logo-img {
@@ -38,6 +72,10 @@
     &__input-container {
         display: flex;
         justify-content: center;
+
+        @include breakpoint(laptop) {
+
+	      }
     }
 
     &__input {
@@ -75,6 +113,10 @@
     &__error {
         font-family: 'PT Sans', sans-serif;
         color: #00A0A0;
+    }
+
+    &__error-wrapper {
+        width: 250px;
     }
 
 }

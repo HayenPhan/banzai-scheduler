@@ -83,30 +83,36 @@ or die("Error: ". mysqli_connect_error());
 
       <div class="login__container">
 
-          <div class="login__logo-wrapper">
-              <div class="login__logo">
-                  <img class="login__logo-img" src="../app/assets/images/sumo.png" />
-              </div>
-          </div>
+        <div class="login__left-square">
+            <div class="login__logo-wrapper">
+                <div class="login__logo">
+                    <img class="login__logo-img" src="../app/assets/images/sumo.png" />
+                </div>
+            </div>
+        </div>
 
-          <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
-              <div class="login__input-container">
-                  <div class="login__input-wrapper">
-                      <div class="login__input">
-                          <input class="login__username" id="username" type="username" name="username" placeholder="Gebruikersnaam"/>
+          <div class="login__right-square">
+              <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
+                  <div class="login__input-container">
+                      <div class="login__input-wrapper">
+                          <div class="login__input">
+                              <input class="login__username" id="username" type="username" name="username" placeholder="Gebruikersnaam"/>
+                          </div>
+                          <div class="login__input">
+                              <input class="login__password" id="password" type="password" name="password" placeholder="Wachtwoord"/>
+                          </div>
+                          <div class="login__input">
+                              <button class="login__submit" type="submit" name="submit">
+                                  <h2 class="login__submit-title"> Login </h2>
+                              </button>
+                          </div>
+                          <div class="login__error-wrapper">
+                            <p class="login__error"><?= $error ?></p>
+                          </div>
                       </div>
-                      <div class="login__input">
-                          <input class="login__password" id="password" type="password" name="password" placeholder="Wachtwoord"/>
-                      </div>
-                      <div class="login__input">
-                          <button class="login__submit" type="submit" name="submit">
-                              <h2 class="login__submit-title"> Login </h2>
-                          </button>
-                      </div>
-                      <p class="login__error"><?= $error ?></p>
                   </div>
-              </div>
-          </form>
+              </form>
+          </div>
 
       </div>
 
