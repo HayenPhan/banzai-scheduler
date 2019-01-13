@@ -37,13 +37,7 @@ or die("Error: ". mysqli_connect_error());
             $error = "Vul beide gegevens in";
         }
 
-        if ($username != $row['login_name'] || $password != $row['password_hash']) {
-            $error = "Combinatie gebruikersnaam/wachtwoord onjuist";
-        }
-
-        // If there's no error than..
-        // Put session_start above
-        if(!isset($error)) {
+        if ($username == $row['login_name'] || $password == $row['password_hash']) {
 
           /*  // E-mail
             $_SESSION['type'] = $email; */
@@ -61,9 +55,10 @@ or die("Error: ". mysqli_connect_error());
               exit;
             }
 
+
+        } else if ($username != $row['login_name'] || $password != $row['password_hash']) {
+            $error = "Combinatie gebruikersnaam/wachtwoord onjuist";
         }
-
-
 
     }
 
