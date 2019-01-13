@@ -31,17 +31,17 @@
         on line 45 of app/assets/styles/organisms/login.scss
         from line 7 of app/assets/styles/main.scss
 >>         font-family: map-deep-get($typo, 'font', 'text'); */
-.login__container {
+.home__container {
   width: 100%;
   display: flex;
   flex-direction: column; }
   @media (min-width: 64em) {
-    .login__container {
+    .home__container {
       flex-direction: row;
       height: 100vh; } }
 
 @media (min-width: 64em) {
-  .login__left-square {
+  .home__left-square {
     width: 40%;
     height: 100%;
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
@@ -50,60 +50,24 @@
     justify-content: space-around; } }
 
 @media (min-width: 64em) {
-  .login__right-square {
+  .home__right-square {
     width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around; } }
 
-.login__logo {
+.home__logo {
   width: 240px;
   height: 240px; }
 
-.login__logo-wrapper {
+.home__logo-wrapper {
   display: flex;
   justify-content: center; }
   @media (min-width: 64em) {
-    .login__logo-wrapper {
+    .home__logo-wrapper {
       margin-bottom: 300px; } }
 
-.login__logo-img {
+.home__logo-img {
   max-width: 100%;
   max-height: 100%; }
-
-.login__input-container {
-  display: flex;
-  justify-content: center; }
-
-.login__input {
-  margin-bottom: 40px; }
-
-.login__username, .login__password {
-  padding-left: 20px;
-  background-color: #F5F5F5; }
-
-.login__username, .login__password, .login__submit {
-  width: 270px;
-  height: 50px;
-  border: none;
-  border-radius: 10px;
-  font-family: 'PT Sans', sans-serif;
-  color: #707070;
-  font-size: 18px; }
-
-.login__submit {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); }
-
-.login__submit-title {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 200;
-  color: #fff; }
-
-.login__error {
-  font-family: 'PT Sans', sans-serif;
-  color: #00A0A0; }
-
-.login__error-wrapper {
-  width: 250px; }
