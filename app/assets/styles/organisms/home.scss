@@ -36,7 +36,57 @@
     &__right-square {
         display: flex;
         flex-direction: column;
-        background-color: red;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    &__link-wrapper, &__icons-wrapper, &__overview-wrapper, &__overview-title-wrapper {
+        margin-left: -50px;
+    }
+
+    &__overview {
+
+    }
+
+    &__overview-wrapper {
+        display: flex;
+    }
+
+    &__overview-title-wrapper {
+        width: 200px;
+    }
+
+    &__overview-title {
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 200;
+        color: #696969;
+    }
+
+    &__request-wrapper {
+        margin-left: 40px;
+    }
+
+    &__day, &__month, &__time, &__request, &__link-wrapper {
+        font-family: 'PT Sans', sans-serif;
+        color: #939090;
+    }
+
+    &__month, &__request {
+        font-weight: 400;
+        color: #AFAFAF;
+    }
+
+    &__time, &__request {
+        font-size: 18px;
+    }
+
+    &__day, &__time {
+        font-weight: 800;
+        margin-bottom: -15px;
+    }
+
+    &__day, &__month {
+        font-size: 16px;
     }
 
     &__logo {

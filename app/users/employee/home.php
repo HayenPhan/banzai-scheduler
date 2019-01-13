@@ -38,39 +38,43 @@ $name = $_SESSION['name'];
         </div>
 
           <div class="home__right-square">
-              <div class="home__overview-title-wrapper">
-                  <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
-              </div>
-
-              <div class="home__overview-wrapper">
-                  <div class="home__date-wrapper">
-                      <p> 30 </p>
-                      <p> Dec </p>
+              <div class="home__overview">
+                  <div class="home__overview-title-wrapper">
+                      <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
                   </div>
-                  <div class="home__request-wrapper">
-                      <p> 18:00 </p>
-                      <p> Kerstdiner op school </p>
-                  </div>
-              </div>
 
-              <div class="home__overview-wrapper">
-                  <div class="home__date-wrapper">
-                      <p> 30 </p>
-                      <p> Dec </p>
+                  <div class="home__overview-wrapper">
+                      <div class="home__date-wrapper">
+                          <p class="home__day"> 30 </p>
+                          <p class="home__month"> Dec </p>
+                      </div>
+                      <div class="home__request-wrapper">
+                          <p class="home__time"> 18:00 </p>
+                          <p class="home__request"> Kerstdiner op school </p>
+                      </div>
                   </div>
-                  <div class="home__request-wrapper">
-                      <p> 18:00 </p>
-                      <p> Kerstdiner op school </p>
+
+                  <div class="home__overview-wrapper">
+                      <div class="home__date-wrapper">
+                          <p class="home__day"> 30 </p>
+                          <p class="home__month"> Dec </p>
+                      </div>
+                      <div class="home__request-wrapper">
+                          <p class="home__time"> 18:00 </p>
+                          <p class="home__request"> Kerstdiner op school </p>
+                      </div>
                   </div>
-              </div>
 
-              <div class="home__link-wrapper">
-                  <p> Bekijk alles </p>
-              </div>
+                  <div class="home__link-wrapper">
+                      <p> Bekijk alles </p>
+                  </div>
 
-              <div class="home__icons">
-                  <div> icon 1 </div>
-                  <div> icon 2 </div>
+                  <div class="home__icons-wrapper">
+                      <div> icon 1 </div>
+                      <div> icon 2 </div>
+                  </div>
+
+
               </div>
 
           </div>

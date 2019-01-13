@@ -52,7 +52,43 @@
 .home__right-square {
   display: flex;
   flex-direction: column;
-  background-color: red; }
+  align-items: center;
+  padding-left: 20px; }
+
+.home__link-wrapper, .home__icons-wrapper, .home__overview-wrapper, .home__overview-title-wrapper {
+  margin-left: -50px; }
+
+.home__overview-wrapper {
+  display: flex; }
+
+.home__overview-title-wrapper {
+  width: 200px; }
+
+.home__overview-title {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 200;
+  color: #696969; }
+
+.home__request-wrapper {
+  margin-left: 40px; }
+
+.home__day, .home__month, .home__time, .home__request, .home__link-wrapper {
+  font-family: 'PT Sans', sans-serif;
+  color: #939090; }
+
+.home__month, .home__request {
+  font-weight: 400;
+  color: #AFAFAF; }
+
+.home__time, .home__request {
+  font-size: 18px; }
+
+.home__day, .home__time {
+  font-weight: 800;
+  margin-bottom: -15px; }
+
+.home__day, .home__month {
+  font-size: 16px; }
 
 .home__logo {
   width: 240px;
