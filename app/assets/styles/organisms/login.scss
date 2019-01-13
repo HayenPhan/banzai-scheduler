@@ -16,10 +16,8 @@
         flex-direction: column;
     }
     &__logo {
-        width: 150px;
-        height: 150px;
-        background-color: blue;
-        margin-bottom: 40px;
+        width: 200px;
+        height: 200px;
         @include breakpoint(laptop) {
             background-color: yellow;
 	      }
@@ -40,7 +38,6 @@
     &__input-container {
         display: flex;
         justify-content: center;
-        background-color: yellow;
     }
 
     &__input {
@@ -49,6 +46,7 @@
 
     &__username, &__password {
         padding-left: 20px;
+        background-color: #F5F5F5;
 
     }
 
@@ -56,13 +54,27 @@
         width: 270px;
         height: 50px;
         border: none;
+        border-radius: 10px;
         font-family: 'PT Sans', sans-serif;
-        font-size: 20px;
+        color: #707070;
+        font-size: 18px;
 
     }
 
     &__submit {
-        font-size: 12px;
+        background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    }
+
+    &__submit-title {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        color: #fff;
+    }
+
+    &__error {
+        font-family: 'PT Sans', sans-serif;
+        color: #00A0A0;
     }
 
 }

@@ -37,10 +37,8 @@
   flex-direction: column; }
 
 .login__logo {
-  width: 150px;
-  height: 150px;
-  background-color: blue;
-  margin-bottom: 40px; }
+  width: 200px;
+  height: 200px; }
   @media (min-width: 64em) {
     .login__logo {
       background-color: yellow; } }
@@ -55,21 +53,33 @@
 
 .login__input-container {
   display: flex;
-  justify-content: center;
-  background-color: yellow; }
+  justify-content: center; }
 
 .login__input {
   margin-bottom: 40px; }
 
 .login__username, .login__password {
-  padding-left: 20px; }
+  padding-left: 20px;
+  background-color: #F5F5F5; }
 
 .login__username, .login__password, .login__submit {
   width: 270px;
   height: 50px;
   border: none;
+  border-radius: 10px;
   font-family: 'PT Sans', sans-serif;
-  font-size: 20px; }
+  color: #707070;
+  font-size: 18px; }
 
 .login__submit {
-  font-size: 12px; }
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); }
+
+.login__submit-title {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: #fff; }
+
+.login__error {
+  font-family: 'PT Sans', sans-serif;
+  color: #00A0A0; }
