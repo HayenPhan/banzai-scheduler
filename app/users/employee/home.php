@@ -29,12 +29,49 @@ $name = $_SESSION['name'];
         <div class="home__left-square">
             <div class="home__logo-wrapper">
                 <div class="home__logo">
-                    <img class="home__logo-img" src="../app/assets/images/sumo.png" />
+                    <img class="home__logo-img" src="../../../app/assets/images/sumo.png" />
                 </div>
+            </div>
+            <div class="home__title-wrapper">
+                <h2 class="home__title"> Welkom, <br> <?= $name ?> </h2>
             </div>
         </div>
 
           <div class="home__right-square">
+              <div class="home__overview-title-wrapper">
+                  <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
+              </div>
+
+              <div class="home__overview-wrapper">
+                  <div class="home__date-wrapper">
+                      <p> 30 </p>
+                      <p> Dec </p>
+                  </div>
+                  <div class="home__request-wrapper">
+                      <p> 18:00 </p>
+                      <p> Kerstdiner op school </p>
+                  </div>
+              </div>
+
+              <div class="home__overview-wrapper">
+                  <div class="home__date-wrapper">
+                      <p> 30 </p>
+                      <p> Dec </p>
+                  </div>
+                  <div class="home__request-wrapper">
+                      <p> 18:00 </p>
+                      <p> Kerstdiner op school </p>
+                  </div>
+              </div>
+
+              <div class="home__link-wrapper">
+                  <p> Bekijk alles </p>
+              </div>
+
+              <div class="home__icons">
+                  <div> icon 1 </div>
+                  <div> icon 2 </div>
+              </div>
 
           </div>
 

@@ -22,6 +22,7 @@
     }
 
     &__left-square {
+
         @include breakpoint(laptop) {
             width: 40%;
             height: 100%;
@@ -33,13 +34,9 @@
     }
 
     &__right-square {
-      @include breakpoint(laptop) {
-          width: 60%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-      }
+        display: flex;
+        flex-direction: column;
+        background-color: red;
     }
 
     &__logo {
@@ -50,11 +47,24 @@
     &__logo-wrapper {
         display: flex;
         justify-content: center;
+        background-color: yellow;
 
         @include breakpoint(laptop) {
             margin-bottom: 300px;
         }
 
+    }
+
+    &__title {
+        font-family: 'PT sans', sans-serif;
+        font-weight: 200;
+        font-size: 30px;
+        color: #36B4B4;
+    }
+
+    &__title-wrapper {
+        display: flex;
+        justify-content: center;
     }
 
     &__logo-img {
