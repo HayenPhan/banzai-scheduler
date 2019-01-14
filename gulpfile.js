@@ -26,17 +26,17 @@ gulp.task('watch', () => {    // It's better to set this on default, because you
 
 // Compiling to ES6
 
-gulp.task('scripts', () =>  {
-  return gulp.src(
-  ['node_modules/babel-polyfill/dist/polyfill.js','js/*.js']).pipe(babel({
-      presets: ['es2015'],
-      plugins: ["syntax-dynamic-import"]
-  }))
-  .pipe(gulp.dest('compiled'));
-});
+// gulp.task('scripts', () =>  {
+//   return gulp.src(
+//   ['node_modules/babel-polyfill/dist/polyfill.js','app/assets/js/*.js']).pipe(babel({
+//       presets: ['es2015'],
+//       plugins: ["syntax-dynamic-import"]
+//   }))
+//   .pipe(gulp.dest('app/assets/compiled'));
+// });
 
 // Find out how to minify files
 
 // Find out how let BrowserSync work
 
-gulp.task('default', gulp.series('styles', 'watch', 'scripts'));
+gulp.task('default', gulp.series('styles', 'watch'));
