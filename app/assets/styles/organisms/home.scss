@@ -9,6 +9,11 @@
     '../variables/typography'
     ;
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .home {
     &__container {
         width: 100%;
@@ -28,8 +33,7 @@
             height: 100%;
             background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
             display: flex;
-            align-items: center;
-            justify-content: space-around;
+            flex-direction: column;
 	      }
     }
 
@@ -38,14 +42,19 @@
         flex-direction: column;
         align-items: center;
         padding-left: 20px;
+
+        @include breakpoint(laptop) {
+            padding-left: 50px;
+            padding-top: 17px;
+	      }
     }
 
-    &__link-wrapper, &__icons-wrapper, &__overview-wrapper, &__overview-title-wrapper {
-        margin-left: -50px;
-    }
+
 
     &__overview {
-
+      @include breakpoint(laptop) {
+          width: 600px;
+      }
     }
 
     &__overview-wrapper {
@@ -64,6 +73,10 @@
 
     &__request-wrapper {
         margin-left: 40px;
+    }
+
+    &__date-wrapper {
+        margin-top: 5px;
     }
 
     &__day, &__month, &__time, &__request, &__link-wrapper {
@@ -92,17 +105,20 @@
     &__logo {
         width: 240px;
         height: 240px;
+
+        @include breakpoint(laptop) {
+            width: 150px;
+            height: 150px;
+        }
     }
 
     &__logo-wrapper {
         display: flex;
         justify-content: center;
-        background-color: yellow;
 
         @include breakpoint(laptop) {
-            margin-bottom: 300px;
+            justify-content: flex-start;
         }
-
     }
 
     &__title {
@@ -110,16 +126,75 @@
         font-weight: 200;
         font-size: 30px;
         color: #36B4B4;
+
+        @include breakpoint(laptop) {
+            color: #fff;
+            font-size: 40px;
+        }
+
+
     }
 
     &__title-wrapper {
         display: flex;
         justify-content: center;
+
+        @include breakpoint(laptop) {
+            justify-content: flex-start;
+            margin-left: 36px;
+        }
     }
 
     &__logo-img {
         max-width:100%;
         max-height:100%;
+    }
+
+    &__link {
+        color: #580086;
+        font-size: 16px;
+    }
+
+    &__link-wrapper {
+        margin-bottom: 50px;
+    }
+
+    &__icon {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__icon-wrapper-one {
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+    }
+
+    &__icon-wrapper-two {
+        width: 45px;
+        height: 45px;
+        margin-left: 20px;
+    }
+
+    &__icons-wrapper {
+        display: flex;
+    }
+
+    &__line {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 15px;
+    }
+
+    &__bottom {
+      @include breakpoint(laptop) {
+        position:absolute;
+        bottom: 20px;
+        width: 580px;
+        height:60px;
+      }
     }
 
 }

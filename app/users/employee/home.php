@@ -66,12 +66,20 @@ $name = $_SESSION['name'];
                   </div>
 
                   <div class="home__link-wrapper">
-                      <p> Bekijk alles </p>
+                      <p class="home__link"> Bekijk alles </p>
                   </div>
 
-                  <div class="home__icons-wrapper">
-                      <div> icon 1 </div>
-                      <div> icon 2 </div>
+                  <div class="home__bottom">
+                      <hr class="home__line" />
+
+                      <div class="home__icons-wrapper">
+                          <div class="home__icon-wrapper-one">
+                              <img class="home__icon" src="../../../app/assets/images/huisje.png" />
+                          </div>
+                          <div class="home__icon-wrapper-two">
+                              <img class="home__icon" src="../../../app/assets/images/agenda.png" />
+                          </div>
+                      </div>
                   </div>
 
 
