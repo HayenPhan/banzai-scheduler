@@ -54,7 +54,6 @@
   margin-top: 10px;
   color: #A7A7A7; }
 
-.requests__button:active, .requests__button:focus {
+.current {
   background-color: #00D1D1;
-  color: white;
-  outline: none; }
+  color: white; }

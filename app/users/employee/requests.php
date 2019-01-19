@@ -15,14 +15,14 @@
   <div class="requests__container">
       <div class="requests__top">
           <div class="requests__button-wrapper">
-              <button type="button" id="aanvraag" class="requests__button">
+              <a class="current requests__button" href="requests.php" id="aanvraag">
                  Aanvragen
-              </button>
+              </a>
           </div>
           <div class="requests__button-wrapper">
-              <button type="button" id="status" class="requests__button">
-                Status 
-              </button>
+              <a href="status.php" id="status" class="requests__button">
+                Status
+              </a>
           </div>
       </div>
 

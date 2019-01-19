@@ -12,8 +12,24 @@
      <meta charset="UTF-8">
      <title> Bekijk de status van je aanvragen </title>
 
+     <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+
  </head>
  <body>
+
+   <div class="requests__top">
+       <div class="requests__button-wrapper">
+           <a class="requests__button" href="requests.php" id="aanvraag">
+              Aanvragen
+           </a>
+       </div>
+       <div class="requests__button-wrapper">
+           <a class="current requests__button" href="status.php" id="status">
+             Status
+           </a>
+       </div>
+   </div>
+
    <h1> Bekijk de status van je aanvragen </h1>
 
    <ul>
