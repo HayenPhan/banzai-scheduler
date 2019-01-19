@@ -34,6 +34,7 @@
                     <input type="text" name="request[]"  classname="inputje">
                     <br><br><br>
                 </div>
+                <button type="button" class="requests__date-picker"> Prik een datum </button>
 
             </div>
             <button name="submit"> Submit </input>
@@ -43,7 +44,9 @@
 
   </div>
 
+  <script src="../../assets/js/components/tinydatepicker.js"></script>
   <script src="../../assets/js/components/addRequest.js"></script>
+
 
  </body>
  </html>

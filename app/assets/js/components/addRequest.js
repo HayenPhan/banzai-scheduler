@@ -14,8 +14,8 @@ const addRequest = () => {
     }
 }
 
-// Change button color when onclick
+// tinydatepicker
 
-
+TinyDatePicker('.requests__date-picker');
 
 addRequest();
