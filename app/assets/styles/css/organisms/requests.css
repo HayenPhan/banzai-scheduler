@@ -33,11 +33,25 @@
 >>         font-family: map-deep-get($typo, 'font', 'text'); */
 .requests__container {
   width: 100%;
-  height: 500px;
-  display: flex;
-  flex-direction: row;
-  background-color: yellow; }
+  height: auto;
+  padding: 30px; }
 
 .requests__top {
   display: flex;
-  align-items: center; }
+  flex-direction: column; }
+
+.requests__button {
+  width: 150px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center; }
+
+.requests__button-text {
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #fff; }

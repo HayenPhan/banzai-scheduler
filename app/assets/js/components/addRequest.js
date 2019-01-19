@@ -14,4 +14,18 @@ const addRequest = () => {
     }
 }
 
+// Change button color when onclick
+
+const buttonClicked = (type) => {
+  if(type == 'a') {
+      document.getElementById("aanvraag").style.backgroundColor = "#00D1D1";
+      document.getElementById("status").style.backgroundColor = "#fff";
+  }
+  else if(type == 'b') {
+      document.getElementById("status").style.backgroundColor = "#00D1D1";
+      document.getElementById("aanvraag").style.backgroundColor = "#fff";
+  }
+}
+
+
 addRequest();

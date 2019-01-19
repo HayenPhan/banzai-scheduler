@@ -7,7 +7,7 @@
  <head>
      <meta charset="UTF-8">
      <title> Aanvragen </title>
-     <script type="module" src="../../assets/js/entries/main.js"></script>
+       <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
 
  </head>
  <body>
@@ -15,10 +15,14 @@
   <div class="requests__container">
       <div class="requests__top">
           <div class="requests__button-wrapper">
-              <button type="button"> Aanvragen </button>
+              <button onclick="buttonClicked('a')" type="button" id="aanvraag" class="requests__button">
+                 <p class="requests__button-text"> Aanvragen </p>
+              </button>
           </div>
           <div class="requests__button-wrapper">
-              <button type="button"> Status </button>
+              <button onclick="buttonClicked('b')" type="button" id="status" class="requests__button">
+                 <p class="requests__button-text"> Status </p>
+              </button>
           </div>
       </div>
 
@@ -36,7 +40,7 @@
       </form>
 
       <button id="add_request"> Add  </button>
-      
+
   </div>
 
   <script src="../../assets/js/components/addRequest.js"></script>
