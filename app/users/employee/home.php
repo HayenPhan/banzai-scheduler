@@ -73,12 +73,17 @@ $name = $_SESSION['name'];
                       <hr class="home__line" />
 
                       <div class="home__icons-wrapper">
-                          <div class="home__icon-wrapper-one">
-                              <img class="home__icon" src="../../../app/assets/images/huisje.png" />
-                          </div>
-                          <div class="home__icon-wrapper-two">
-                              <img class="home__icon" src="../../../app/assets/images/agenda.png" />
-                          </div>
+                          <a href="home.php">
+                              <div class="home__icon-wrapper-one">
+                                  <img class="home__icon" src="../../../app/assets/images/huisje.png" />
+                              </div>
+                          </a>
+
+                          <a href="requests.php">
+                              <div class="home__icon-wrapper-two">
+                                  <img class="home__icon" src="../../../app/assets/images/agenda.png" />
+                              </div>
+                          </a>
                       </div>
                   </div>
 

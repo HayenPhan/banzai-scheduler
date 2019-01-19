@@ -106,14 +106,6 @@ or die("Error: ". mysqli_connect_error());
                             <p class="login__error"><?= $error ?></p>
                           </div>
 
-                          <div id="quiz">
-                          </div>
-                          <div id="results">
-
-                          </div>
-                          <button type="submit" id="submit">
-
-                          </button>
 
 
                       </div>
@@ -122,9 +114,7 @@ or die("Error: ". mysqli_connect_error());
           </div>
 
       </div>
-      <script src="assets/js/components/addRequest.js"></script>
-      <script src="assets/js/components/handleRequest.js"></script>
-      <script src="assets/js/entries/main.js"></script>
+
     </body>
 
 </html>

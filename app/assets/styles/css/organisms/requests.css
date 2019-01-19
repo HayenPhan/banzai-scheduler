@@ -1,0 +1,43 @@
+/* ===============================================
+   Breakpoint
+   =============================================== */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+/* ===============================================
+   Typography settings
+   =============================================== */
+/* $typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+); */
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */
+.requests__container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  background-color: yellow; }
+
+.requests__top {
+  display: flex;
+  align-items: center; }
