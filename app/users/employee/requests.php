@@ -15,13 +15,13 @@
   <div class="requests__container">
       <div class="requests__top">
           <div class="requests__button-wrapper">
-              <button onclick="buttonClicked('a')" type="button" id="aanvraag" class="requests__button">
-                 <p class="requests__button-text"> Aanvragen </p>
+              <button type="button" id="aanvraag" class="requests__button">
+                 Aanvragen
               </button>
           </div>
           <div class="requests__button-wrapper">
-              <button onclick="buttonClicked('b')" type="button" id="status" class="requests__button">
-                 <p class="requests__button-text"> Status </p>
+              <button type="button" id="status" class="requests__button">
+                Status 
               </button>
           </div>
       </div>

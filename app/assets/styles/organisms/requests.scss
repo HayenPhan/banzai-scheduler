@@ -20,19 +20,23 @@
         width: 150px;
         height: 35px;
         padding: 0;
-        border: none;
+        border: 0.5px solid #D6D5D5;
 
         border-radius: 5px;
         display: flex;
         justify-content: center;
+
+        font-family: 'PT sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 10px;
+        color: #A7A7A7;
     }
 
-    &__button-text {
-      font-family: 'PT sans', sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      margin-top: 10px;
-      color: #fff;
+    &__button:active, &__button:focus {
+        background-color: #00D1D1;
+        color: white;
+        outline:none;
     }
 }
 
