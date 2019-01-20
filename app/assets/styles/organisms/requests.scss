@@ -31,7 +31,10 @@
     }
 
     &__wrapper {
-        padding-left: 60px;
+
+        @include breakpoint(laptop) {
+            padding-left: 60px;
+	      }
     }
 
     &__button {
@@ -51,6 +54,13 @@
         font-size: 14px;
         margin-top: 10px;
         color: #A7A7A7;
+
+        @include breakpoint(laptop) {
+            width: 170px;
+            height: 45px;
+            font-size: 16px;
+	      }
+
     }
 
 
@@ -65,7 +75,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20px;
 
 
         font-family: 'PT sans', sans-serif;
@@ -81,10 +90,18 @@
         font-size: 14px;
         color: #A7A7A7;
         margin-bottom: -15px;
+
+        @include breakpoint(laptop) {
+            font-size: 16px;
+	      }
     }
 
     &__reason-wrapper {
         margin-bottom: -40px;
+    }
+
+    &__date-reason-wrapper {
+        margin-bottom: 60px;
     }
 
     &__add {
@@ -126,6 +143,7 @@
     &__add-wrapper {
         width: 50px;
         height: 50px;
+        margin-top: -50px;
     }
 
     &__submit {
@@ -146,6 +164,12 @@
         margin-top: 10px;
         color: #fff;
         background-color: #00D1D1;
+
+        @include breakpoint(laptop) {
+            width: 170px;
+            height: 45px;
+            font-size: 16px;
+	      }
     }
 
     &__button-wrapper {
@@ -170,4 +194,11 @@ input[type=text], select {
   border: 0.5px solid #EDE8E8;
   border-radius: 4px;
   box-sizing: border-box;
+
+  @include breakpoint(laptop) {
+      width: 400px;
+      height: 40px;
+      font-size: 16px;
+  }
+
 }

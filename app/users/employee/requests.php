@@ -30,13 +30,15 @@
          <div class="requests__wrapper">
            <div id="request">
 
-                <div class="requests__reason-wrapper">
-                    <p class="requests__reason"> Reden aanvraag: </p> <br>
-                    <input type="text" name="request[]"  classname="requests__input">
-                    <br><br><br>
-                </div>
-                <p class="requests__reason"> Kies een datum: </p> <br>
-                <input type="text" id="pick-date" class="requests__date-picker">
+             <div class="requests__date-reason-wrapper">
+                  <div class="requests__reason-wrapper">
+                      <p class="requests__reason"> Reden aanvraag: </p> <br>
+                      <input type="text" name="request[]"  classname="requests__input">
+                      <br><br><br>
+                  </div>
+                  <p class="requests__reason"> Kies een datum: </p> <br>
+                  <input type="text" id="pick-date" class="requests__date-picker">
+              </div>
 
             </div>
 

@@ -656,8 +656,9 @@ body {
       width: 100%;
       justify-content: center; } }
 
-.requests__wrapper {
-  padding-left: 60px; }
+@media (min-width: 64em) {
+  .requests__wrapper {
+    padding-left: 60px; } }
 
 .requests__button {
   width: 150px;
@@ -673,6 +674,11 @@ body {
   font-size: 14px;
   margin-top: 10px;
   color: #A7A7A7; }
+  @media (min-width: 64em) {
+    .requests__button {
+      width: 170px;
+      height: 45px;
+      font-size: 16px; } }
 
 .requests__date-picker {
   width: 150px;
@@ -684,7 +690,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
   font-family: 'PT sans', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -697,9 +702,15 @@ body {
   font-size: 14px;
   color: #A7A7A7;
   margin-bottom: -15px; }
+  @media (min-width: 64em) {
+    .requests__reason {
+      font-size: 16px; } }
 
 .requests__reason-wrapper {
   margin-bottom: -40px; }
+
+.requests__date-reason-wrapper {
+  margin-bottom: 60px; }
 
 .requests__add {
   border: none;
@@ -728,7 +739,8 @@ body {
 
 .requests__add-wrapper {
   width: 50px;
-  height: 50px; }
+  height: 50px;
+  margin-top: -50px; }
 
 .requests__submit {
   width: 150px;
@@ -745,6 +757,11 @@ body {
   margin-top: 10px;
   color: #fff;
   background-color: #00D1D1; }
+  @media (min-width: 64em) {
+    .requests__submit {
+      width: 170px;
+      height: 45px;
+      font-size: 16px; } }
 
 .requests__button-wrapper {
   display: flex;
@@ -764,3 +781,8 @@ input[type=text], select {
   border: 0.5px solid #EDE8E8;
   border-radius: 4px;
   box-sizing: border-box; }
+  @media (min-width: 64em) {
+    input[type=text], select {
+      width: 400px;
+      height: 40px;
+      font-size: 16px; } }

@@ -5,7 +5,8 @@ const addRequest = () => {
     if (document.getElementById("add_request") !== null){
       document.getElementById("add_request").addEventListener("click", function(){
 
-          document.getElementById("request").innerHTML += '<div class="requests__reason-wrapper"> <p class="requests__reason"> Reden aanvraag: </p> <br> <input type="text" name="request[]"  classname="requests__input"> </input> <br><br><br>  </div> <p class="requests__reason"> Kies een datum: </p> <br><input type="text" id="pick-date" class="requests__date-picker"> ';
+          document.getElementById("request").innerHTML += '<div class="requests__date-reason-wrapper"><div class="requests__reason-wrapper"><p class="requests__reason"> Reden aanvraag: </p> <br><input type="text" name="request[]"  classname="requests__input"><br><br><br></div><p class="requests__reason"> Kies een datum: </p> <br><input type="text" id="pick-date" class="requests__date-picker"></div>';
+
           addInputNumber++;
 
             // 1. Everytime addRequest gets executed it will ++ the InputNumber, so this is how we get unique input numbers.
