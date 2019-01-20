@@ -10,27 +10,25 @@
  <html>
  <head>
      <meta charset="UTF-8">
-     <title> Bekijk de status van je aanvragen </title>
 
      <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
 
  </head>
  <body>
 
-   <div class="requests__top">
-       <div class="requests__button-wrapper">
-           <a class="requests__button" href="requests.php" id="aanvraag">
+<div class="status__container">
+   <div class="status__top">
+       <div class="status__button-wrapper">
+           <a class="status__button" href="requests.php" id="aanvraag">
               Aanvragen
            </a>
        </div>
-       <div class="requests__button-wrapper">
-           <a class="current requests__button" href="status.php" id="status">
+       <div class="status__button-wrapper">
+           <a class="current status__button" href="status.php" id="status">
              Status
            </a>
        </div>
    </div>
-
-   <h1> Bekijk de status van je aanvragen </h1>
 
    <ul>
 
@@ -47,14 +45,20 @@
                   $status = 'Geweigerd';
               }
         ?>
-         <li>
-             <p><?= $items['request'] ?></p>
-             <p><?= $items['date'] ?></p>
-              <p><?= $status ?></p>
-         </li>
+        <ul>
+             <li class="status__list-item">
+                <div>
+                 <p><?= $items['request'] ?></p>
+                 <p><?= $items['date'] ?></p>
+                  <p><?= $status ?></p>
+                </div>
+             </li>
+        </ul>
      <?php }
      ?>
 
    </ul>
+</div>
+
  </body>
  </html>

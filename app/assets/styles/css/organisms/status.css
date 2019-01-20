@@ -1,0 +1,86 @@
+/* ===============================================
+   Breakpoint
+   =============================================== */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+/* ===============================================
+   Typography settings
+   =============================================== */
+/* $typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+); */
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */
+body {
+  padding: 0;
+  margin: 0; }
+
+.status__container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8F7F7; }
+
+.status__top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  padding: 20px;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 64em) {
+    .status__top {
+      flex-direction: row;
+      width: 100%; } }
+
+.status__button {
+  width: 150px;
+  height: 35px;
+  border: 0.5px solid #EDE8E8;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #A7A7A7; }
+  @media (min-width: 64em) {
+    .status__button {
+      width: 170px;
+      height: 45px;
+      font-size: 16px; } }
+
+.status__button-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.current {
+  color: #fff; }
