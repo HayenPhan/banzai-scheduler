@@ -29,18 +29,26 @@
        <form action="requests_succes.php" method="post">
            <div id="request">
 
-                <div>
-                    Reden aanvraag: <br>
-                    <input type="text" name="request[]"  classname="inputje">
+                <div class="requests__reason-wrapper">
+                    <p class="requests__reason"> Reden aanvraag: </p> <br>
+                    <input type="text" name="request[]"  classname="requests__input">
                     <br><br><br>
                 </div>
                 <button type="button" class="requests__date-picker"> Prik een datum </button>
 
             </div>
-            <button name="submit"> Submit </input>
+
+            <button class="requests__submit" name="submit">
+               Submit
+           </button>
+
       </form>
 
-      <button id="add_request"> Add  </button>
+      <button class="requests__add" id="add_request">
+          <div class="requests__add-wrapper">
+              <img class="requests__add-image" src="../../../app/assets/images/plus.png" />
+          </div>
+      </button>
 
   </div>
 
