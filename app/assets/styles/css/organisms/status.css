@@ -94,6 +94,12 @@ body {
   flex-direction: column;
   position: relative;
   padding: 30px; }
+  @media (min-width: 64em) {
+    .status__long-square {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px; } }
 
 .status__content-wrapper {
   display: flex;
@@ -103,6 +109,9 @@ body {
   position: absolute;
   right: 80px;
   bottom: 10px; }
+  @media (min-width: 64em) {
+    .status__current-status {
+      position: relative; } }
 
 .status__name, .status__request, .status__date, .status__current-status, .status__default {
   font-family: 'PT sans', sans-serif;

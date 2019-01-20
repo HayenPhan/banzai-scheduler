@@ -83,6 +83,10 @@ body {
 
 
         @include breakpoint(laptop) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
 
 	      }
     }
@@ -96,6 +100,10 @@ body {
         position: absolute;
         right: 80px;;
         bottom: 10px;
+
+        @include breakpoint(laptop) {
+            position: relative;
+	      }
     }
 
     &__name, &__request, &__date, &__current-status, &__default {
