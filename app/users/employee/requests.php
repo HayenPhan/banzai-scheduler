@@ -38,17 +38,19 @@
 
             </div>
 
-            <button class="requests__submit" name="submit">
-               Submit
-           </button>
+            <div class="requests__button-wrapper">
+                <button type="button" class="requests__add" id="add_request">
+                    <div class="requests__add-wrapper">
+                        <img class="requests__add-image" src="../../../app/assets/images/plus.png" />
+                    </div>
+                </button>
+
+                <button type="submit" class="requests__submit" name="submit">
+                   Submit
+               </button>
+            </div>
 
       </form>
-
-      <button class="requests__add" id="add_request">
-          <div class="requests__add-wrapper">
-              <img class="requests__add-image" src="../../../app/assets/images/plus.png" />
-          </div>
-      </button>
 
   </div>
 

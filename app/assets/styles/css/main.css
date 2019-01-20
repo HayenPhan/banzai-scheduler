@@ -673,6 +673,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
   font-family: 'PT sans', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -684,7 +685,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: #A7A7A7;
-  margin: 0; }
+  margin-bottom: -15px; }
 
 .requests__reason-wrapper {
   margin-bottom: -40px; }
@@ -706,14 +707,37 @@ body {
   -moz-osx-font-smoothing: inherit;
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
-  margin-left: -265px; }
+  margin-bottom: 70px; }
   .requests__add-image {
     max-width: 100%;
     max-height: 100%; }
 
+.requests__add:focus {
+  outline: 0; }
+
 .requests__add-wrapper {
   width: 50px;
   height: 50px; }
+
+.requests__submit {
+  width: 150px;
+  height: 35px;
+  text-decoration: none;
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #00D1D1; }
+
+.requests__button-wrapper {
+  display: flex;
+  flex-direction: column; }
 
 .current {
   background-color: #00D1D1;
