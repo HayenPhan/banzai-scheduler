@@ -13,11 +13,25 @@
         flex-direction: column;
         align-items: center;
         padding-top: 25px;
+
+        @include breakpoint(laptop) {
+            align-items: flex-start;
+	      }
     }
     &__top {
         display: flex;
         flex-direction: column;
         margin-bottom: 70px;
+
+        @include breakpoint(laptop) {
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+	      }
+    }
+
+    &__wrapper {
+        padding-left: 60px;
     }
 
     &__button {
@@ -44,8 +58,8 @@
         width: 150px;
         height: 35px;
         text-decoration: none;
-        border: 0;
-        background-color: #CBB4FF;
+        border: 0.5px solid #EDE8E8;
+        background-color: #FFF;
 
         border-radius: 5px;
         display: flex;
@@ -58,7 +72,7 @@
         font-weight: 400;
         font-size: 14px;
         margin-top: 10px;
-        color: #fff;
+        color: #CBB4FF;
     }
 
     &__reason {
@@ -77,7 +91,7 @@
       border: none;
        margin: 0;
        padding: 0;
-       width: auto;
+       width: 50px;
        overflow: visible;
 
        background: transparent;

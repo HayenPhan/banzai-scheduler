@@ -27,6 +27,7 @@
       </div>
 
        <form action="requests_succes.php" method="post">
+         <div class="requests__wrapper">
            <div id="request">
 
                 <div class="requests__reason-wrapper">
@@ -34,7 +35,8 @@
                     <input type="text" name="request[]"  classname="requests__input">
                     <br><br><br>
                 </div>
-                <button type="button" class="requests__date-picker"> Prik een datum </button>
+                <p class="requests__reason"> Kies een datum: </p> <br>
+                <input type="text" id="pick-date" class="requests__date-picker">
 
             </div>
 
@@ -49,7 +51,7 @@
                    Submit
                </button>
             </div>
-
+        </div>
       </form>
 
   </div>

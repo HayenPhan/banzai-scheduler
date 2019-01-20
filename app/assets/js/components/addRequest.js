@@ -5,7 +5,7 @@ const addRequest = () => {
     if (document.getElementById("add_request") !== null){
       document.getElementById("add_request").addEventListener("click", function(){
 
-          document.getElementById("request").innerHTML += '<div class="requests__reason-wrapper"> <p class="requests__reason"> Reden aanvraag: </p> <br> <input type="text" name="request[]"  classname="requests__input"> </input> <br><br><br>  </div> <button type="button" class="requests__date-picker"> Prik een datum </button>';
+          document.getElementById("request").innerHTML += '<div class="requests__reason-wrapper"> <p class="requests__reason"> Reden aanvraag: </p> <br> <input type="text" name="request[]"  classname="requests__input"> </input> <br><br><br>  </div> <p class="requests__reason"> Kies een datum: </p> <br><input type="text" id="pick-date" class="requests__date-picker"> ';
           addInputNumber++;
 
             // 1. Everytime addRequest gets executed it will ++ the InputNumber, so this is how we get unique input numbers.
@@ -13,9 +13,16 @@ const addRequest = () => {
 
             // tinydatepicker
 
-            const inputs = Array.prototype.slice.call(document.querySelectorAll('.requests__date-picker'));
+              const inputs = Array.prototype.slice.call(document.querySelectorAll('.requests__date-picker'));
 
-            inputs.forEach(TinyDatePicker);
+              for (var i = 0; i < inputs.length; i++) {
+                const bla = TinyDatePicker(inputs[i]);
+
+                console.log(bla.state.selectedDate);
+
+              }
+
+
 
       });
     }
@@ -26,9 +33,15 @@ const addRequest = () => {
 // But default there's only 1. And when you add a request that's when you have a new .requests__date-picker class and it has
 // to look for that existing class AGAIN>
 
-const inputs = Array.prototype.slice.call(document.querySelectorAll('.requests__date-picker'));
+  const inputs = Array.prototype.slice.call(document.querySelectorAll('.requests__date-picker'));
 
-inputs.forEach(TinyDatePicker);
+  for (var i = 0; i < inputs.length; i++) {
+    const bla = TinyDatePicker(inputs[i]);
+
+    console.log(bla.state.selectedDate);
+
+  }
+
 
 
 addRequest();
