@@ -13,7 +13,6 @@ body {
     &__container {
         width: 100%;
         height: auto;
-        display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #F8F7F7;
@@ -21,13 +20,15 @@ body {
     &__top {
         display: flex;
         flex-direction: column;
-        margin-bottom: 70px;
-        padding: 20px;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 30px;
         height: 100px;
         width: 100%;
         background-color: #fff;
         justify-content: center;
         align-items: center;
+
 
         @include breakpoint(laptop) {
             flex-direction: row;
@@ -66,9 +67,116 @@ body {
         flex-direction: column;
     }
 
+    &__list-item {
+        list-style-type: none;
+    }
+
+    &__long-square {
+        width: 100%;
+        height: 150px;
+        background-color: #fff;
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+        position: relative;
+        padding: 30px;
+
+
+        @include breakpoint(laptop) {
+
+	      }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__current-status {
+        position: absolute;
+        right: 80px;;
+        bottom: 10px;
+    }
+
+    &__name, &__request, &__date, &__current-status, &__default {
+        font-family: 'PT sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    &__name {
+        color: #C1B8D6;
+    }
+
+    &__default {
+        color: #BCBCBC;
+        margin-right: 15px;
+    }
+
+    &__request {
+        color: #9F9D9D;
+    }
+
+    &__date {
+        color: #9282B7;
+    }
+
+    &__add {
+      border: none;
+       margin: 0;
+       padding: 0;
+       width: 50px;
+       overflow: visible;
+
+       background: transparent;
+
+       /* inherit font & color from ancestor */
+       color: inherit;
+       font: inherit;
+
+       /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+       line-height: normal;
+
+       /* Corrects font smoothing for webkit */
+       -webkit-font-smoothing: inherit;
+       -moz-osx-font-smoothing: inherit;
+
+       /* Corrects inability to style clickable `input` types in iOS */
+       -webkit-appearance: none;
+
+       &-image {
+          max-width: 100%;
+          max-height: 100%;
+       }
+
+       margin-bottom: 70px;
+
+       position: absolute;
+       right: 20px;
+
+
+    }
+
+    &__add:focus {
+        outline: 0;
+    }
+
 
 }
 
 .current {
   color: #fff;
+  border: 0;
+}
+
+.pending {
+    color: #C7C7C7;
+}
+
+.accepted {
+    color: #00C39D;
+}
+
+.rejected {
+    color: #ED4141;
 }

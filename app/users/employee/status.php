@@ -28,9 +28,12 @@
              Status
            </a>
        </div>
+       <a href="home.php" class="status__add">
+           <div class="status__add-wrapper">
+               <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
+           </div>
+       </a>
    </div>
-
-   <ul>
 
      <?php foreach($pending_requests as $key => $items) { ?>
 
@@ -38,26 +41,26 @@
             $status = '';
 
               if($items['status'] == 0) {
-                  $status = 'In behandeling';
+                  $status = '<p class="status__current-status pending"> In behandeling </p>';
               } else if($items['status'] == 1) {
-                  $status = 'Geaccepteerd';
+                  $status = '<p class="status__current-status accepted"> Geaccepteerd </p>';
               } else if($items['status'] == 2) {
-                  $status = 'Geweigerd';
+                  $status = '<p class="status__current-status rejected"> Geweigerd </p>';
               }
         ?>
-        <ul>
-             <li class="status__list-item">
-                <div>
-                 <p><?= $items['request'] ?></p>
-                 <p><?= $items['date'] ?></p>
-                  <p><?= $status ?></p>
+                <div class="status__long-square">
+                    <p class="status__name">Xiaotong</p>
+                    <div class="status__content-wrapper">
+                        <p class="status__default"> Aanvraag: </p>
+                        <div class="status__request-wrapper">
+                            <p class="status__request"><?= $items['request'] ?></p>
+                            <p class="status__date"><?= $items['date'] ?></p>
+                        </div>
+                    </div>
+                    <?= $status ?>
                 </div>
-             </li>
-        </ul>
      <?php }
      ?>
-
-   </ul>
 </div>
 
  </body>

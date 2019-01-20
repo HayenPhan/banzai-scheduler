@@ -24,6 +24,11 @@
                 Status
               </a>
           </div>
+          <a href="home.php" class="status__add">
+              <div class="status__add-wrapper">
+                  <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
+              </div>
+          </a>
       </div>
 
        <form action="requests_succes.php" method="post">
