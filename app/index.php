@@ -96,6 +96,7 @@ or die("Error: ". mysqli_connect_error());
                           <div class="login__input">
                               <input class="login__password" id="password" type="password" name="password" placeholder="Wachtwoord"/>
                           </div>
+
                           <div class="login__input">
                               <button class="login__submit" type="submit" name="submit">
                                   <h2 class="login__submit-title"> Login </h2>
