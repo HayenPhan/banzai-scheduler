@@ -64,31 +64,66 @@ if(isset($_POST['rejected'])) {
 <head>
     <meta charset="UTF-8">
     <title> Bekijk de status van je aanvragen </title>
-
+    <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
 </head>
 <body>
-  <h1> Bekijk de status van je aanvragen </h1>
 
-  <ul>
+  <div class="status__container">
+     <div class="status__top">
+         <div class="status__button-wrapper">
+             <a class="status__button" href="requests.php" id="aanvraag">
+                Aanvragen
+             </a>
+         </div>
+         <div class="status__button-wrapper">
+             <a class="current status__button" href="status.php" id="status">
+               Status
+             </a>
+         </div>
+         <a href="home.php" class="status__add">
+             <div class="status__add-wrapper">
+                 <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
+             </div>
+         </a>
+     </div>
 
-    <?php foreach($pending_requests as $key => $items) { ?>
-        <li>
-            <p><?= $items['first_name'] ?></p>
-            <p><?= $items['request'] ?></p>
-            <p><?= $items['date'] ?></p>
-            <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                <input type="submit" name="rejected" value="Weigeren"> </input>
-                <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-                <p> <?= $items['id']?></p>
-            </form>
-            <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                <input type="submit" name="accepted" value="Accepteren"> </input>
-                <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-            </form>
-        </li>
-    <?php }
-    ?>
+       <?php foreach($pending_requests as $key => $items) { ?>
 
-  </ul>
+          <?=
+              $status = '';
+
+                if($items['status'] == 0) {
+                    $status = '<p class="status__current-status pending"> In behandeling </p>';
+                } else if($items['status'] == 1) {
+                    $status = '<p class="status__current-status accepted"> Geaccepteerd </p>';
+                } else if($items['status'] == 2) {
+                    $status = '<p class="status__current-status rejected"> Geweigerd </p>';
+                }
+          ?>
+                  <div class="status__long-square">
+                      <p class="status__name"> <?= $items['first_name'] ?> </p>
+                      <div class="status__content-wrapper">
+                          <p class="status__default"> Aanvraag: </p>
+                          <div class="status__request-wrapper">
+                              <p class="status__request"><?= $items['request'] ?></p>
+                              <p class="status__date"><?= $items['date'] ?></p>
+                          </div>
+                      </div>
+                      <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+                          <input type="submit" name="rejected" value="Weigeren"> </input>
+                          <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+                          <p> <?= $items['id']?></p>
+                      </form>
+                      <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+                          <input type="submit" name="accepted" value="Accepteren"> </input>
+                          <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+                      </form>
+                  </div>
+       <?php }
+       ?>
+  </div>
+
+
+
 </body>
 </html>
