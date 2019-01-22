@@ -57,28 +57,54 @@ if(isset($_POST['revert'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> Bekijk de status van je aanvragen </title>
+    <title> Geschiedenis </title>
 
+    <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+    
 </head>
 <body>
-  <h1> Geschiedenis aanvragen </h1>
 
-  <ul>
+  <div class="requests-admin__container">
+     <div class="requests-admin__top">
+         <div class="requests-admin__button-wrapper">
+             <a class="requests-admin__button" href="requests.php" id="aanvraag">
+                Aanvragen
+             </a>
+         </div>
+         <div class="requests-admin__button-wrapper">
+             <a class="current requests-admin__button" href="history.php" id="history">
+               History
+             </a>
+         </div>
+         <a href="home.php" class="requests-admin__add">
+             <div class="requests-admin__add-wrapper">
+                 <img class="requests-admin__add-image" src="../../../app/assets/images/left-arrow.png" />
+             </div>
+         </a>
+     </div>
 
-    <?php foreach($requests as $key => $items) { ?>
-        <li>
-            <p><?= $items['first_name'] ?></p>
-            <p><?= $items['request'] ?></p>
-            <p><?= $items['date'] ?></p>
-            <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                <input type="submit" name="revert" value="revert"> </input>
-                <input type="hidden"  name="status"  value="<?= $items['status'] ?>" />
-                <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-            </form>
-        </li>
-    <?php }
-    ?>
+       <?php foreach($requests as $key => $items) { ?>
 
-  </ul>
+                  <div class="requests-admin__long-square">
+                      <p class="requests-admin__name"> <?= $items['first_name'] ?> </p>
+                      <div class="requests-admin__content-wrapper">
+                          <p class="requests-admin__default"> Aanvraag: </p>
+                          <div class="requests-admin__request-wrapper">
+                              <p class="requests-admin__request"><?= $items['request'] ?></p>
+                              <p class="requests-admin__date"><?= $items['date'] ?></p>
+                          </div>
+                      </div>
+
+                      <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+                          <input type="submit" name="revert" value="revert"> </input>
+                          <input type="hidden"  name="status"  value="<?= $items['status'] ?>" />
+                          <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+                      </form>
+
+                  </div>
+       <?php }
+       ?>
+  </div>
+
 </body>
 </html>

@@ -69,6 +69,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 .login__container {
   width: 100%;
   display: flex;
@@ -789,6 +790,165 @@ input[type=text], select {
       width: 400px;
       height: 40px;
       font-size: 16px; } }
+
+/* ===============================================
+   Breakpoint
+   =============================================== */
+/* ===============================================
+   Typography settings
+   =============================================== */
+/* $typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+); */
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */
+body {
+  padding: 0;
+  margin: 0; }
+
+.requests-admin__container {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8F7F7; }
+
+.requests-admin__top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 64em) {
+    .requests-admin__top {
+      flex-direction: row;
+      width: 100%; } }
+
+.requests-admin__button {
+  width: 150px;
+  height: 35px;
+  border: 0.5px solid #EDE8E8;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #A7A7A7; }
+  @media (min-width: 64em) {
+    .requests-admin__button {
+      width: 170px;
+      height: 45px;
+      font-size: 16px; } }
+
+.requests-admin__button-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.requests-admin__list-item {
+  list-style-type: none; }
+
+.requests-admin__long-square {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  position: relative;
+  padding: 30px; }
+  @media (min-width: 64em) {
+    .requests-admin__long-square {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px; } }
+
+.requests-admin__content-wrapper {
+  display: flex;
+  flex-direction: row; }
+
+.requests-admin__current-status {
+  position: absolute;
+  right: 80px;
+  bottom: 10px; }
+  @media (min-width: 64em) {
+    .requests-admin__current-status {
+      position: relative; } }
+
+.requests-admin__name, .requests-admin__request, .requests-admin__date, .requests-admin__current-status, .requests-admin__default {
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px; }
+
+.requests-admin__name {
+  color: #C1B8D6; }
+
+.requests-admin__default {
+  color: #BCBCBC;
+  margin-right: 15px; }
+
+.requests-admin__request {
+  color: #9F9D9D; }
+
+.requests-admin__date {
+  color: #9282B7; }
+
+.requests-admin__add {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  margin-bottom: 70px;
+  position: absolute;
+  right: 20px; }
+  .requests-admin__add-image {
+    max-width: 100%;
+    max-height: 100%; }
+
+.requests-admin__add:focus {
+  outline: 0; }
 
 /* ===============================================
    Breakpoint
