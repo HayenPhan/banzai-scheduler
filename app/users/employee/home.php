@@ -8,9 +8,9 @@ session_start();
 if($_SESSION['type'] =! 'employee') {
     header("Location: index.php");
     exit;
+} else {
+    $name = $_SESSION['name'];
 }
-
-$name = $_SESSION['name'];
 
 ?>
 

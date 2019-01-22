@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-.requests-admin {
+.history {
     &__container {
         width: 100%;
         height: auto;
@@ -167,6 +167,30 @@ body {
 
     &__add:focus {
         outline: 0;
+    }
+
+    &__revert {
+        background-color: orange;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+
+        position: absolute;
+        right: 70px;
+        top: 80px;
+
+        background-image: url(../../images/left-arrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px 50px;
+
+        @include breakpoint(laptop) {
+            top: 40px;
+            right: 100px;
+            background-size: 60px 60px;
+        }
     }
 
 
