@@ -91,6 +91,10 @@ body {
 	      }
     }
 
+    #hideDiv {
+        display: block;
+    }
+
     &__content-wrapper {
         display: flex;
         flex-direction: row;

@@ -101,6 +101,9 @@ body {
       align-items: center;
       height: 70px; } }
 
+.requests-admin #hideDiv {
+  display: block; }
+
 .requests-admin__content-wrapper {
   display: flex;
   flex-direction: row; }

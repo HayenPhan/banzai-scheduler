@@ -26,6 +26,8 @@ while($row = mysqli_fetch_assoc($result)) {
 
 $request = mysqli_fetch_assoc($result);
 
+// JE ZIET NIKS OMDAT ER NOG GEEN GEACCEPTEERDE OF GEWEIGERDE REQUESTS ZIJN
+
 // GET current status
 
 // Revert as pending request
@@ -85,7 +87,7 @@ if(isset($_POST['revert'])) {
 
        <?php foreach($requests as $key => $items) { ?>
 
-         <?=
+         <?php
              $status = '';
 
                if($items['status'] == 0) {
@@ -116,8 +118,9 @@ if(isset($_POST['revert'])) {
                       </form>
 
                   </div>
-       <?php }
-       ?>
+
+       <?php } ?>
+
   </div>
 
 </body>
