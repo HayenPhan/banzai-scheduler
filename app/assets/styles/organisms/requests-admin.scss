@@ -196,5 +196,16 @@ body {
         width: 20px;
     }
 
+    &__buttons-wrapper {
+        position: absolute;
+        right: 85px;
+        top: 55px;
+
+        @include breakpoint(laptop) {
+            position: relative;
+            margin-bottom: 110px;
+	      }
+    }
+
 
 }

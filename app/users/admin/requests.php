@@ -97,16 +97,18 @@ if(isset($_POST['rejected'])) {
                               <p class="requests-admin__date"><?= $items['date'] ?></p>
                           </div>
                       </div>
-                      <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                          <input class="requests-admin__rejected" type="submit" value="" name="rejected">
-                          </input>
-                          <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-                      </form>
-                      <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                          <input class="requests-admin__accepted" type="submit" value="" name="accepted">
-                          </input>
-                          <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-                      </form>
+                      <div class="requests-admin__buttons-wrapper">
+                          <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+                              <input class="requests-admin__rejected" type="submit" value="" name="rejected">
+                              </input>
+                              <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+                          </form>
+                          <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
+                              <input class="requests-admin__accepted" type="submit" value="" name="accepted">
+                              </input>
+                              <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+                          </form>
+                    </div>
                   </div>
        <?php }
        ?>

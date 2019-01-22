@@ -180,3 +180,12 @@ body {
 
 .requests-admin__crossicon {
   width: 20px; }
+
+.requests-admin__buttons-wrapper {
+  position: absolute;
+  right: 85px;
+  top: 55px; }
+  @media (min-width: 64em) {
+    .requests-admin__buttons-wrapper {
+      position: relative;
+      margin-bottom: 110px; } }
