@@ -8,6 +8,7 @@
     // By starting session, it knows who you are and for example also knows that your last_name is Phan.
 
     $first_name = $_SESSION['name'];
+    $user_id = $_SESSION['user_id'];
 
 
 
@@ -36,7 +37,7 @@
 
                   //Msqli real escape string makes data safe before sending it to mysql.
 
-                  $sql = "INSERT INTO pending_requests(first_name, request) VALUES ('$first_name','" . $msqli->real_escape_string($value) . "')";
+                  $sql = "INSERT INTO pending_requests(first_name, user_id, request) VALUES ('$first_name','$user_id','" . $msqli->real_escape_string($value) . "')";
 
                   $insert = $msqli->query($sql);
 
