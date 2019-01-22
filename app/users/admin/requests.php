@@ -23,7 +23,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 
 
-
 // Update status to 1 (accepted)
 
 if(isset($_POST['accepted'])) {
@@ -68,45 +67,34 @@ if(isset($_POST['rejected'])) {
 </head>
 <body>
 
-  <div class="status__container">
-     <div class="status__top">
-         <div class="status__button-wrapper">
-             <a class="status__button" href="requests.php" id="aanvraag">
+  <div class="requests-admin__container">
+     <div class="requests-admin__top">
+         <div class="requests-admin__button-wrapper">
+             <a class="current requests-admin__button" href="requests.php" id="aanvraag">
                 Aanvragen
              </a>
          </div>
-         <div class="status__button-wrapper">
-             <a class="current status__button" href="status.php" id="status">
-               Status
+         <div class="requests-admin__button-wrapper">
+             <a class="requests-admin__button" href="history.php" id="history">
+               History
              </a>
          </div>
-         <a href="home.php" class="status__add">
-             <div class="status__add-wrapper">
-                 <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
+         <a href="home.php" class="requests-admin__add">
+             <div class="requests-admin__add-wrapper">
+                 <img class="requests-admin__add-image" src="../../../app/assets/images/left-arrow.png" />
              </div>
          </a>
      </div>
 
        <?php foreach($pending_requests as $key => $items) { ?>
 
-          <?=
-              $status = '';
-
-                if($items['status'] == 0) {
-                    $status = '<p class="status__current-status pending"> In behandeling </p>';
-                } else if($items['status'] == 1) {
-                    $status = '<p class="status__current-status accepted"> Geaccepteerd </p>';
-                } else if($items['status'] == 2) {
-                    $status = '<p class="status__current-status rejected"> Geweigerd </p>';
-                }
-          ?>
-                  <div class="status__long-square">
-                      <p class="status__name"> <?= $items['first_name'] ?> </p>
-                      <div class="status__content-wrapper">
-                          <p class="status__default"> Aanvraag: </p>
-                          <div class="status__request-wrapper">
-                              <p class="status__request"><?= $items['request'] ?></p>
-                              <p class="status__date"><?= $items['date'] ?></p>
+                  <div class="requests-admin__long-square">
+                      <p class="requests-admin__name"> <?= $items['first_name'] ?> </p>
+                      <div class="requests-admin__content-wrapper">
+                          <p class="requests-admin__default"> Aanvraag: </p>
+                          <div class="requests-admin__request-wrapper">
+                              <p class="requests-admin__request"><?= $items['request'] ?></p>
+                              <p class="requests-admin__date"><?= $items['date'] ?></p>
                           </div>
                       </div>
                       <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
