@@ -16,25 +16,24 @@
 
     $queryAll =
 
-     "SELECT pending_requests.request, pending_requests.date
+     "SELECT pending_requests.request, pending_requests.date, pending_requests.status
      FROM pending_requests
      INNER JOIN users ON pending_requests.user_id = users.user_id
      WHERE pending_requests.user_id = $user_id;"; // fix this later, code still works
 
 
-    $newresult = mysqli_query($db, $queryAll);
+    $result = mysqli_query($db, $queryAll);
 
 
-    // Create array & store from the database
+    // Create array
 
-    $lol = [];
+    $details = [];
 
-    while($row = mysqli_fetch_assoc($newresult)) {
-        $lol[] = $row;
+    while($row = mysqli_fetch_assoc($result)) {
+        $details[] = $row;
     }
 
-    print_r($lol)
-
+    $status = '';
 
 ?>
 
@@ -67,19 +66,21 @@
        </a>
    </div>
 
-     <?php foreach($pending_requests as $key => $items) { ?>
 
-        <?=
-            $status = '';
+     <?php foreach($details as $key => $items) {
 
-              if($items['status'] == 0) {
-                  $status = '<p class="status__current-status pending"> In behandeling </p>';
-              } else if($items['status'] == 1) {
-                  $status = '<p class="status__current-status accepted"> Geaccepteerd </p>';
-              } else if($items['status'] == 2) {
-                  $status = '<p class="status__current-status rejected"> Geweigerd </p>';
-              }
-        ?>
+       $status = '';
+
+       if($items['status'] == 0) {
+           $status = '<p class="status__current-status pending"> In behandeling </p>';
+       } else if($items['status'] == 1) {
+           $status = '<p class="status__current-status accepted"> Geaccepteerd </p>';
+       } else if($items['status'] == 2) {
+           $status = '<p class="status__current-status rejected"> Geweigerd </p>';
+       }
+
+       ?>
+
                 <div class="status__long-square">
                     <p class="status__name">Xiaotong</p>
                     <div class="status__content-wrapper">
