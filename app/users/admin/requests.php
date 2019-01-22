@@ -98,12 +98,13 @@ if(isset($_POST['rejected'])) {
                           </div>
                       </div>
                       <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                          <input type="submit" name="rejected" value="Weigeren"> </input>
+                          <input class="requests-admin__rejected" type="submit" value="" name="rejected">
+                          </input>
                           <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-                          <p> <?= $items['id']?></p>
                       </form>
                       <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                          <input type="submit" name="accepted" value="Accepteren"> </input>
+                          <input class="requests-admin__accepted" type="submit" value="" name="accepted">
+                          </input>
                           <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
                       </form>
                   </div>

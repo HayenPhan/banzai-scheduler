@@ -950,6 +950,29 @@ body {
 .requests-admin__add:focus {
   outline: 0; }
 
+.requests-admin__rejected, .requests-admin__accepted {
+  background-color: orange;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px; }
+
+.requests-admin__rejected {
+  background-image: url(../../images/cross.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px; }
+
+.requests-admin__accepted {
+  background-image: url(../../images/verified.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px; }
+
+.requests-admin__crossicon {
+  width: 20px; }
+
 /* ===============================================
    Breakpoint
    =============================================== */
