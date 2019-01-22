@@ -42,8 +42,6 @@
 
                   if (!$insert) {
                       echo $msqli->error;
-                  } else {
-                      print_r("Het is gelukt!");
                   }
               }
 
@@ -66,12 +64,33 @@
      <meta charset="UTF-8">
      <title> Aanvragen gelukt </title>
 
+     <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+
 
  </head>
  <body>
-     <div>
-        <h1>  </h1>
-      </div>
 
+   <div class="requests__container">
+   <div class="requests__top">
+       <div class="requests__button-wrapper">
+           <a class="current requests__button" href="requests.php" id="aanvraag">
+              Aanvragen
+           </a>
+       </div>
+       <div class="requests__button-wrapper">
+           <a href="status.php" id="status" class="requests__button">
+             Status
+           </a>
+       </div>
+       <a href="home.php" class="status__add">
+           <div class="status__add-wrapper">
+               <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
+           </div>
+       </a>
+   </div>
+         <div class="requests__succes">
+            <h2 class="requests__succes-title"> Het aanvragen van je vakantiedag(en) is gelukt! </h2>
+          </div>
+    </div>
  </body>
  </html>

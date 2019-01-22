@@ -179,6 +179,7 @@
 
 }
 
+
 .current {
   background-color: #00D1D1;
   color: white;
@@ -200,5 +201,24 @@ input[type=text], select {
       height: 40px;
       font-size: 16px;
   }
+
+}
+
+
+// Succespage
+
+.requests__succes {
+    &-title {
+        font-family: 'PT sans', sans-serif;
+        font-weight: 400;
+        color: #CBB4FF;
+    }
+
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @include breakpoint(laptop) {
+        padding-left: 50px;
+    }
 
 }

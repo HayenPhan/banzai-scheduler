@@ -791,6 +791,17 @@ input[type=text], select {
       height: 40px;
       font-size: 16px; } }
 
+.requests__succes {
+  padding-left: 50px;
+  padding-right: 50px; }
+  .requests__succes-title {
+    font-family: 'PT sans', sans-serif;
+    font-weight: 400;
+    color: #CBB4FF; }
+  @media (min-width: 64em) {
+    .requests__succes {
+      padding-left: 50px; } }
+
 /* ===============================================
    Breakpoint
    =============================================== */
