@@ -31,12 +31,11 @@ if(isset($_POST['accepted'])) {
       $result = mysqli_query($db, $acceptedQuery);
 
       if($result) {
-          print_r('Het is gelukt');
+        Header('Location: '.$_SERVER['PHP_SELF']);
+        Exit();
       }else {
           print_r('Aanvraag accepteren is niet gelukt.');
       }
-
-
 
 }
 
@@ -50,7 +49,8 @@ if(isset($_POST['rejected'])) {
       $result = mysqli_query($db, $rejectedQuery);
 
       if($result) {
-          print_r('Het is gelukt');
+          Header('Location: '.$_SERVER['PHP_SELF']);
+          Exit();
       }else {
           print_r('Aanvraag weigeren is niet gelukt.');
       }
@@ -106,7 +106,7 @@ if(isset($_POST['rejected'])) {
                               <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
                           </form>
                           <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                              <input class="requests-admin__accepted"  type="submit" value="" name="accepted">
+                              <input class="requests-admin__accepted" type="submit" value="" name="accepted">
                               </input>
                               <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
                           </form>
@@ -117,9 +117,6 @@ if(isset($_POST['rejected'])) {
        <?php }
        ?>
   </div>
-
-
-    <script src="../../assets/js/components/hideDiv.js"></script>
 
 
 </body>

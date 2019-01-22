@@ -1,3 +1,4 @@
 const hideDiv = () => {
-   document.getElementById('hideDiv').style.display = "none";
+   window.location.reload();
+   console.log('tf');
 }
