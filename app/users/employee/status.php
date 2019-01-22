@@ -4,6 +4,38 @@
     // Start session because I need the first and Last name of employee.
     session_start();
 
+    $user_id = $_SESSION['user_id'];
+
+    // Create query for db & fetch result
+
+    // Fetching pending requests, because the admin has to see the pending requests.
+
+
+    $db = mysqli_connect($host, $user, $password, $database)
+    or die("Error: ". mysqli_connect_error());
+
+    $queryAll =
+
+     "SELECT pending_requests.request, pending_requests.date
+     FROM pending_requests
+     INNER JOIN users ON pending_requests.user_id = users.user_id
+     WHERE pending_requests.user_id = $user_id;"; // fix this later, code still works
+
+
+    $newresult = mysqli_query($db, $queryAll);
+
+
+    // Create array & store from the database
+
+    $lol = [];
+
+    while($row = mysqli_fetch_assoc($newresult)) {
+        $lol[] = $row;
+    }
+
+    print_r($lol)
+
+
 ?>
 
  <!DOCTYPE html>
