@@ -1366,6 +1366,11 @@ body {
       right: 100px;
       background-size: 60px 60px; } }
 
+@media (min-width: 64em) {
+  .history__status {
+    position: absolute;
+    right: 200px; } }
+
 /* ===============================================
    Breakpoint
    =============================================== */

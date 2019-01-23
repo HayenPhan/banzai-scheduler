@@ -120,7 +120,9 @@ if(isset($_POST['revert'])) {
                           </div>
                       </div>
 
-                      <?= $status ?>
+                      <div class="history__status">
+                        <?= $status ?>
+                      </div>
 
                       <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
                           <input class="history__revert"type="submit" name="revert" value=""> </input>

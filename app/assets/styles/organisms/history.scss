@@ -193,5 +193,12 @@ body {
         }
     }
 
+    &__status {
+      @include breakpoint(laptop) {
+          position: absolute;
+          right: 200px;
+      }
+    }
+
 
 }
