@@ -49,8 +49,8 @@ while($row = mysqli_fetch_assoc($result)) {
              </a>
          </div>
          <div class="requests-admin__button-wrapper">
-             <a class="requests-admin__button" href="status.php" id="history">
-                Status
+             <a class="requests-admin__button" href="history.php" id="history">
+                History
              </a>
          </div>
 
