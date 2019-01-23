@@ -43,7 +43,8 @@ if(isset($_POST['revert'])) {
     $result = mysqli_query($db, $revert);
 
     if($result) {
-        print_r('Het is met succes teruggezet bij pending requests.');
+        Header('Location: '.$_SERVER['PHP_SELF']);
+        Exit();
     }else {
         print_r('Het is niet gelukt met het terugzetten naar pending requests.');
     }
