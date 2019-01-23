@@ -56,7 +56,9 @@ body {
   @media (min-width: 64em) {
     .status__top {
       flex-direction: row;
-      width: 100%; } }
+      width: 100%;
+      align-items: stretch;
+      margin-top: 20px; } }
 
 .status__button {
   width: 150px;

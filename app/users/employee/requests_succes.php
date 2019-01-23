@@ -88,6 +88,11 @@
                <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
            </div>
        </a>
+       <div class="requests-uitloggen__wrapper">
+           <a class="requests-uitloggen" href="../../logout.php">
+              Uitloggen
+           </a>
+       </div>
    </div>
          <div class="requests__succes">
             <h2 class="requests__succes-title"> Het aanvragen van je vakantiedag(en) is gelukt! </h2>

@@ -84,6 +84,11 @@ if(isset($_POST['revert'])) {
                  <img class="history__add-image" src="../../../app/assets/images/left-arrow.png" />
              </div>
          </a>
+         <div class="history-uitloggen__wrapper">
+             <a class="history-uitloggen" href="../../logout.php" id="aanvraag">
+                Uitloggen
+             </a>
+         </div>
      </div>
 
        <?php foreach($requests as $key => $items) { ?>

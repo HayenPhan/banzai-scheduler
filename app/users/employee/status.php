@@ -64,6 +64,11 @@
                <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
            </div>
        </a>
+       <div class="status-uitloggen__wrapper">
+           <a class="status-uitloggen" href="../../logout.php">
+              Uitloggen
+           </a>
+       </div>
    </div>
 
 

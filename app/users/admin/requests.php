@@ -71,6 +71,7 @@ if(isset($_POST['rejected'])) {
 
   <div class="requests-admin__container">
      <div class="requests-admin__top">
+
          <div class="requests-admin__button-wrapper">
              <a class="current requests-admin__button" href="requests.php" id="aanvraag">
                 Aanvragen
@@ -86,6 +87,13 @@ if(isset($_POST['rejected'])) {
                  <img class="requests-admin__add-image" src="../../../app/assets/images/left-arrow.png" />
              </div>
          </a>
+
+         <div class="admin-requests-uitloggen__wrapper">
+             <a class="admin-requests-uitloggen" href="../../logout.php">
+                Uitloggen
+             </a>
+         </div>
+
      </div>
 
        <?php foreach($pending_requests as $key => $items) { ?>

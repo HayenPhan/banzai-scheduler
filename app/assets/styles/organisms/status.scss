@@ -33,6 +33,8 @@ body {
         @include breakpoint(laptop) {
             flex-direction: row;
             width: 100%;
+            align-items: stretch;
+            margin-top: 20px;
 	      }
     }
 

@@ -34,7 +34,7 @@
 .uitloggen {
   width: 150px;
   height: 35px;
-  border: 0.5px solid #EDE8E8;
+  border: 0.5px solid #B4A5D8;
   text-decoration: none;
   border-radius: 5px;
   display: flex;
@@ -44,7 +44,7 @@
   font-weight: 400;
   font-size: 14px;
   margin-top: 10px;
-  color: #A7A7A7; }
+  color: #B4A5D8; }
   @media (min-width: 64em) {
     .uitloggen {
       width: 120px;
@@ -67,9 +67,7 @@
   font-size: 14px;
   margin-top: 10px;
   color: #B4A5D8;
-  position: absolute;
-  right: 40px;
-  top: 25px; }
+  position: absolute; }
   @media (min-width: 64em) {
     .requests-uitloggen {
       width: 120px;
@@ -78,3 +76,69 @@
       position: absolute;
       right: 100px;
       border: 0.5px solid #B4A5D8; } }
+
+.status-uitloggen {
+  width: 150px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #B4A5D8; }
+  @media (min-width: 64em) {
+    .status-uitloggen {
+      width: 120px;
+      height: 45px;
+      font-size: 16px;
+      position: absolute;
+      right: 100px;
+      border: 0.5px solid #B4A5D8; } }
+
+.admin-requests-uitloggen {
+  width: 150px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #B4A5D8; }
+  @media (min-width: 64em) {
+    .admin-requests-uitloggen {
+      width: 120px;
+      height: 45px;
+      font-size: 16px;
+      position: absolute;
+      right: 100px;
+      border: 0.5px solid #B4A5D8;
+      margin-top: 30px; } }
+
+.history-uitloggen {
+  width: 150px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #B4A5D8; }
+  @media (min-width: 64em) {
+    .history-uitloggen {
+      width: 120px;
+      height: 45px;
+      font-size: 16px;
+      position: absolute;
+      right: 100px;
+      top: 52px;
+      border: 0.5px solid #B4A5D8;
+      margin: 0; } }
