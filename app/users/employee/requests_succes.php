@@ -93,6 +93,11 @@
              Status
            </a>
        </div>
+       <div class="requests__button-wrapper">
+           <a href="overview.php" id="status" class="requests__button">
+             Overzicht
+           </a>
+       </div>
        <a href="home.php" class="status__add">
            <div class="status__add-wrapper">
                <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />

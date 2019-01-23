@@ -79,6 +79,11 @@ if(isset($_POST['revert'])) {
                History
              </a>
          </div>
+         <div class="history__button-wrapper">
+             <a class="history__button" href="overview.php" id="history">
+               Overzicht
+             </a>
+         </div>
          <a href="home.php" class="history__add">
              <div class="history__add-wrapper">
                  <img class="history__add-image" src="../../../app/assets/images/left-arrow.png" />

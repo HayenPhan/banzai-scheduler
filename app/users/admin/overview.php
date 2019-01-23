@@ -73,7 +73,7 @@ if(isset($_POST['rejected'])) {
      <div class="requests-admin__top">
 
          <div class="requests-admin__button-wrapper">
-             <a class="current requests-admin__button" href="requests.php" id="aanvraag">
+             <a class="requests-admin__button" href="requests.php" id="aanvraag">
                 Aanvragen
              </a>
          </div>
@@ -83,8 +83,8 @@ if(isset($_POST['rejected'])) {
              </a>
          </div>
          <div class="requests-admin__button-wrapper">
-             <a class="requests-admin__button" href="overview.php" id="history">
-               Overzicht
+             <a class="current requests-admin__button" href="overview.php" id="history">
+                Overzicht
              </a>
          </div>
          <a href="home.php" class="requests-admin__add">
