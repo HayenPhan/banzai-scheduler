@@ -29,6 +29,13 @@
                   <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
               </div>
           </a>
+
+          <div class="requests-uitloggen__wrapper">
+              <a class="requests-uitloggen" href="../../logout.php">
+                 Uitloggen
+              </a>
+          </div>
+
       </div>
 
        <form action="requests_succes.php" method="post">
@@ -58,7 +65,7 @@
                    Submit
                </button>
             </div>
-            
+
         </div>
 
       </form>

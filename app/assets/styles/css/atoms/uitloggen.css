@@ -1,0 +1,80 @@
+/* ===============================================
+   Breakpoint
+   =============================================== */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+/* ===============================================
+   Typography settings
+   =============================================== */
+/* $typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+); */
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */
+.uitloggen {
+  width: 150px;
+  height: 35px;
+  border: 0.5px solid #EDE8E8;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #A7A7A7; }
+  @media (min-width: 64em) {
+    .uitloggen {
+      width: 120px;
+      height: 45px;
+      font-size: 16px;
+      position: absolute;
+      top: 20px;
+      right: -350px; } }
+
+.requests-uitloggen {
+  width: 150px;
+  height: 35px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #B4A5D8;
+  position: absolute;
+  right: 40px;
+  top: 25px; }
+  @media (min-width: 64em) {
+    .requests-uitloggen {
+      width: 120px;
+      height: 45px;
+      font-size: 16px;
+      position: absolute;
+      right: 100px;
+      border: 0.5px solid #B4A5D8; } }

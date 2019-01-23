@@ -1,3 +1,9 @@
+@import
+    '../variables/breakpoints',
+    '../variables/colors',
+    '../variables/typography'
+    ;
+
 .uitloggen {
 
   width: 150px;
@@ -10,7 +16,6 @@
   justify-content: center;
   align-items: center;
 
-
   font-family: 'PT sans', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -18,9 +23,47 @@
   color: #A7A7A7;
 
   @include breakpoint(laptop) {
-      width: 170px;
+      width: 120px;
       height: 45px;
       font-size: 16px;
+      position: absolute;
+      top: 20px;
+      right: -350px;
+  }
+
+    &__title {
+
+    }
+}
+
+.requests-uitloggen {
+
+  width: 150px;
+  height: 35px;
+  text-decoration: none;
+
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #B4A5D8;
+
+  position: absolute;
+  right: 40px;
+  top: 25px;
+
+  @include breakpoint(laptop) {
+      width: 120px;
+      height: 45px;
+      font-size: 16px;
+      position: absolute;
+      right: 100px;
+      border: 0.5px solid #B4A5D8;
   }
 
     &__title {
