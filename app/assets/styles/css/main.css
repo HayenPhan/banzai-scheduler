@@ -383,6 +383,9 @@ body {
       padding-top: 17px;
       width: 30%; } }
 
+.home a {
+  text-decoration: none; }
+
 .home__overview-wrapper {
   display: flex; }
 
@@ -472,7 +475,8 @@ body {
 
 .home__link {
   color: #580086;
-  font-size: 16px; }
+  font-size: 16px;
+  text-decoration: none; }
 
 .home__link-wrapper {
   margin-bottom: 50px; }

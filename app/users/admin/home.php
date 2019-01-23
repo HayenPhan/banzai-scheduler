@@ -92,7 +92,9 @@ while($row = mysqli_fetch_assoc($result)) {
                 <?php } ?>
 
                   <div class="home__link-wrapper">
-                      <p class="home__link"> Bekijk alles </p>
+                      <a class="home__link-link home__link" href="overview.php">
+                           Bekijk alles 
+                      </a>
                   </div>
 
                   <div class="home__bottom">

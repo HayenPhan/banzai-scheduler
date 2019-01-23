@@ -51,6 +51,9 @@ body {
 	      }
     }
 
+   a {
+     text-decoration: none;
+   }
 
 
     &__overview {
@@ -174,6 +177,7 @@ body {
     &__link {
         color: #580086;
         font-size: 16px;
+        text-decoration: none;
     }
 
     &__link-wrapper {
