@@ -158,7 +158,8 @@ body {
   text-decoration: none; }
 
 .home__link-wrapper {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-top: 20px; }
 
 .home__icon {
   max-width: 100%;
