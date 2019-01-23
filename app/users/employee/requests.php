@@ -49,7 +49,7 @@
                       <br><br><br>
                   </div>
                   <p class="requests__reason"> Kies een datum: </p> <br>
-                  <input type="text" id="pick-date" class="requests__date-picker">
+                  <input type="text" name="date[]" id="pick-date" class="requests__date-picker">
               </div>
 
             </div>

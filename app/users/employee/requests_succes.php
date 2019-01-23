@@ -19,6 +19,8 @@
 
         $request = $_POST['request'];
 
+        $date = $_POST['date'];
+
 
         if (isset($_POST['request'])) {
 
@@ -32,19 +34,27 @@
               $result = $msqli->query($query);
 
 
-              if($result) {
-                  //Perform inserted
 
-                  //Msqli real escape string makes data safe before sending it to mysql.
+              foreach($date as $key => $valuedate) {
 
-                  $sql = "INSERT INTO pending_requests(first_name, user_id, request) VALUES ('$first_name','$user_id','" . $msqli->real_escape_string($value) . "')";
+                  if($result) {
+                      //Perform inserted
 
-                  $insert = $msqli->query($sql);
+                      //Msqli real escape string makes data safe before sending it to mysql.
 
-                  if (!$insert) {
-                      echo $msqli->error;
+                      $sql = "INSERT INTO pending_requests(first_name, user_id, request, date) VALUES ('$first_name','$user_id','" . $msqli->real_escape_string($value) . "', '$valuedate')";
+
+                      $insert = $msqli->query($sql);
+
+                      if (!$insert) {
+                          echo $msqli->error;
+                      }
                   }
+
               }
+
+
+
 
             }
         }
