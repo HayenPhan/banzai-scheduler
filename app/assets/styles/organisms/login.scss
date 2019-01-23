@@ -45,21 +45,57 @@
     &__logo {
         width: 240px;
         height: 240px;
+        display: block;
+
+        @include breakpoint(laptop) {
+            display: none;
+        }
+    }
+
+    &__logo-white {
+        width: 150px;
+        height: 150px;
+        display: none;
+
+        @include breakpoint(laptop) {
+            display: block;
+        }
     }
 
     &__logo-wrapper {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         @include breakpoint(laptop) {
-            margin-bottom: 300px;
+          
         }
 
+    }
+
+    &__logo-title {
+        font-family: 'PT sans', sans-serif;
+        font-weight: 400;
+        margin-top: -20px;
+        margin-bottom: 60px;
+        color: #149A80;
+
+        @include breakpoint(laptop) {
+            color: #fff;
+            margin-top: 35px;
+            font-size: 40px;
+        }
     }
 
     &__logo-img {
         max-width:100%;
         max-height:100%;
+    }
+
+    &__logo-white-img {
+        max-width:100%;
+        max-height:100%;
+
     }
 
     // form

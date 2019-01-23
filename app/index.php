@@ -85,6 +85,10 @@ or die("Error: ". mysqli_connect_error());
                 <div class="login__logo">
                     <img class="login__logo-img" src="../app/assets/images/sumo.png" />
                 </div>
+                <div class="login__logo-white">
+                    <img class="login__logo-white-img" src="../app/assets/images/sumo-white.png" />
+                </div>
+                <h2 class="login__logo-title"> Banzai </h2>
             </div>
         </div>
 

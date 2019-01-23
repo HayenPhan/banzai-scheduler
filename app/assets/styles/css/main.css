@@ -243,16 +243,42 @@
 
 .login__logo {
   width: 240px;
-  height: 240px; }
+  height: 240px;
+  display: block; }
+  @media (min-width: 64em) {
+    .login__logo {
+      display: none; } }
+
+.login__logo-white {
+  width: 150px;
+  height: 150px;
+  display: none; }
+  @media (min-width: 64em) {
+    .login__logo-white {
+      display: block; } }
 
 .login__logo-wrapper {
   display: flex;
-  justify-content: center; }
+  align-items: center;
+  flex-direction: column; }
+
+.login__logo-title {
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  margin-top: -20px;
+  margin-bottom: 60px;
+  color: #149A80; }
   @media (min-width: 64em) {
-    .login__logo-wrapper {
-      margin-bottom: 300px; } }
+    .login__logo-title {
+      color: #fff;
+      margin-top: 35px;
+      font-size: 40px; } }
 
 .login__logo-img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.login__logo-white-img {
   max-width: 100%;
   max-height: 100%; }
 
