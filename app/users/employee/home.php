@@ -86,7 +86,7 @@ while($row = mysqli_fetch_assoc($result)) {
                       <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
                   </div>
 
-                   <?php foreach($details as $key => $items) { ?>
+                   <?php foreach(array_slice($details, 0, 3) as $key => $items) { ?>
 
                       <div class="home__overview-wrapper">
                           <div class="home__date-wrapper">
