@@ -32,6 +32,9 @@ $name = $_SESSION['name'];
                 <div class="home__logo">
                     <img class="home__logo-img" src="../../../app/assets/images/sumo.png" />
                 </div>
+                <div class="home__logo-white">
+                    <img class="home__logo-white-img" src="../../../app/assets/images/sumo-white.png" />
+                </div>
             </div>
             <div class="home__title-wrapper">
                 <h2 class="home__title"> Welkom, <br> <?= $name ?> </h2>
