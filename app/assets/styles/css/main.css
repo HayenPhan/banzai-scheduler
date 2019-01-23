@@ -1296,6 +1296,10 @@ body {
 .history__content-wrapper {
   display: flex;
   flex-direction: row; }
+  @media (min-width: 64em) {
+    .history__content-wrapper {
+      position: absolute;
+      left: 400px; } }
 
 .history__current-status {
   position: absolute;
@@ -1540,6 +1544,10 @@ body {
 .status__content-wrapper {
   display: flex;
   flex-direction: row; }
+  @media (min-width: 64em) {
+    .status__content-wrapper {
+      position: absolute;
+      left: 450px; } }
 
 .status__current-status {
   position: absolute;

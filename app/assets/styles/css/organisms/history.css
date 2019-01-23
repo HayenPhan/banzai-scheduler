@@ -104,6 +104,10 @@ body {
 .history__content-wrapper {
   display: flex;
   flex-direction: row; }
+  @media (min-width: 64em) {
+    .history__content-wrapper {
+      position: absolute;
+      left: 400px; } }
 
 .history__current-status {
   position: absolute;

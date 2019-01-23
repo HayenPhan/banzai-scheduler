@@ -94,6 +94,13 @@ body {
     &__content-wrapper {
         display: flex;
         flex-direction: row;
+
+        @include breakpoint(laptop) {
+          position: absolute;
+          left: 400px;
+
+	      }
+
     }
 
     &__current-status {
