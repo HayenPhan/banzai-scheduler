@@ -395,7 +395,8 @@ body {
   color: #696969; }
 
 .home__request-wrapper {
-  margin-left: 40px; }
+  margin-left: 40px;
+  margin-top: 10px; }
 
 .home__date-wrapper {
   margin-top: 5px; }

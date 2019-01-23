@@ -2,6 +2,10 @@
 
 session_start();
 
+require_once '../../includes/database.php';
+
+
+
 // May I even visit this page?
 
 // If I don't have the login variable then.. i will redirect back to login page.
@@ -11,6 +15,24 @@ if($_SESSION['type'] != 'admin') {
 }
 
 $name = $_SESSION['name'];
+
+$db = mysqli_connect($host, $user, $password, $database)
+or die("Error: ". mysqli_connect_error());
+
+$queryAll = "SELECT * FROM pending_requests WHERE status ='1'"; // fix this later, code still works
+
+
+$result = mysqli_query($db, $queryAll);
+
+
+// Create array
+
+$details = [];
+
+while($row = mysqli_fetch_assoc($result)) {
+    $details[] = $row;
+}
+
 
 ?>
 
@@ -54,16 +76,8 @@ $name = $_SESSION['name'];
                       <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
                   </div>
 
-                  <div class="home__overview-wrapper">
-                      <div class="home__date-wrapper">
-                          <p class="home__day"> 30 </p>
-                          <p class="home__month"> Dec </p>
-                      </div>
-                      <div class="home__request-wrapper">
-                          <p class="home__time"> 18:00 </p>
-                          <p class="home__request"> Kerstdiner op school </p>
-                      </div>
-                  </div>
+
+                 <?php foreach($details as $key => $items) { ?>
 
                   <div class="home__overview-wrapper">
                       <div class="home__date-wrapper">
@@ -71,10 +85,11 @@ $name = $_SESSION['name'];
                           <p class="home__month"> Dec </p>
                       </div>
                       <div class="home__request-wrapper">
-                          <p class="home__time"> 18:00 </p>
-                          <p class="home__request"> Kerstdiner op school </p>
+                          <p class="home__request"> <?= $items['request'] ?> </p>
                       </div>
                   </div>
+
+                <?php } ?>
 
                   <div class="home__link-wrapper">
                       <p class="home__link"> Bekijk alles </p>
