@@ -4,57 +4,29 @@ require_once '../../includes/database.php';
 // Start session because I need the first and Last name of employee.
 session_start();
 
-// Create connection
+$user_id = $_SESSION['user_id'];
+$name = $_SESSION['name'];
+
+// Create query for db & fetch result
+
+// Fetching pending requests, because the admin has to see the pending requests.
+
 
 $db = mysqli_connect($host, $user, $password, $database)
 or die("Error: ". mysqli_connect_error());
 
-$queryAll = "SELECT * FROM pending_requests WHERE status ='0'"; // fix this later, code still works
+$queryAll = "SELECT * FROM pending_requests WHERE status ='1'"; // fix this later, code still works
+
 
 $result = mysqli_query($db, $queryAll);
 
 
-// Create array & store from the database
+// Create array
 
-$pending_requests = [];
+$details = [];
 
 while($row = mysqli_fetch_assoc($result)) {
-    $pending_requests[] = $row;
-}
-
-
-// Update status to 1 (accepted)
-
-if(isset($_POST['accepted'])) {
-      $currentId = $_POST['id'];
-      $acceptedQuery = "UPDATE pending_requests SET status = '1' WHERE id = '$currentId'";
-      $result = mysqli_query($db, $acceptedQuery);
-
-      if($result) {
-        Header('Location: '.$_SERVER['PHP_SELF']);
-        Exit();
-      }else {
-          print_r('Aanvraag accepteren is niet gelukt.');
-      }
-
-}
-
-
-// Update status to 2 (rejected)
-
-if(isset($_POST['rejected'])) {
-
-      $currentId = $_POST['id'];
-      $rejectedQuery = "UPDATE pending_requests SET status = '2' WHERE id = '$currentId'";
-      $result = mysqli_query($db, $rejectedQuery);
-
-      if($result) {
-          Header('Location: '.$_SERVER['PHP_SELF']);
-          Exit();
-      }else {
-          print_r('Aanvraag weigeren is niet gelukt.');
-      }
-
+    $details[] = $row;
 }
 
 
@@ -69,7 +41,6 @@ if(isset($_POST['rejected'])) {
 </head>
 <body>
 
-  <div class="requests-admin__container">
      <div class="requests-admin__top">
 
          <div class="requests-admin__button-wrapper">
@@ -78,15 +49,17 @@ if(isset($_POST['rejected'])) {
              </a>
          </div>
          <div class="requests-admin__button-wrapper">
-             <a class="requests-admin__button" href="history.php" id="history">
-               History
+             <a class="requests-admin__button" href="status.php" id="history">
+                Status
              </a>
          </div>
+
          <div class="requests-admin__button-wrapper">
              <a class="current requests-admin__button" href="overview.php" id="history">
                 Overzicht
              </a>
          </div>
+
          <a href="home.php" class="requests-admin__add">
              <div class="requests-admin__add-wrapper">
                  <img class="requests-admin__add-image" src="../../../app/assets/images/left-arrow.png" />
@@ -101,35 +74,19 @@ if(isset($_POST['rejected'])) {
 
      </div>
 
-       <?php foreach($pending_requests as $key => $items) { ?>
 
-                  <div class="requests-admin__long-square">
-                      <p class="requests-admin__name"> <?= $items['first_name'] ?> </p>
-                      <div class="requests-admin__content-wrapper">
-                          <p class="requests-admin__default"> Aanvraag: </p>
-                          <div class="requests-admin__request-wrapper">
-                              <p class="requests-admin__request"><?= $items['request'] ?></p>
-                              <p class="requests-admin__date"><?= $items['date'] ?></p>
-                          </div>
-                      </div>
-                      <div class="requests-admin__buttons-wrapper">
-                          <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                              <input class="requests-admin__rejected" type="submit" value="" name="rejected">
-                              </input>
-                              <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-                          </form>
-                          <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                              <input class="requests-admin__accepted" type="submit" value="" name="accepted">
-                              </input>
-                              <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
-                          </form>
-                    </div>
+           <h2 class="overview__title"> Overzicht </h2>
+
+       <?php foreach($details as $key => $items) { ?>
+
+                  <div class="overview__container">
+                      <p class="overview__name"> <?= $items['first_name'] ?> </p>
+                      <p class="overview__request"> <?= $items['request'] ?> </p>
+                      <p class="overview__date"> <?= $items['date'] ?> </p>
                   </div>
-
 
        <?php }
        ?>
-  </div>
 
 
 </body>

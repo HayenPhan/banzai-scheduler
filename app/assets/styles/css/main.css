@@ -71,6 +71,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 .uitloggen {
   width: 150px;
   height: 35px;
@@ -1363,6 +1364,64 @@ body {
       top: 40px;
       right: 100px;
       background-size: 60px 60px; } }
+
+/* ===============================================
+   Breakpoint
+   =============================================== */
+/* ===============================================
+   Typography settings
+   =============================================== */
+/* $typo: (
+    // fonts
+    'font': (
+        'head': '"PT Sans", sans-serif',
+    ),
+    'weight': (
+        'regular': 400,
+        'bold': 700,
+    ),
+    'xsmall': (
+        'xs' : 10px,
+    ),
+    'small': (
+        'xs': 12px,
+    ),
+    'medium': (
+        'xs': 14px,
+    ),
+    'large': (
+        'xs': 16px,
+    ),
+); */
+/* Undefined variable: "$typo".
+        on line 45 of app/assets/styles/organisms/login.scss
+        from line 7 of app/assets/styles/main.scss
+>>         font-family: map-deep-get($typo, 'font', 'text'); */
+.overview__container {
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px; }
+
+.overview__name, .overview__request, .overview__date {
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px; }
+
+.overview__name {
+  color: #C1B8D6; }
+
+.overview__request, .overview__date {
+  color: #727272; }
+
+.overview__title {
+  text-align: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #C1B8D6; }
 
 /* ===============================================
    Breakpoint
