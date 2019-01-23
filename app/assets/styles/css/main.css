@@ -32,10 +32,35 @@
         on line 45 of app/assets/styles/organisms/login.scss
         from line 7 of app/assets/styles/main.scss
 >>         font-family: map-deep-get($typo, 'font', 'text'); */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+.uitloggen {
+  width: 150px;
+  height: 35px;
+  border: 0.5px solid #EDE8E8;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #A7A7A7; }
+  @media (min-width: 64em) {
+    .uitloggen {
+      width: 170px;
+      height: 45px;
+      font-size: 16px; } }
+
 /* ===============================================
    Breakpoint
    =============================================== */
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 /* ===============================================
    Typography settings
    =============================================== */
@@ -65,11 +90,6 @@
         on line 45 of app/assets/styles/organisms/login.scss
         from line 7 of app/assets/styles/main.scss
 >>         font-family: map-deep-get($typo, 'font', 'text'); */
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
 .login__container {
   width: 100%;
   display: flex;
@@ -205,7 +225,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 20px; }
+  padding-left: 20px;
+  position: relative; }
   @media (min-width: 64em) {
     .home__right-square {
       padding-left: 50px;

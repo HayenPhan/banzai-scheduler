@@ -38,7 +38,15 @@ if($_SESSION['type'] =! 'employee') {
         </div>
 
           <div class="home__right-square">
+
+            <div class="uitloggen__wrapper">
+                <a class="uitloggen" href="../../logout.php" id="aanvraag">
+                   Uitloggen
+                </a>
+            </div>
+
               <div class="home__overview">
+
                   <div class="home__overview-title-wrapper">
                       <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
                   </div>

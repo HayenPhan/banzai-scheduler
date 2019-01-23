@@ -1,0 +1,29 @@
+.uitloggen {
+
+  width: 150px;
+  height: 35px;
+  border: 0.5px solid #EDE8E8;
+  text-decoration: none;
+
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #A7A7A7;
+
+  @include breakpoint(laptop) {
+      width: 170px;
+      height: 45px;
+      font-size: 16px;
+  }
+
+    &__title {
+
+    }
+}
