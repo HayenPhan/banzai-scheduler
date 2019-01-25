@@ -50,7 +50,7 @@ while($row = mysqli_fetch_assoc($result)) {
          </div>
          <div class="requests-admin__button-wrapper">
              <a class="requests-admin__button" href="history.php" id="history">
-                History
+                Geschiedenis
              </a>
          </div>
 

@@ -79,7 +79,7 @@ if(isset($_POST['rejected'])) {
          </div>
          <div class="requests-admin__button-wrapper">
              <a class="requests-admin__button" href="history.php" id="history">
-               History
+               Geschiedenis
              </a>
          </div>
          <div class="requests-admin__button-wrapper">

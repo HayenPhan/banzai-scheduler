@@ -76,7 +76,7 @@ if(isset($_POST['revert'])) {
          </div>
          <div class="history__button-wrapper">
              <a class="current history__button" href="history.php" id="history">
-               History
+               Geschiedenis
              </a>
          </div>
          <div class="history__button-wrapper">
