@@ -1,5 +1,12 @@
 <?php
 
+include '../../../vendor/autoload.php';
+
+use Latitude\QueryBuilder\Engine\CommonEngine;
+use Latitude\QueryBuilder\QueryFactory;
+
+use function Latitude\QueryBuilder\field;
+
 // Credentials
 
 $host = 'localhost';
@@ -12,14 +19,25 @@ $database = 'banzai';
 $db = mysqli_connect($host, $user, $password, $database)
 or die("Error: ". mysqli_connect_error());
 
+
+
+$factory = new QueryFactory(new CommonEngine());
+$query = $factory
+    ->select('*')
+    ->from('pending_requests')
+    ->compile();
+
+$swek = $query->sql(); // SELECT "id" FROM "users" WHERE "id" = ?
+$query->params(); // [5]
+
 // Create query for db & fetch result
 
 // Fetching pending requests, because the admin has to see the pending requests.
 
-$queryAll = "SELECT * FROM pending_requests";
+//$queryAll = "SELECT * FROM pending_requests";
 
 
-$result = mysqli_query($db, $queryAll);
+$result = mysqli_query($db, $swek);
 
 
 // Create array & store from the database

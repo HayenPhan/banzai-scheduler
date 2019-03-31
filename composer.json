@@ -1,0 +1,5 @@
+{
+    "require": {
+        "latitude/latitude": "^3.3"
+    },
+}
