@@ -21,23 +21,27 @@ or die("Error: ". mysqli_connect_error());
 
 
 
-$factory = new QueryFactory(new CommonEngine());
-$query = $factory
-    ->select('*')
-    ->from('pending_requests')
-    ->compile();
+//$factory = new QueryFactory(new CommonEngine());
+//$query = $factory
+    //->select('*')
+    //->from('pending_requests')
+    //->compile();
 
-$swek = $query->sql(); // SELECT "id" FROM "users" WHERE "id" = ?
-$query->params(); // [5]
+//$swek = $query->sql(); // SELECT "id" FROM "users" WHERE "id" = ?
+//$query->params(); // [5]
+
+//print_r($swek);
+
+
 
 // Create query for db & fetch result
 
 // Fetching pending requests, because the admin has to see the pending requests.
 
-//$queryAll = "SELECT * FROM pending_requests";
+$queryAll = "SELECT * FROM pending_requests";
 
 
-$result = mysqli_query($db, $swek);
+$result = mysqli_query($db, $queryAll);
 
 
 // Create array & store from the database
