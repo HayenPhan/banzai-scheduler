@@ -16,7 +16,7 @@ or die("Error: ". mysqli_connect_error());
 
 // Fetching pending requests, because the admin has to see the pending requests.
 
-$queryAll = "SELECT * FROM pending_requests"; // fix this later, code still works
+$queryAll = "SELECT * FROM pending_requests";
 
 
 $result = mysqli_query($db, $queryAll);
@@ -26,9 +26,16 @@ $result = mysqli_query($db, $queryAll);
 
 $pending_requests = [];
 
-while($row = mysqli_fetch_assoc($result)) {
-    $pending_requests[] = $row;
+if($result) {
+
+    while($row = mysqli_fetch_assoc($result)) {
+        $pending_requests[] = $row;
+    }
+
+} else {
+  print_r('murp');
 }
+
 
 
 
