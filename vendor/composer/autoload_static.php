@@ -14,7 +14,6 @@ class ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa
         'L' => 
         array (
             'Latitude\\QueryBuilder\\' => 22,
-            'Latitude\\' => 9,
         ),
     );
 
@@ -23,56 +22,6 @@ class ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa
         array (
             0 => __DIR__ . '/..' . '/latitude/latitude/src',
         ),
-        'Latitude\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
-        ),
-    );
-
-    public static $classMap = array (
-        'Latitude\\QueryBuilder\\Builder\\CriteriaBuilder' => __DIR__ . '/..' . '/latitude/latitude/src/Builder/CriteriaBuilder.php',
-        'Latitude\\QueryBuilder\\Builder\\LikeBuilder' => __DIR__ . '/..' . '/latitude/latitude/src/Builder/LikeBuilder.php',
-        'Latitude\\QueryBuilder\\CriteriaInterface' => __DIR__ . '/..' . '/latitude/latitude/src/CriteriaInterface.php',
-        'Latitude\\QueryBuilder\\EngineInterface' => __DIR__ . '/..' . '/latitude/latitude/src/EngineInterface.php',
-        'Latitude\\QueryBuilder\\Engine\\BasicEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/BasicEngine.php',
-        'Latitude\\QueryBuilder\\Engine\\CommonEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/CommonEngine.php',
-        'Latitude\\QueryBuilder\\Engine\\MySqlEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/MySqlEngine.php',
-        'Latitude\\QueryBuilder\\Engine\\PostgresEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/PostgresEngine.php',
-        'Latitude\\QueryBuilder\\Engine\\SqlServerEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/SqlServerEngine.php',
-        'Latitude\\QueryBuilder\\ExpressionInterface' => __DIR__ . '/..' . '/latitude/latitude/src/ExpressionInterface.php',
-        'Latitude\\QueryBuilder\\Partial\\Criteria' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Criteria.php',
-        'Latitude\\QueryBuilder\\Partial\\Expression' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Expression.php',
-        'Latitude\\QueryBuilder\\Partial\\Identifier' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Identifier.php',
-        'Latitude\\QueryBuilder\\Partial\\IdentifierQualified' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/IdentifierQualified.php',
-        'Latitude\\QueryBuilder\\Partial\\LikeBegins' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/LikeBegins.php',
-        'Latitude\\QueryBuilder\\Partial\\LikeContains' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/LikeContains.php',
-        'Latitude\\QueryBuilder\\Partial\\LikeEnds' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/LikeEnds.php',
-        'Latitude\\QueryBuilder\\Partial\\Listing' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Listing.php',
-        'Latitude\\QueryBuilder\\Partial\\Literal' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Literal.php',
-        'Latitude\\QueryBuilder\\Partial\\Parameter' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Parameter.php',
-        'Latitude\\QueryBuilder\\Query' => __DIR__ . '/..' . '/latitude/latitude/src/Query.php',
-        'Latitude\\QueryBuilder\\QueryFactory' => __DIR__ . '/..' . '/latitude/latitude/src/QueryFactory.php',
-        'Latitude\\QueryBuilder\\QueryInterface' => __DIR__ . '/..' . '/latitude/latitude/src/QueryInterface.php',
-        'Latitude\\QueryBuilder\\Query\\AbstractQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/AbstractQuery.php',
-        'Latitude\\QueryBuilder\\Query\\Capability\\CanUnion' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/CanUnion.php',
-        'Latitude\\QueryBuilder\\Query\\Capability\\HasFrom' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasFrom.php',
-        'Latitude\\QueryBuilder\\Query\\Capability\\HasLimit' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasLimit.php',
-        'Latitude\\QueryBuilder\\Query\\Capability\\HasOffset' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasOffset.php',
-        'Latitude\\QueryBuilder\\Query\\Capability\\HasOrderBy' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasOrderBy.php',
-        'Latitude\\QueryBuilder\\Query\\Capability\\HasReturning' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasReturning.php',
-        'Latitude\\QueryBuilder\\Query\\Capability\\HasWhere' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasWhere.php',
-        'Latitude\\QueryBuilder\\Query\\DeleteQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/DeleteQuery.php',
-        'Latitude\\QueryBuilder\\Query\\InsertQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/InsertQuery.php',
-        'Latitude\\QueryBuilder\\Query\\MySql\\SelectQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/MySql/SelectQuery.php',
-        'Latitude\\QueryBuilder\\Query\\Postgres\\InsertQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Postgres/InsertQuery.php',
-        'Latitude\\QueryBuilder\\Query\\Postgres\\UpdateQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Postgres/UpdateQuery.php',
-        'Latitude\\QueryBuilder\\Query\\SelectQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/SelectQuery.php',
-        'Latitude\\QueryBuilder\\Query\\SqlServer\\DeleteQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/SqlServer/DeleteQuery.php',
-        'Latitude\\QueryBuilder\\Query\\SqlServer\\SelectQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/SqlServer/SelectQuery.php',
-        'Latitude\\QueryBuilder\\Query\\UnionQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/UnionQuery.php',
-        'Latitude\\QueryBuilder\\Query\\UpdateQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/UpdateQuery.php',
-        'Latitude\\QueryBuilder\\Ruler\\Visitor' => __DIR__ . '/..' . '/latitude/latitude/src/Ruler/Visitor.php',
-        'Latitude\\QueryBuilder\\StatementInterface' => __DIR__ . '/..' . '/latitude/latitude/src/StatementInterface.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -80,7 +29,6 @@ class ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa::$classMap;
 
         }, null, ClassLoader::class);
     }

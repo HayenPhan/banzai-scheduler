@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Latitude\\QueryBuilder\\' => array($vendorDir . '/latitude/latitude/src'),
-    'Latitude\\' => array($baseDir . '/app'),
 );
