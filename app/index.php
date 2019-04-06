@@ -5,9 +5,6 @@ require "../vendor/autoload.php";
 
 use Respect\Validation\Validator as v;
 
-$usernameValidator = v::alnum()->noWhitespace()->length(1,15);
-$usernameValidator->validate('alganet'); // true
-
 
 
 session_start();
@@ -41,9 +38,25 @@ or die("Error: ". mysqli_connect_error());
 
         // U can do stricter checks, but for now we're just doing one simple error.
 
-        if(empty($username) || empty($password )) {
-            $error = "Vul beide gegevens in";
+        /* if(empty($username) || empty($password )) {
+
+            $error = v::numeric()->validate($username);
+
+            $usernameValidator =  v::numeric();
+
+
+        } */
+
+
+        // Validation
+        $errorUsername = v::optional(v::alpha())->validate($username);
+        $errorPassword = v::optional(v::alpha())->validate($password);
+
+        if($errorUsername && $errorPassword == true) {
+            $error = "Gebruikersnaam of wachtwoord is onjuist";
         }
+
+        // Check if name and password are in database
 
         if ($username == $row['login_name'] || $password == $row['password_hash']) {
 
