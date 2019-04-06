@@ -1,5 +1,6 @@
 {
     "require": {
-        "latitude/latitude": "^3.3"
+        "latitude/latitude": "^3.3",
+        "respect/validation": "^1.1"
     }
 }

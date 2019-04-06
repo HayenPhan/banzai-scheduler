@@ -7,10 +7,19 @@ namespace Composer\Autoload;
 class ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa
 {
     public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '094883ee9da9e6fabd95b86a5ef61b72' => __DIR__ . '/..' . '/latitude/latitude/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+        ),
+        'R' => 
+        array (
+            'Respect\\Validation\\' => 19,
+        ),
         'L' => 
         array (
             'Latitude\\QueryBuilder\\' => 22,
@@ -18,6 +27,14 @@ class ComposerStaticInitf8072c9f79f5a8f1f9b6d9b557b4affa
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Respect\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/respect/validation/library',
+        ),
         'Latitude\\QueryBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/latitude/latitude/src',
