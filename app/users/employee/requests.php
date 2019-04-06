@@ -1,5 +1,6 @@
 <?php
 
+
  ?>
 
  <!DOCTYPE html>
@@ -30,7 +31,7 @@
                 Overzicht
               </a>
           </div>
-          
+
           <a href="home.php" class="status__add">
               <div class="status__add-wrapper">
                   <img class="status__add-image" src="../../../app/assets/images/left-arrow.png" />
@@ -53,7 +54,10 @@
                   <div class="requests__reason-wrapper">
                       <p class="requests__reason"> Reden aanvraag: </p> <br>
                       <input type="text" name="request[]"  classname="requests__input">
+                      <p> test </p>
                       <br><br><br>
+
+
                   </div>
                   <p class="requests__reason"> Kies een datum: </p> <br>
                   <input type="text" name="date[]" id="pick-date" class="requests__date-picker">

@@ -52,7 +52,11 @@ or die("Error: ". mysqli_connect_error());
         $errorUsername = v::optional(v::alpha())->validate($username);
         $errorPassword = v::optional(v::alpha())->validate($password);
 
-        if($errorUsername && $errorPassword == true) {
+        $noWhiteSpace = v::noWhitespace()->validate($username);
+        $noWhiteSpace = v::noWhitespace()->validate($password);
+
+
+        if($errorUsername && $errorPassword && $noWhiteSpace) {
             $error = "Gebruikersnaam of wachtwoord is onjuist";
         }
 
