@@ -1438,6 +1438,10 @@ body {
   font-size: 30px;
   color: #C1B8D6; }
 
+.registration__container {
+  position: relative;
+  width: 100%; }
+
 /* ===============================================
    Breakpoint
    =============================================== */

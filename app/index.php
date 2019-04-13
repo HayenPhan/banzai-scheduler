@@ -49,6 +49,8 @@ or die("Error: ". mysqli_connect_error());
 
 
         // Validation
+
+  
         $errorUsername = v::optional(v::alpha())->validate($username);
         $errorPassword = v::optional(v::alpha())->validate($password);
 
@@ -56,7 +58,7 @@ or die("Error: ". mysqli_connect_error());
         $noWhiteSpace = v::noWhitespace()->validate($password);
 
 
-        if($errorUsername && $errorPassword && $noWhiteSpace) {
+        if($errorUsername || $errorPassword || $noWhiteSpace) {
             $error = "Gebruikersnaam of wachtwoord is onjuist";
         }
 
