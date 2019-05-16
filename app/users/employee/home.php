@@ -51,7 +51,8 @@ while($row = mysqli_fetch_assoc($result)) {
 
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
+
     </head>
 
     <body>

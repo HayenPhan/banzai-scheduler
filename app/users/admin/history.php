@@ -62,7 +62,7 @@ if(isset($_POST['revert'])) {
     <meta charset="UTF-8">
     <title> Geschiedenis </title>
 
-    <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
 
 </head>
 <body>

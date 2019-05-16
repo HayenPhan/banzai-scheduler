@@ -65,7 +65,7 @@ if(isset($_POST['rejected'])) {
 <head>
     <meta charset="UTF-8">
     <title> Bekijk de status van je aanvragen </title>
-    <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
 </head>
 <body>
 

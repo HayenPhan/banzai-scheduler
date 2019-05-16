@@ -8,7 +8,7 @@
  <head>
      <meta charset="UTF-8">
      <title> Aanvragen </title>
-       <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+       <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
 
  </head>
  <body>

@@ -11,7 +11,7 @@ use Respect\Validation\Validator as v;
 // GET user input
 
 
-/////// GEBLEVEN BIJ. Hij doet het voor de Username, maar niet voor e-mail etc. 
+/////// GEBLEVEN BIJ. Hij doet het voor de Username, maar niet voor e-mail etc.
 
 $errorUsername = [];
 $errorEmail = [];
@@ -81,7 +81,7 @@ $password_confirm = $_POST['password_confirm'];
 
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../app/assets/styles/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../app/dist/css/main.css">
     </head>
 
     <body>

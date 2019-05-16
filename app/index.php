@@ -50,7 +50,7 @@ or die("Error: ". mysqli_connect_error());
 
         // Validation
 
-  
+
         $errorUsername = v::optional(v::alpha())->validate($username);
         $errorPassword = v::optional(v::alpha())->validate($password);
 
@@ -100,7 +100,7 @@ or die("Error: ". mysqli_connect_error());
 
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../app/assets/styles/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../app/dist/css/main.css">
     </head>
 
     <body>

@@ -42,7 +42,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../../../app/assets/styles/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
     </head>
 
     <body>
@@ -93,7 +93,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
                   <div class="home__link-wrapper">
                       <a class="home__link-link home__link" href="overview.php">
-                           Bekijk alles 
+                           Bekijk alles
                       </a>
                   </div>
 
