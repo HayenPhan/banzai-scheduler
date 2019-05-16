@@ -10,6 +10,9 @@ use Respect\Validation\Validator as v;
 
 // GET user input
 
+
+/////// GEBLEVEN BIJ. Hij doet het voor de Username, maar niet voor e-mail etc. 
+
 $errorUsername = [];
 $errorEmail = [];
 $errorPassword = [];
@@ -31,8 +34,9 @@ $password_confirm = $_POST['password_confirm'];
     // Username
 
     $noWhiteSpaceUser = v::noWhitespace()->validate($username);
-    $emptyUser = v::optional(v::alpha())->validate($username);
     $characterUser = v::alnum()->validate($username);
+    $emptyUser = v::notBlank()->validate($username);
+
 
     // Email
 
@@ -40,19 +44,6 @@ $password_confirm = $_POST['password_confirm'];
     $emptyEmail = v::optional(v::alpha())->validate($email);
     $characterEmail = v::alnum()->validate($email);
     $emailValidator = v::email()->validate(trim($email));
-
-
-    // password
-
-    $noWhiteSpacePassword = v::noWhitespace()->validate($password);
-    $emptyPassword = v::optional(v::alpha())->validate($password);
-    $characterPassword = v::alnum()->validate($password);
-
-    // password confirm
-
-    $noWhiteSpacePasswordC = v::noWhitespace()->validate($password_confirm);
-    $emptyPasswordC = v::optional(v::alpha())->validate($password_confirm);
-    $characterPasswordC = v::alnum()->validate($password_confirm);
 
 
 
@@ -65,12 +56,18 @@ $password_confirm = $_POST['password_confirm'];
         array_push($errorUsername, "Geen witruimte toegestaan bij invullen gebruikersnaam");
     }
 
-    if(!$emptyUser) {
-        array_push($errorUsername, "Gebruikersnaam is niet ingevuld");
+    if(!$characterUser) {
+        array_push($errorUsername, "Only use character A-Z or 0-9");
     }
 
-    if(!$characterUser) {
-        array_push($errorUsername, "Alleen characters van A-Z en 0-9 zijn toegestaan");
+    if(!$emptyUser) {
+        array_push($errorUsername, "Vul je gebruikersnaam in");
+    }
+
+    // Email conditional
+
+    if(!$noWhiteSpaceEmail) {
+        array_push($errorEmail, "Geen witruimte toegestaan bij invullen e-mail");
     }
 
 }
@@ -127,10 +124,12 @@ $password_confirm = $_POST['password_confirm'];
 
              <p> <?= $error ?> </p>
 
+
         <?php }
 
 
         ?>
+
 
       </div>
 
