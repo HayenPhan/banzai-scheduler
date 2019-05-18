@@ -48,6 +48,7 @@
 
        <form action="requests_succes.php" method="post">
          <div class="requests__wrapper">
+
            <div id="request">
 
              <div class="requests__date-reason-wrapper">
@@ -64,6 +65,7 @@
               </div>
 
             </div>
+
 
             <div class="requests__button-wrapper">
                 <button type="button" class="requests__add" id="add_request">

@@ -23,8 +23,19 @@ or die("Error: ". mysqli_connect_error());
 
         if (isset($_POST['submit'])) {
 
+
+        // Insert phpcaptcha
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/cle/banzai-scheduler/securimage/securimage.php';
+
+        $securimage = new Securimage();
+
+
+        // Username and password
+
         $username = $_POST['username'];
         $password = $_POST['password'];
+        $captchaCode = $_POST['captcha_code'];
 
         // Store Query in variable
         $usersQuery = "SELECT * from users WHERE login_name = '$username' and password_hash = '$password' ";
@@ -62,9 +73,13 @@ or die("Error: ". mysqli_connect_error());
             $error = "Gebruikersnaam of wachtwoord is onjuist";
         }
 
+
+
         // Check if name and password are in database
 
-        if ($username == $row['login_name'] || $password == $row['password_hash']) {
+        if ($username == $row['login_name'] && $password == $row['password_hash'] && $securimage->check($_POST['captcha_code']) == true) {
+
+
 
           /*  // E-mail
             $_SESSION['type'] = $email; */
@@ -85,9 +100,14 @@ or die("Error: ". mysqli_connect_error());
             }
 
 
-            } else if ($username != $row['login_name'] || $password != $row['password_hash']) {
+            }
+
+
+            else if ($username != $row['login_name'] && $password != $row['password_hash'] && $securimage->check($_POST['captcha_code']) == false) {
                 $error = "Combinatie gebruikersnaam/wachtwoord onjuist";
             }
+
+
 
     }
 
@@ -128,6 +148,17 @@ or die("Error: ". mysqli_connect_error());
                           </div>
                           <div class="login__input">
                               <input class="login__password" id="password" type="password" name="password" placeholder="Wachtwoord"/>
+                          </div>
+
+                          <div class-"requests__captcha">
+
+                              <img id="captcha" src="../securimage/securimage_show.php" alt="CAPTCHA Image" />
+
+                              <input type="text" name="captcha_code" size="10" maxlength="6" />
+                              <a href="#" onclick="document.getElementById('captcha').src = '../securimage/securimage_show.php?' + Math.random(); return false">
+                              [ Different Image ]
+                              </a>
+
                           </div>
 
                           <div class="login__input">
