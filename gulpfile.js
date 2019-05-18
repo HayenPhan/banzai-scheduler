@@ -27,17 +27,7 @@ gulp.task('watch', () => {    // It's better to set this on default, because you
 });
 
 
-// gulp.task('scripts', () =>  {
-//   return gulp.src(
-//   ['node_modules/babel-polyfill/dist/polyfill.js','app/assets/js/*.js']).pipe(babel({
-//       presets: ['es2015'],
-//       plugins: ["syntax-dynamic-import"]
-//   }))
-//   .pipe(gulp.dest('app/assets/compiled'));
-// });
-
-
-// babel
+// babel (without this you can't use gulp-uglify for the minifying part)
 
 gulp.task('babel', () =>
     gulp.src('app/assets/js/**/*.js')
@@ -56,6 +46,5 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('app/dist/js'))
 });
 
-// Find out how let BrowserSync work
 
 gulp.task('default', gulp.series('styles', 'watch', 'babel', 'scripts'));
