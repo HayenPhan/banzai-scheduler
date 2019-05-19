@@ -37,6 +37,14 @@ or die("Error: ". mysqli_connect_error());
         $password = htmlspecialchars($_POST['password']);
         $captchaCode = $_POST['captcha_code'];
 
+
+
+        //PROBEER PDO TE GEBRUIKEN VOOR SQL INJECTIONS
+
+
+        //$fetch = $db->prepare("SELECT * from users WHERE login_name = '$username' and password_hash = '$password' ");
+
+
         // Store Query in variable
         $usersQuery = "SELECT * from users WHERE login_name = '$username' and password_hash = '$password' ";
 
