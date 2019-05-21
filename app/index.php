@@ -38,7 +38,6 @@ or die("Error: ". mysqli_connect_error());
         $captchaCode = $_POST['captcha_code'];
 
 
-
         //PROBEER PDO TE GEBRUIKEN VOOR SQL INJECTIONS
 
 
