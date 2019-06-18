@@ -5,6 +5,24 @@ session_start();
 require_once '../../includes/database.php';
 
 
+// Current time API
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_URL, 'http://worldtimeapi.org/api/ip');
+$result = curl_exec($ch);
+curl_close($ch);
+
+$time = json_decode($result);
+
+$timezone = $time->timezone;
+$week_number = $time->week_number;
+$datetime = $time->utc_datetime;
+$datetimesinglebyte = substr($datetime, 0, 10);
+
+
+
 
 // May I even visit this page?
 
@@ -114,6 +132,15 @@ while($row = mysqli_fetch_assoc($result)) {
                           </a>
                       </div>
                   </div>
+
+                  <div class="home__currenttime-wrapper">
+
+                      <p class="home__currenttime-text"> Je bent momenteel in <?= $timezone ?></p>
+                      <p class="home__currenttime-text"> De datum van vandaag is: <?= $datetimesinglebyte ?>, week <?= $week_number ?>! </p>
+
+
+                  </div>
+
 
 
               </div>

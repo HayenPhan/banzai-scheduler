@@ -18,7 +18,6 @@ curl_close($ch);
 
 $time = json_decode($result);
 
-
 $timezone = $time->timezone;
 $week_number = $time->week_number;
 $datetime = $time->utc_datetime;
@@ -108,9 +107,11 @@ while($row = mysqli_fetch_assoc($result)) {
 
               <div class="home__overview">
 
+
                   <div class="home__overview-title-wrapper">
                       <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
                   </div>
+
 
                    <?php foreach(array_slice($details, 0, 3) as $key => $items) { ?>
 
@@ -133,6 +134,7 @@ while($row = mysqli_fetch_assoc($result)) {
                     </a>
                 </div>
 
+
                   <div class="home__bottom">
                       <hr class="home__line" />
 
@@ -150,6 +152,16 @@ while($row = mysqli_fetch_assoc($result)) {
                           </a>
                       </div>
                   </div>
+
+
+                  <div class="home__currenttime-wrapper">
+
+                      <p class="home__currenttime-text"> Je bent momenteel in <?= $timezone ?></p>
+                      <p class="home__currenttime-text"> De datum van vandaag is: <?= $datetimesinglebyte ?>, week <?= $week_number ?>! </p>
+
+
+                  </div>
+
 
 
               </div>
