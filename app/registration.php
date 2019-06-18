@@ -20,10 +20,10 @@ $errorPasswordC = [];
 
   if (isset($_POST['submit'])) {
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$password_confirm = $_POST['password_confirm'];
+  $username = $_POST['username'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $password_confirm = $_POST['password_confirm'];
 
 
 // GET input array_count_value

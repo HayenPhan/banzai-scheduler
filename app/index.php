@@ -33,8 +33,8 @@ or die("Error: ". mysqli_connect_error());
 
         // Username and password
 
-        $username = htmlspecialchars($_POST['username']);
-        $password = htmlspecialchars($_POST['password']);
+        $username = msqli_real_escape_string(htmlentities($_POST['username']));
+        $password = msqli_real_escape_string(htmlentities($_POST['password']));
         $captchaCode = $_POST['captcha_code'];
 
 
@@ -82,10 +82,9 @@ or die("Error: ". mysqli_connect_error());
 
 
 
-        // Check if name and password are in database
+          // Check if name and password are in database
 
-        if ($username == $row['login_name'] && $password == $row['password_hash'] && $securimage->check($_POST['captcha_code']) == true) {
-
+          if ($username == $row['login_name'] && $password == $row['password_hash'] && $securimage->check($_POST['captcha_code']) == true) {
 
 
           /*  // E-mail
@@ -106,9 +105,7 @@ or die("Error: ". mysqli_connect_error());
               exit;
             }
 
-
             }
-
 
             else if ($username != $row['login_name'] && $password != $row['password_hash'] && $securimage->check($_POST['captcha_code']) == false) {
                 $error = "Combinatie gebruikersnaam/wachtwoord onjuist";
