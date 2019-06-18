@@ -1,8 +1,25 @@
 <?php
 
+
+
 session_start();
 
 require_once '../../includes/database.php';
+
+
+// Current time API
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_URL, 'http://worldtimeapi.org/api/ip');
+$result = curl_exec($ch);
+curl_close($ch);
+
+$time = json_decode($result);
+
+print_r($time->timezone);
+
 
 // May I even visit this page?
 
