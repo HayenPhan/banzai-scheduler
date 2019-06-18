@@ -15,7 +15,7 @@ if($_SESSION['type'] =! 'employee') {
 }
 
 $user_id = $_SESSION['user_id'];
-$name = $_SESSION['name'];
+$name =  htmlspecialchars($_SESSION['name']);
 
 // Create query for db & fetch result
 
