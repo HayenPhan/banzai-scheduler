@@ -18,7 +18,15 @@ curl_close($ch);
 
 $time = json_decode($result);
 
-print_r($time->timezone);
+
+$timezone = $time->timezone;
+$week_number = $time->week_number;
+$datetime = $time->utc_datetime;
+$datetimesinglebyte = substr($datetime, 0, 10);
+
+
+
+
 
 
 // May I even visit this page?
