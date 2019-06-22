@@ -26,10 +26,11 @@ $errorLastname = [];
   $msqli = mysqli_connect($host, $user, $password, $database)
   or die("Error: ". mysqli_connect_error());
 
-  $firstname = $_POST['firstname'];
-  $lastname = $_POST['lastname'];
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $firstname = mysqli_real_escape_string($msqli, htmlentities($_POST['firstname']));
+  $lastname = mysqli_real_escape_string($msqli, htmlentities($_POST['lastname']));
+  $username = mysqli_real_escape_string($msqli, htmlentities($_POST['username']));
+  $password = mysqli_real_escape_string($msqli, htmlentities($_POST['password']));
+
 
 
   $sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
