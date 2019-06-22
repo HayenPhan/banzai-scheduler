@@ -17,8 +17,8 @@
         or die("Error: ". mysqli_connect_error());
 
 
-        $request = msqli_real_escape_string(htmlentities($_POST['request']));
-        $date = msqli_real_escape_string(htmlentities($_POST['date']));
+        $request = mysqli_real_escape_string($db, htmlentities($_POST['request']));
+        $date = mysqli_real_escape_string($db, htmlentities($_POST['date']));
 
 
         if (isset($_POST['request'])) {

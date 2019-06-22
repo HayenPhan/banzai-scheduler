@@ -33,8 +33,8 @@ or die("Error: ". mysqli_connect_error());
 
         // Username and password
 
-        $username = msqli_real_escape_string(htmlentities($_POST['username']));
-        $password = msqli_real_escape_string(htmlentities($_POST['password']));
+        $username = mysqli_real_escape_string($db, htmlentities($_POST['username']));
+        $password = mysqli_real_escape_string($db, htmlentities($_POST['password']));
         $captchaCode = $_POST['captcha_code'];
 
 
