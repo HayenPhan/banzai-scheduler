@@ -55,7 +55,6 @@
                   <div class="requests__reason-wrapper">
                       <p class="requests__reason"> Reden aanvraag: </p> <br>
                       <input type="text" name="request[]"  classname="requests__input">
-                      <p> test </p>
                       <br><br><br>
 
 
