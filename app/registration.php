@@ -2,6 +2,7 @@
 
 include './includes/database.php';
 require "../vendor/autoload.php";
+require_once './includes/database.php';
 
 use Respect\Validation\Validator as v;
 
