@@ -14,7 +14,6 @@ or die("Error: ". mysqli_connect_error());
 
 
 
-
 // Create query for db & fetch result
 
 // Fetching pending requests, because the admin has to see the pending requests.

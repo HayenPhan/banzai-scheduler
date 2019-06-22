@@ -125,7 +125,7 @@ if(isset($_POST['revert'])) {
                       </div>
 
                       <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post">
-                          <input class="history__revert"type="submit" name="revert" value=""> </input>
+                          <input class="history__revert" type="submit" name="revert" value=""> </input>
                           <input type="hidden"  name="status"  value="<?= $items['status'] ?>" />
                           <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
                       </form>

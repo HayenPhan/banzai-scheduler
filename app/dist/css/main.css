@@ -1380,7 +1380,7 @@ body {
   position: absolute;
   right: 70px;
   top: 80px;
-  background-image: url(../../images/left-arrow.png);
+  background-image: url("../../assets/images/left-arrow.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50px 50px; }

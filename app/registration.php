@@ -18,13 +18,29 @@ $errorUsername = [];
 $errorEmail = [];
 $errorPassword = [];
 $errorPasswordC = [];
+$errorFirstname = [];
+$errorLastname = [];
 
   if (isset($_POST['submit'])) {
 
+  $msqli = mysqli_connect($host, $user, $password, $database)
+  or die("Error: ". mysqli_connect_error());
+
+  $firstname = $_POST['firstname'];
+  $lastname = $_POST['lastname'];
   $username = $_POST['username'];
-  $email = $_POST['email'];
   $password = $_POST['password'];
-  $password_confirm = $_POST['password_confirm'];
+
+
+  $sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
+  VALUES ('$username','$password','$firstname', '$lastname', 'employee')";
+
+  $insert = $msqli->query($sql);
+
+  if (!$insert) {
+      echo $msqli->error;
+  }
+
 
 
 // GET input array_count_value
@@ -37,15 +53,6 @@ $errorPasswordC = [];
     $noWhiteSpaceUser = v::noWhitespace()->validate($username);
     $characterUser = v::alnum()->validate($username);
     $emptyUser = v::notBlank()->validate($username);
-
-
-    // Email
-
-    $noWhiteSpaceEmail = v::noWhitespace()->validate($email);
-    $emptyEmail = v::optional(v::alpha())->validate($email);
-    $characterEmail = v::alnum()->validate($email);
-    $emailValidator = v::email()->validate(trim($email));
-
 
 
 
@@ -65,12 +72,6 @@ $errorPasswordC = [];
         array_push($errorUsername, "Vul je gebruikersnaam in");
     }
 
-    // Email conditional
-
-    if(!$noWhiteSpaceEmail) {
-        array_push($errorEmail, "Geen witruimte toegestaan bij invullen e-mail");
-    }
-
 }
 
 
@@ -88,6 +89,45 @@ $errorPasswordC = [];
     <body>
 
       <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
+
+
+        <div class="control-group">
+          <!-- Password-->
+          <label class="control-label" for="password">First name</label>
+          <div class="controls">
+            <input type="firstname" id="firstname" name="firstname" placeholder="" class="input-xlarge">
+          </div>
+
+          <?php foreach($errorFirstname as $key => $error) { ?>
+
+
+               <p> <?= $error ?> </p>
+
+          <?php }
+
+
+          ?>
+
+        </div>
+
+        <div class="control-group">
+          <!-- Password-->
+          <label class="control-label" for="password">Last name</label>
+          <div class="controls">
+            <input type="lastname" id="lastname" name="lastname" placeholder="" class="input-xlarge">
+          </div>
+
+          <?php foreach($errorLastname as $key => $error) { ?>
+
+
+               <p> <?= $error ?> </p>
+
+          <?php }
+
+
+          ?>
+
+        </div>
 
       <div class="control-group">
         <!-- Username -->
@@ -113,26 +153,7 @@ $errorPasswordC = [];
 
       </div>
 
-      <div class="control-group">
-        <!-- E-mail -->
-        <label class="control-label" for="email">E-mail</label>
-        <div class="controls">
-          <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
-        </div>
 
-        <?php foreach($errorEmail as $key => $error) { ?>
-
-
-             <p> <?= $error ?> </p>
-
-
-        <?php }
-
-
-        ?>
-
-
-      </div>
 
       <div class="control-group">
         <!-- Password-->
@@ -142,25 +163,6 @@ $errorPasswordC = [];
         </div>
 
         <?php foreach($errorPassword as $key => $error) { ?>
-
-
-             <p> <?= $error ?> </p>
-
-        <?php }
-
-
-        ?>
-
-      </div>
-
-      <div class="control-group">
-        <!-- Password -->
-        <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-        <div class="controls">
-          <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-        </div>
-
-        <?php foreach($errorPasswordC as $key => $error) { ?>
 
 
              <p> <?= $error ?> </p>
