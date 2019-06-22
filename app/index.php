@@ -93,7 +93,7 @@ or die("Error: ". mysqli_connect_error());
             // Nog van de opdracht
             $_SESSION['type'] = $row['user_type'];
             $_SESSION['name'] = $row['first_name'];
-            $_SESSION['user_id'] = ((isset($row['user_id'])) ? ($row['user_id']) : '');
+            $_SESSION['id'] = ((isset($row['id'])) ? ($row['id']) : '');
 
 
             if($_SESSION['type'] == 'admin') { // admin word straks een variable die je hebt geconnect met database.

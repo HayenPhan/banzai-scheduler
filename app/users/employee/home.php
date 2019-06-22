@@ -38,7 +38,7 @@ if($_SESSION['type'] =! 'employee') {
     $name = $_SESSION['name'];
 }
 
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['id'];
 $name =  htmlspecialchars($_SESSION['name']);
 
 // Create query for db & fetch result
@@ -53,7 +53,7 @@ $queryAll =
 
  "SELECT pending_requests.request, pending_requests.date, pending_requests.status
  FROM pending_requests
- INNER JOIN users ON pending_requests.user_id = users.user_id
+ INNER JOIN users ON pending_requests.user_id = users.id
  WHERE pending_requests.user_id = $user_id AND pending_requests.status = 1"; // fix this later, code still works
 
 

@@ -4,7 +4,7 @@
     // Start session because I need the first and Last name of employee.
     session_start();
 
-    $user_id = $_SESSION['user_id'];
+    $user_id = $_SESSION['id'];
 
     // Create query for db & fetch result
 
@@ -18,7 +18,7 @@
 
      "SELECT pending_requests.request, pending_requests.date, pending_requests.status
      FROM pending_requests
-     INNER JOIN users ON pending_requests.user_id = users.user_id
+     INNER JOIN users ON pending_requests.user_id = users.id
      WHERE pending_requests.user_id = $user_id;"; // fix this later, code still works
 
 

@@ -8,7 +8,7 @@
     // By starting session, it knows who you are and for example also knows that your last_name is Phan.
 
     $first_name = $_SESSION['name'];
-    $user_id = $_SESSION['user_id'];
+    $user_id = $_SESSION['id'];
 
 
 

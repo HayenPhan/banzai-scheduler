@@ -4,7 +4,7 @@ require_once '../../includes/database.php';
 // Start session because I need the first and Last name of employee.
 session_start();
 
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['id'];
 $name = $_SESSION['name'];
 
 // Create query for db & fetch result

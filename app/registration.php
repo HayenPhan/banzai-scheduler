@@ -30,11 +30,12 @@ $errorLastname = [];
   $lastname = mysqli_real_escape_string($msqli, htmlentities($_POST['lastname']));
   $username = mysqli_real_escape_string($msqli, htmlentities($_POST['username']));
   $password = mysqli_real_escape_string($msqli, htmlentities($_POST['password']));
+  $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 
 
   $sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
-  VALUES ('$username','$password','$firstname', '$lastname', 'employee')";
+  VALUES ('$username','$passwordHash','$firstname', '$lastname', 'employee')";
 
   $insert = $msqli->query($sql);
 
