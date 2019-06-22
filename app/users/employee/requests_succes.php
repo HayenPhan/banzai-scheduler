@@ -16,9 +16,8 @@
         $msqli = mysqli_connect($host, $user, $password, $database)
         or die("Error: ". mysqli_connect_error());
 
-
-        $request = mysqli_real_escape_string($db, htmlentities($_POST['request']));
-        $date = mysqli_real_escape_string($db, htmlentities($_POST['date']));
+        $request = $_POST['request'];
+        $date = $_POST['date'];
 
 
         if (isset($_POST['request'])) {
