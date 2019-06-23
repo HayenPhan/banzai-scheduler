@@ -45,14 +45,17 @@ or die("Error: ". mysqli_connect_error());
 
 
         // Store Query in variable
-        $usersQuery = "SELECT * from users WHERE login_name = '$username' and password_hash = '$password' ";
+        $usersQuery = "SELECT * from users WHERE login_name = '$username'";
 
         // Run query with msql_queryy and check if it connects
         $result = mysqli_query($db, $usersQuery)
         or die("Failed to query".msqli_error());
 
-        // fetch the results
+
         $row = mysqli_fetch_assoc($result);
+        print_r($row);
+
+
 
         // U can do stricter checks, but for now we're just doing one simple error.
 
@@ -87,15 +90,12 @@ or die("Error: ". mysqli_connect_error());
 
           // Password hashing not working yet
 
-          if(password_verify($row['password_hash'], $password)) {
-            echo 'Password is valid';
-          } else {
-            echo 'Shit';
-          }
 
 
-          if ($username == $row['login_name'] &&  /* password verify */ $row['password_hash'] && $securimage->check($_POST['captcha_code']) == true) {
 
+
+
+          if ($username == $row['login_name'] && password_verify($password, $row['password_hash']) /* && $securimage->check($_POST['captcha_code']) == true */) {
 
           /*  // E-mail
             $_SESSION['type'] = $email; */
@@ -119,11 +119,14 @@ or die("Error: ". mysqli_connect_error());
 
             else if ($username != $row['login_name'] && $password != $row['password_hash'] && $securimage->check($_POST['captcha_code']) == false) {
                 $error = "Combinatie gebruikersnaam/wachtwoord onjuist";
-            }
+
+
 
 
 
     }
+
+  }
 
     // Am I loggin in? Please go to secure page
 
