@@ -87,15 +87,22 @@ while($row = mysqli_fetch_assoc($result)) {
                       <p class="overview__date"> <?= $items['date'] ?> </p>
                   </div>
 
-                  <div class="overview__edit-button">
-                      <input class="overview__edit" type="submit" value="" name="rejected">
+
+                <!--- 1. When clicked on button it has to add new inputs with the above text als placeholder, but
+                ONLY in the request div that you're on, all the other requests should NOT be changed.-->
+
+                  <div  id="overview_button" class="overview__edit-button">
+                      <input id="edit_request" class="overview__edit" type="submit" value="" name="editbutton">
                       </input>
                   </div>
+
+
             </div>
 
        <?php }
        ?>
 
+  <script src="../../assets/js/components/editRequest.js"></script>
 
 </body>
 </html>
