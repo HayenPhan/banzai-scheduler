@@ -57,8 +57,21 @@
       }
     }
 
+    &__edit {
+          background-image: url('../../assets/images/edit.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 50px 50px;
+          border: none;
+          text-decoration: none;
+          cursor: pointer;
+          width: 50px;
+          height: 50px;
+    }
+
     &__wrapper {
         position: relative;
     }
+
 
 }

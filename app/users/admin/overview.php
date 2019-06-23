@@ -89,7 +89,6 @@ while($row = mysqli_fetch_assoc($result)) {
 
                   <div class="overview__edit-button">
                       <input class="overview__edit" type="submit" value="" name="rejected">
-                      blub
                       </input>
                   </div>
             </div>
