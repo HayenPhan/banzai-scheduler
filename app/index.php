@@ -84,7 +84,17 @@ or die("Error: ". mysqli_connect_error());
 
           // Check if name and password are in database
 
-          if ($username == $row['login_name'] && $password == $row['password_hash'] && $securimage->check($_POST['captcha_code']) == true) {
+
+          // Password hashing not working yet
+
+          if(password_verify($row['password_hash'], $password)) {
+            echo 'Password is valid';
+          } else {
+            echo 'Shit';
+          }
+
+
+          if ($username == $row['login_name'] &&  /* password verify */ $row['password_hash'] && $securimage->check($_POST['captcha_code']) == true) {
 
 
           /*  // E-mail
