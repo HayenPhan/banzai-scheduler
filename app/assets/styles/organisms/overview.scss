@@ -12,7 +12,16 @@
           height: 100px;
           padding-left: 50px;
           padding-right: 50px;
-          padding-top: 50px;
+          padding-bottom: 50px;
+
+          @include breakpoint(laptop) {
+            padding-bottom: 40px;
+
+          }
+
+
+
+
     }
 
     &__name, &__request, &__date {
@@ -36,6 +45,20 @@
         font-weight: 400;
         font-size: 30px;
         color: #C1B8D6;
+    }
+
+    &__edit-button {
+      position: absolute;
+      right: 85px;
+      top: 55px;
+
+      @include breakpoint(laptop) {
+          margin-bottom: 110px;
+      }
+    }
+
+    &__wrapper {
+        position: relative;
     }
 
 }

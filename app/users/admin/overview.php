@@ -79,11 +79,20 @@ while($row = mysqli_fetch_assoc($result)) {
 
        <?php foreach($details as $key => $items) { ?>
 
+            <div class="overview__wrapper">
+
                   <div class="overview__container">
                       <p class="overview__name"> <?= $items['first_name'] ?> </p>
                       <p class="overview__request"> <?= $items['request'] ?> </p>
                       <p class="overview__date"> <?= $items['date'] ?> </p>
                   </div>
+
+                  <div class="overview__edit-button">
+                      <input class="overview__edit" type="submit" value="" name="rejected">
+                      blub
+                      </input>
+                  </div>
+            </div>
 
        <?php }
        ?>

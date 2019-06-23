@@ -1433,7 +1433,10 @@ body {
   height: 100px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 50px; }
+  padding-bottom: 50px; }
+  @media (min-width: 64em) {
+    .overview__container {
+      padding-bottom: 40px; } }
 
 .overview__name, .overview__request, .overview__date {
   font-family: 'PT sans', sans-serif;
@@ -1452,6 +1455,17 @@ body {
   font-weight: 400;
   font-size: 30px;
   color: #C1B8D6; }
+
+.overview__edit-button {
+  position: absolute;
+  right: 85px;
+  top: 55px; }
+  @media (min-width: 64em) {
+    .overview__edit-button {
+      margin-bottom: 110px; } }
+
+.overview__wrapper {
+  position: relative; }
 
 .registration__container {
   position: relative;
