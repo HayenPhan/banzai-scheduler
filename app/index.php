@@ -94,6 +94,7 @@ or die("Error: ". mysqli_connect_error());
             // Nog van de opdracht
             $_SESSION['type'] = $row['user_type'];
             $_SESSION['name'] = $row['first_name'];
+            $_SESSION['last_name'] = $row['last_name'];
             $_SESSION['id'] = ((isset($row['id'])) ? ($row['id']) : '');
 
 
