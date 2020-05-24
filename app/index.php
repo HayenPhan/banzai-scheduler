@@ -26,7 +26,7 @@ or die("Error: ". mysqli_connect_error());
 
         // Insert phpcaptcha
 
-        include_once $_SERVER['DOCUMENT_ROOT'] . '/cle/banzai-scheduler/securimage/securimage.php';
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/banzai-scheduler/securimage/securimage.php';
 
         $securimage = new Securimage();
 
@@ -79,10 +79,9 @@ or die("Error: ". mysqli_connect_error());
         $noWhiteSpace = v::noWhitespace()->validate($password);
 
 
-        if($errorUsername || $errorPassword || $noWhiteSpace) {
-            $error = "Gebruikersnaam of wachtwoord is onjuist";
-        }
-
+        //if($errorUsername || $errorPassword || $noWhiteSpace) {
+            //$error = "Gebruikersnaam of wachtwoord is onjuist";
+        //}
 
 
           // Check if name and password are in database
@@ -112,7 +111,7 @@ or die("Error: ". mysqli_connect_error());
             else if ($username != $row['login_name'] && $password != $row['password_hash'] && $securimage->check($_POST['captcha_code']) == false) {
                 $error = "Combinatie gebruikersnaam/wachtwoord onjuist";
 
-    }
+            }
 
   }
 
