@@ -17,10 +17,10 @@ or die("Error: ". mysqli_connect_error());
 
 $queryAll =
 
- "SELECT pending_requests.request, pending_requests.date, pending_requests.status
+ "SELECT pending_requests.first_name, pending_requests.request, pending_requests.date, pending_requests.status
  FROM pending_requests
  INNER JOIN users ON pending_requests.user_id = users.id
- WHERE pending_requests.user_id = $user_id AND pending_requests.status = 1"; // fix this later, code still works
+ WHERE pending_requests.user_id = $user_id;"; // fix this later, code still works
 
 
 $result = mysqli_query($db, $queryAll);
@@ -82,10 +82,14 @@ while($row = mysqli_fetch_assoc($result)) {
 
            <h2 class="overview__title"> Overzicht </h2>
 
-       <?php foreach($details as $key => $items) { ?>
+       <?php foreach($details as $key => $items) {
+
+
+
+         ?>
 
                   <div class="overview__container">
-                      <p class="overview__name"> <?= $name ?> </p>
+                      <p class="overview__name"> <?= $items['first_name'] ?> </p>
                       <p class="overview__request"> <?= $items['request'] ?> </p>
                       <p class="overview__date"> <?= $items['date'] ?> </p>
                   </div>

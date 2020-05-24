@@ -21,6 +21,7 @@ $queryAll = "SELECT * FROM pending_requests WHERE status ='1'"; // fix this late
 $result = mysqli_query($db, $queryAll);
 
 
+
 // Create array
 
 $details = [];

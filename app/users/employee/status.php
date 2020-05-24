@@ -16,13 +16,15 @@
 
     $queryAll =
 
-     "SELECT pending_requests.request, pending_requests.date, pending_requests.status
+     "SELECT pending_requests.first_name, pending_requests.request, pending_requests.date, pending_requests.status
      FROM pending_requests
      INNER JOIN users ON pending_requests.user_id = users.id
      WHERE pending_requests.user_id = $user_id;"; // fix this later, code still works
 
 
     $result = mysqli_query($db, $queryAll);
+
+    //print_r($result);
 
 
     // Create array
@@ -92,7 +94,7 @@
        ?>
 
                 <div class="status__long-square">
-                    <p class="status__name">Xiaotong</p>
+                    <p class="status__name"><?= $items['first_name'] ?></p>
                     <div class="status__content-wrapper">
                         <p class="status__default"> Aanvraag: </p>
                         <div class="status__request-wrapper">
