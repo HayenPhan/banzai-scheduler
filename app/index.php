@@ -86,7 +86,7 @@ or die("Error: ". mysqli_connect_error());
 
           // Check if name and password are in database
 
-          if ($username == $row['login_name'] && $password == $row['password_hash'] && $securimage->check($_POST['captcha_code']) == true) {
+          if ($username == $row['login_name'] && password_verify($password, $row['password_hash']) && $securimage->check($_POST['captcha_code']) == true) {
 
           /*  // E-mail
             $_SESSION['type'] = $email; */
