@@ -21,27 +21,27 @@ $errorPasswordC = [];
 $errorFirstname = [];
 $errorLastname = [];
 
-  if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
-  $msqli = mysqli_connect($host, $user, $password, $database)
-  or die("Error: ". mysqli_connect_error());
+$msqli = mysqli_connect($host, $user, $password, $database)
+or die("Error: ". mysqli_connect_error());
 
-  $firstname = mysqli_real_escape_string($msqli, htmlentities($_POST['firstname']));
-  $lastname = mysqli_real_escape_string($msqli, htmlentities($_POST['lastname']));
-  $username = mysqli_real_escape_string($msqli, htmlentities($_POST['username']));
-  $password = mysqli_real_escape_string($msqli, htmlentities($_POST['password']));
-  $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+$firstname = mysqli_real_escape_string($msqli, htmlentities($_POST['firstname']));
+$lastname = mysqli_real_escape_string($msqli, htmlentities($_POST['lastname']));
+$username = mysqli_real_escape_string($msqli, htmlentities($_POST['username']));
+$password = mysqli_real_escape_string($msqli, htmlentities($_POST['password']));
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 
 
-  $sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
-  VALUES ('$username','$passwordHash','$firstname', '$lastname', 'employee')";
+$sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
+VALUES ('$username','$passwordHash','$firstname', '$lastname', 'employee')";
 
-  $insert = $msqli->query($sql);
+$insert = $msqli->query($sql);
 
-  if (!$insert) {
-      echo $msqli->error;
-  }
+if (!$insert) {
+    echo $msqli->error;
+}
 
 
 
