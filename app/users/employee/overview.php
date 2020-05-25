@@ -22,9 +22,7 @@ $queryAll =
  INNER JOIN users ON pending_requests.user_id = users.id
  WHERE pending_requests.user_id = $user_id;"; // fix this later, code still works
 
-
 $result = mysqli_query($db, $queryAll);
-
 
 // Create array
 
