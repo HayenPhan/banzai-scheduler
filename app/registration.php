@@ -4,75 +4,76 @@ include './includes/database.php';
 require "../vendor/autoload.php";
 require_once './includes/database.php';
 
-use Respect\Validation\Validator as v;
-
-
-// Validation
-
-// GET user input
-
-
-/////// GEBLEVEN BIJ. Hij doet het voor de Username, maar niet voor e-mail etc.
-
-$errorUsername = [];
-$errorEmail = [];
-$errorPassword = [];
-$errorPasswordC = [];
-$errorFirstname = [];
-$errorLastname = [];
 
 if (isset($_POST['submit'])) {
 
+
+// Mysql connection
 $msqli = mysqli_connect($host, $user, $password, $database)
 or die("Error: ". mysqli_connect_error());
 
-$firstname = mysqli_real_escape_string($msqli, htmlentities($_POST['firstname']));
-$lastname = mysqli_real_escape_string($msqli, htmlentities($_POST['lastname']));
-$username = mysqli_real_escape_string($msqli, htmlentities($_POST['username']));
-$password = mysqli_real_escape_string($msqli, htmlentities($_POST['password']));
-$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+  if(!empty($_POST)) {
+      // GET POST
+      $firstname = mysqli_real_escape_string($msqli, htmlspecialchars($_POST['firstname']));
+      $lastname = mysqli_real_escape_string($msqli, htmlspecialchars($_POST['lastname']));
+      $username = mysqli_real_escape_string($msqli, htmlspecialchars($_POST['username']));
+      $password = mysqli_real_escape_string($msqli, htmlspecialchars($_POST['password']));
+      $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+      // Validation
+
+      $firstnamelen = strlen($firstname);
+      $lastnamelen = strlen($lastname);
+      $usernamelen = strlen($username);
+      $passwordlen = strlen($password);
+      $max = 255;
+      $minfirstname = 2;
+      $minlastname = 2;
+      $minusername = 6;
+      $minpassword = 12;
+
+      // Errors
+      $errors = [];
+
+      // First name
+      if($firstnamelen < $minfirstname){
+          $errors[] = "Name must be at least 2 characters";
+      } elseif($firstnamelen > $max){
+          $errors[] = "Name must be less than 255 characters";
+      }
+
+      // Last name
+      if($lastnamelen < $minlastname){
+          $errors[] = "Last name must be at least 2 characters";
+      } elseif($lastnamelen > $max){
+          $errors[] = "Last name must be less than 255 characters";
+      }
+
+      // User name
+      if($usernamelen < $minusername){
+          $errors[] = "Username must be at least 6 characters";
+      } elseif($usernamelen > $max){
+          $errors[] = "Username must be less than 255 characters";
+      }
+
+      // Password
+      if($passwordlen < $minpassword){
+          $errors[] = "Password must be at least 12 characters";
+      } elseif($passwordlen > $max){
+          $errors[] = "Password must be less than 255 characters";
+      }
 
 
-$sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
-VALUES ('$username','$passwordHash','$firstname', '$lastname', 'employee')";
+      // Insert into database
+      $sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
+      VALUES ('$username','$passwordHash','$firstname', '$lastname', 'employee')";
 
-$insert = $msqli->query($sql);
+      $insert = $msqli->query($sql);
 
-if (!$insert) {
-    echo $msqli->error;
-}
-
-
-
-// GET input array_count_value
-
-    // All
-
-
-    // Username
-
-    $noWhiteSpaceUser = v::noWhitespace()->validate($username);
-    $characterUser = v::alnum()->validate($username);
-    $emptyUser = v::notBlank()->validate($username);
-
-
-
-  // HIER GEBLEVEN CONDITIONALS DOEN T NIET GOED
-
-    // Username conditional
-
-    if(!$noWhiteSpaceUser) {
-        array_push($errorUsername, "Geen witruimte toegestaan bij invullen gebruikersnaam");
-    }
-
-    if(!$characterUser) {
-        array_push($errorUsername, "Only use character A-Z or 0-9");
-    }
-
-    if(!$emptyUser) {
-        array_push($errorUsername, "Vul je gebruikersnaam in");
-    }
-
+      if (!$insert) {
+          echo $msqli->error;
+      }
+  }
 }
 
 
@@ -99,16 +100,6 @@ if (!$insert) {
             <input type="firstname" id="firstname" name="firstname" placeholder="" class="input-xlarge">
           </div>
 
-          <?php foreach($errorFirstname as $key => $error) { ?>
-
-
-               <p> <?= $error ?> </p>
-
-          <?php }
-
-
-          ?>
-
         </div>
 
         <div class="control-group">
@@ -118,16 +109,6 @@ if (!$insert) {
             <input type="lastname" id="lastname" name="lastname" placeholder="" class="input-xlarge">
           </div>
 
-          <?php foreach($errorLastname as $key => $error) { ?>
-
-
-               <p> <?= $error ?> </p>
-
-          <?php }
-
-
-          ?>
-
         </div>
 
       <div class="control-group">
@@ -136,21 +117,6 @@ if (!$insert) {
         <div class="controls">
           <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
         </div>
-
-
-
-           <?php foreach($errorUsername as $key => $error) { ?>
-
-
-                <p> <?= $error ?> </p>
-
-           <?php }
-
-
-           ?>
-
-
-
 
       </div>
 
@@ -163,16 +129,6 @@ if (!$insert) {
           <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
         </div>
 
-        <?php foreach($errorPassword as $key => $error) { ?>
-
-
-             <p> <?= $error ?> </p>
-
-        <?php }
-
-
-        ?>
-
       </div>
 
       <div class="control-group">
@@ -183,11 +139,18 @@ if (!$insert) {
 
       </div>
 
-      <p>
+        <?php
 
-      </p>
+          if(isset($errors)){
+            foreach($errors as $error) {
+              echo "<p> $error </p>";
+            }
+          }
+
+        ?>
 
   </form>
+
 
         </body>
 
