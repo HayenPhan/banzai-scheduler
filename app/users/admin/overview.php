@@ -30,8 +30,23 @@ while($row = mysqli_fetch_assoc($result)) {
     $details[] = $row;
 }
 
-// Check if edit button has been clicked
+// Update changes
 
+if(isset($_POST['insertdata'])) {
+  $request = $_POST['request'];
+  $date_request = $_POST['date'];
+
+  $updateData = "UPDATE pending_requests SET request = '$request' WHERE id = '$user_id'";
+  $result = mysqli_query($db, $updateData);
+
+  if($result) {
+      Header('Location: '.$_SERVER['PHP_SELF']);
+      Exit();
+      print_r('Gelukt!');
+  }else {
+      echo '<script> alert("Data Not Saved"); </script>';
+  }
+}
 
 ?>
 
@@ -100,11 +115,42 @@ while($row = mysqli_fetch_assoc($result)) {
                 ONLY in the request div that you're on, all the other requests should NOT be changed.-->
 
                   <div  id="overview_button" class="overview__edit-button">
-                      <input id="edit_request" class="overview__edit view_data" type="submit" value="" name="edit">
+                      <input id="edit_request" class="overview__edit view_data" type="button" value="" name="edit">
                       </input>
                   </div>
 
 
+            </div>
+
+            <div id="dataModal" class="modal fade">
+                 <div class="modal-dialog">
+                      <div class="modal-content">
+                           <div class="modal-header">
+                                <h4 class="modal-title">Wijzig gegevens aanvraag</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           </div>
+
+                           <form method="post" id="update_form">
+                               <div class="modal-body" id="employee_detail">
+                                    <div class="form-group">
+                                        <label for="request">Aanvraag</label> <br>
+                                        <input type="text" name="request" class="form-control" value="<?= $items['request'] ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="request">Datum</label> <br>
+                                        <input type="text" name="date" class="form-control" value="<?= $items['date'] ?>">
+                                    </div>
+
+                                    <button type="submit" name="insertdata" class="btn btn-primary">Submit</button>
+
+                               </div>
+                               <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                               </div>
+                          </form>
+
+                      </div>
+                 </div>
             </div>
 
        <?php }
@@ -113,27 +159,12 @@ while($row = mysqli_fetch_assoc($result)) {
 </body>
 </html>
 
-<div id="dataModal" class="modal fade">
-     <div class="modal-dialog">
-          <div class="modal-content">
-               <div class="modal-header">
-                    <h4 class="modal-title">Employee Details</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-               </div>
-               <div class="modal-body" id="employee_detail">
-                 <p> test </p>
-               </div>
-               <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-               </div>
-          </div>
-     </div>
-</div>
-
 <script>
   $(document).ready(function() {
       $('.view_data').click(function() {
           $('#dataModal').modal("show")
       });
+
+
   });
 </script>
