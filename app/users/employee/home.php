@@ -51,7 +51,7 @@ or die("Error: ". mysqli_connect_error());
 
 $queryAll =
 
- "SELECT pending_requests.request, pending_requests.date, pending_requests.status
+ "SELECT pending_requests.request, pending_requests.date, pending_requests.status, pending_requests.first_name
  FROM pending_requests
  INNER JOIN users ON pending_requests.user_id = users.id
  WHERE pending_requests.user_id = $user_id AND pending_requests.status = 1"; // fix this later, code still works
@@ -115,12 +115,19 @@ while($row = mysqli_fetch_assoc($result)) {
 
                    <?php foreach(array_slice($details, 0, 3) as $key => $items) { ?>
 
+                     <?php
+                          $date = $items['date'];
+                          $day = date("d",strtotime($date));
+                          $month = date("F",strtotime($date));
+                     ?>
+
                       <div class="home__overview-wrapper">
                           <div class="home__date-wrapper">
-                              <p class="home__day"> 30  </p>
-                              <p class="home__month"> Dec </p>
+                              <p class="home__day"> <?= $day ?>  </p>
+                              <p class="home__month"> <?= $month ?> </p>
                           </div>
                           <div class="home__request-wrapper">
+                              <p class="home__request"> <?= $items['first_name'] ?> </p>
                               <p class="home__request"> <?= $items['request'] ?> </p>
                           </div>
                       </div>

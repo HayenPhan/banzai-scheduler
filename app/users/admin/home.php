@@ -94,15 +94,21 @@ while($row = mysqli_fetch_assoc($result)) {
                       <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
                   </div>
 
-
                  <?php foreach(array_slice($details, 0, 3) as $key => $items) { ?>
+
+                   <?php
+                        $date = $items['date'];
+                        $day = date("d",strtotime($date));
+                        $month = date("F",strtotime($date));
+                   ?>
 
                   <div class="home__overview-wrapper">
                       <div class="home__date-wrapper">
-                          <p class="home__day"> 30 </p>
-                          <p class="home__month"> Dec </p>
+                          <p class="home__day"> <?= $day ?> </p>
+                          <p class="home__month"> <?= $month ?>  </p>
                       </div>
                       <div class="home__request-wrapper">
+                          <p class="home__request"> <?= $items['first_name'] ?> </p>
                           <p class="home__request"> <?= $items['request'] ?> </p>
                       </div>
                   </div>
