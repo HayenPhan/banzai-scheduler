@@ -1,17 +1,5 @@
 const gulp = require('gulp');  // gulp runs on node that's why we use the require function to get access to the modules
 const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
-
-
-// Start BrowserSync // Not working yet
-gulp.task('browser-sync', () => {
-    browserSync.init({
-        proxy: 'http://localhost:8080/cle/banzai-scheduler/app'
-    });
-});
 
 // Compiling scss to css files
 gulp.task('styles', () => {
@@ -27,24 +15,4 @@ gulp.task('watch', () => {    // It's better to set this on default, because you
 });
 
 
-// babel (without this you can't use gulp-uglify for the minifying part)
-
-gulp.task('babel', () =>
-    gulp.src('app/assets/js/**/*.js')
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(gulp.dest('app/dist/js'))
-);
-
-// Gulp task to minify JavaScript files
-gulp.task('scripts', () => {
-  return gulp.src('app/assets/js/**/*.js')
-    // Minify the file
-    .pipe(uglify())
-    // Output
-    .pipe(gulp.dest('app/dist/js'))
-});
-
-
-gulp.task('default', gulp.series('styles', 'watch', 'babel', 'scripts'));
+gulp.task('default', gulp.series('styles', 'watch'));
