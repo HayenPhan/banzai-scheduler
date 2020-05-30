@@ -114,6 +114,8 @@ if(isset($_POST['insertdata'])) {
                 <!--- 1. When clicked on button it has to add new inputs with the above text als placeholder, but
                 ONLY in the request div that you're on, all the other requests should NOT be changed.-->
 
+
+                  <!-- Modal pop up button -->
                   <div  id="overview_button" class="overview__edit-button">
                       <input id="edit_request" class="overview__edit view_data" type="button" value="" name="edit">
                       </input>
@@ -130,7 +132,10 @@ if(isset($_POST['insertdata'])) {
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                            </div>
 
-                           <form method="post" id="update_form">
+                           <form method="post" action="updatedetails.php" id="update_form">
+
+                              <input type="hidden"  name="id"  value="<?= $items['id'] ?>" />
+
                                <div class="modal-body" id="employee_detail">
                                     <div class="form-group">
                                         <label for="request">Aanvraag</label> <br>
@@ -141,6 +146,7 @@ if(isset($_POST['insertdata'])) {
                                         <input type="text" name="date" class="form-control" value="<?= $items['date'] ?>">
                                     </div>
 
+                                    <!-- Submit updated details -->
                                     <button type="submit" name="insertdata" class="btn btn-primary">Submit</button>
 
                                </div>
