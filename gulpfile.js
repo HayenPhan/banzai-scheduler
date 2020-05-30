@@ -11,7 +11,6 @@ gulp.task('styles', () => {
 // Watch task
 gulp.task('watch', () => {    // It's better to set this on default, because you'll only have to type in "gulp" to make it work.
   gulp.watch('app/assets/styles/**/*.scss', gulp.series('styles'));      // This watches your styles task too.
-  console.log('yo');
 });
 
 
