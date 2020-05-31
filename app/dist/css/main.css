@@ -1062,8 +1062,7 @@ body {
   @media (min-width: 64em) {
     .requests-admin__top {
       flex-direction: row;
-      width: 100%;
-      align-items: stretch; } }
+      width: 100%; } }
 
 .requests-admin__button {
   width: 150px;
