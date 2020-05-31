@@ -158,8 +158,33 @@
       font-size: 16px;
       position: absolute;
       right: 100px;
+      top: 59px;
       border: 0.5px solid #B4A5D8;
-      margin-top: 30px; } }
+      margin: 0; } }
+
+.overview-uitloggen {
+  width: 150px;
+  height: 35px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  border: 0.5px solid #B4A5D8;
+  color: #B4A5D8; }
+  @media (min-width: 64em) {
+    .overview-uitloggen {
+      width: 120px;
+      height: 45px;
+      font-size: 16px;
+      position: absolute;
+      right: 100px;
+      top: 40px;
+      margin: 0; } }
 
 .history-uitloggen {
   width: 150px;
@@ -1491,6 +1516,11 @@ body {
   width: 50px;
   height: 50px;
   display: none; }
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #00D1D1 !important;
+  border-style: none;
+  border-color: #00D1D1 !important; }
 
 .registration__container {
   position: relative;

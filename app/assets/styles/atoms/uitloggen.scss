@@ -101,7 +101,6 @@
 }
 
 .admin-requests-uitloggen {
-
   width: 150px;
   text-decoration: none;
 
@@ -123,12 +122,41 @@
       font-size: 16px;
       position: absolute;
       right: 100px;
+      top: 59px;
       border: 0.5px solid #B4A5D8;
-      margin-top: 30px;
+      margin: 0;
   }
 
     &__title {
 
+    }
+}
+
+.overview-uitloggen {
+    width: 150px;
+    height: 35px;
+    text-decoration: none;
+
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'PT sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    border: 0.5px solid #B4A5D8;
+    color: #B4A5D8;
+
+    @include breakpoint(laptop) {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+        position: absolute;
+        right: 100px;
+        top: 40px;
+        margin: 0;
     }
 }
 

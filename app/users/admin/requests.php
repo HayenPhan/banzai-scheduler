@@ -64,7 +64,7 @@ if(isset($_POST['rejected'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> Bekijk de status van je aanvragen </title>
+    <title> Requests </title>
     <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
 </head>
 <body>
@@ -74,17 +74,17 @@ if(isset($_POST['rejected'])) {
 
          <div class="requests-admin__button-wrapper">
              <a class="current requests-admin__button" href="requests.php" id="aanvraag">
-                Aanvragen
+                Requests
              </a>
          </div>
          <div class="requests-admin__button-wrapper">
              <a class="requests-admin__button" href="history.php" id="history">
-               Geschiedenis
+               History
              </a>
          </div>
          <div class="requests-admin__button-wrapper">
              <a class="requests-admin__button" href="overview.php" id="history">
-               Overzicht
+               Overview
              </a>
          </div>
          <a href="home.php" class="requests-admin__add">
@@ -95,7 +95,7 @@ if(isset($_POST['rejected'])) {
 
          <div class="admin-requests-uitloggen__wrapper">
              <a class="admin-requests-uitloggen" href="../../logout.php">
-                Uitloggen
+                Log out
              </a>
          </div>
 
@@ -106,7 +106,7 @@ if(isset($_POST['rejected'])) {
                   <div class="requests-admin__long-square">
                       <p class="requests-admin__name"> <?= $items['first_name'] ?> </p>
                       <div class="requests-admin__content-wrapper">
-                          <p class="requests-admin__default"> Aanvraag: </p>
+                          <p class="requests-admin__default"> Request: </p>
                           <div class="requests-admin__request-wrapper">
                               <p class="requests-admin__request"><?= $items['request'] ?></p>
                               <p class="requests-admin__date"><?= $items['date'] ?></p>
@@ -129,7 +129,7 @@ if(isset($_POST['rejected'])) {
 
        <?php }
        ?>
-       
+
   </div>
 
 

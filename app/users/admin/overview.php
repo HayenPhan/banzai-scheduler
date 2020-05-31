@@ -54,7 +54,7 @@ if(isset($_POST['insertdata'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> Bekijk de status van je aanvragen </title>
+    <title> Overview </title>
     <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -68,18 +68,18 @@ if(isset($_POST['insertdata'])) {
 
          <div class="requests-admin__button-wrapper">
              <a class="requests-admin__button" href="requests.php" id="aanvraag">
-                Aanvragen
+                Requests
              </a>
          </div>
          <div class="requests-admin__button-wrapper">
              <a class="requests-admin__button" href="history.php" id="history">
-                Geschiedenis
+                History
              </a>
          </div>
 
          <div class="requests-admin__button-wrapper">
              <a class="current requests-admin__button" href="overview.php" id="history">
-                Overzicht
+                Overview
              </a>
          </div>
 
@@ -90,15 +90,15 @@ if(isset($_POST['insertdata'])) {
          </a>
 
          <div class="admin-requests-uitloggen__wrapper">
-             <a class="admin-requests-uitloggen" href="../../logout.php">
-                Uitloggen
+             <a class="overview-uitloggen" href="../../logout.php">
+                Log out
              </a>
          </div>
 
      </div>
 
 
-           <h2 class="overview__title"> Overzicht </h2>
+           <h2 class="overview__title"> Overview </h2>
 
        <?php foreach($details as $key => $items) { ?>
 
@@ -128,7 +128,7 @@ if(isset($_POST['insertdata'])) {
                  <div class="modal-dialog">
                       <div class="modal-content">
                            <div class="modal-header">
-                                <h4 class="modal-title">Wijzig gegevens aanvraag</h4>
+                                <h4 class="modal-title">Edit details</h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                            </div>
 
@@ -138,11 +138,11 @@ if(isset($_POST['insertdata'])) {
 
                                <div class="modal-body" id="employee_detail">
                                     <div class="form-group">
-                                        <label for="request">Aanvraag</label> <br>
+                                        <label for="request">Request</label> <br>
                                         <input type="text" name="request" class="form-control" value="<?= $items['request'] ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="request">Datum</label> <br>
+                                        <label for="request">Date</label> <br>
                                         <input type="text" name="date" class="form-control" value="<?= $items['date'] ?>">
                                     </div>
 

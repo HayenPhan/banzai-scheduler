@@ -71,17 +71,17 @@ if(isset($_POST['revert'])) {
      <div class="history__top">
          <div class="history__button-wrapper">
              <a class="history__button" href="requests.php" id="aanvraag">
-                Aanvragen
+                Requests
              </a>
          </div>
          <div class="history__button-wrapper">
              <a class="current history__button" href="history.php" id="history">
-               Geschiedenis
+               History
              </a>
          </div>
          <div class="history__button-wrapper">
              <a class="history__button" href="overview.php" id="history">
-               Overzicht
+               Overview
              </a>
          </div>
          <a href="home.php" class="history__add">
@@ -102,18 +102,18 @@ if(isset($_POST['revert'])) {
              $status = '';
 
                if($items['status'] == 0) {
-                   $status = '<p class="status__current-status pending"> In behandeling </p>';
+                   $status = '<p class="status__current-status pending"> Pending </p>';
                } else if($items['status'] == 1) {
-                   $status = '<p class="status__current-status accepted"> Geaccepteerd </p>';
+                   $status = '<p class="status__current-status accepted"> Accepted </p>';
                } else if($items['status'] == 2) {
-                   $status = '<p class="status__current-status rejected"> Geweigerd </p>';
+                   $status = '<p class="status__current-status rejected"> Rejected </p>';
                }
          ?>
 
                   <div class="history__long-square">
                       <p class="history__name"> <?= $items['first_name'] ?> </p>
                       <div class="history__content-wrapper">
-                          <p class="history__default"> Aanvraag: </p>
+                          <p class="history__default"> Request: </p>
                           <div class="history__request-wrapper">
                               <p class="history__request"><?= $items['request'] ?></p>
                               <p class="history__date"><?= $items['date'] ?></p>

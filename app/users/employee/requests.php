@@ -7,7 +7,7 @@
  <html>
  <head>
      <meta charset="UTF-8">
-     <title> Aanvragen </title>
+     <title> Requests </title>
        <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
 
  </head>
@@ -17,7 +17,7 @@
       <div class="requests__top">
           <div class="requests__button-wrapper">
               <a class="current requests__button" href="requests.php" id="aanvraag">
-                 Aanvragen
+                 Requests
               </a>
           </div>
           <div class="requests__button-wrapper">
@@ -28,7 +28,7 @@
 
           <div class="requests__button-wrapper">
               <a href="overview.php" id="status" class="requests__button">
-                Overzicht
+                Overview
               </a>
           </div>
 
@@ -40,7 +40,7 @@
 
           <div class="requests-uitloggen__wrapper">
               <a class="requests-uitloggen" href="../../logout.php">
-                 Uitloggen
+                 Log out
               </a>
           </div>
 
@@ -53,13 +53,13 @@
 
              <div class="requests__date-reason-wrapper">
                   <div class="requests__reason-wrapper">
-                      <p class="requests__reason"> Reden aanvraag: </p> <br>
+                      <p class="requests__reason"> Request: </p> <br>
                       <input type="text" name="request[]"  classname="requests__input">
                       <br><br><br>
 
 
                   </div>
-                  <p class="requests__reason"> Kies een datum: </p> <br>
+                  <p class="requests__reason"> Pick a date: </p> <br>
                   <input type="text" name="date[]" id="pick-date" class="requests__date-picker">
               </div>
 

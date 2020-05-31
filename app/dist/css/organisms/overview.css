@@ -96,3 +96,8 @@
   width: 50px;
   height: 50px;
   display: none; }
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #00D1D1 !important;
+  border-style: none;
+  border-color: #00D1D1 !important; }

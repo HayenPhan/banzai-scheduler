@@ -39,7 +39,7 @@ while($row = mysqli_fetch_assoc($result)) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> Bekijk de status van je aanvragen </title>
+    <title> Overview </title>
     <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
 </head>
 <body>
@@ -48,7 +48,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
          <div class="requests-admin__button-wrapper">
              <a class="requests-admin__button" href="requests.php" id="aanvraag">
-                Aanvragen
+                Requests
              </a>
          </div>
          <div class="requests-admin__button-wrapper">
@@ -59,7 +59,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
          <div class="requests-admin__button-wrapper">
              <a class="current requests-admin__button" href="overview.php" id="history">
-                Overzicht
+                Overview
              </a>
          </div>
 
@@ -71,14 +71,14 @@ while($row = mysqli_fetch_assoc($result)) {
 
          <div class="admin-requests-uitloggen__wrapper">
              <a class="admin-requests-uitloggen" href="../../logout.php">
-                Uitloggen
+                Log out
              </a>
          </div>
 
      </div>
 
 
-           <h2 class="overview__title"> Overzicht </h2>
+           <h2 class="overview__title"> Overview </h2>
 
        <?php foreach($details as $key => $items) {
 

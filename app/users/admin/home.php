@@ -59,7 +59,7 @@ while($row = mysqli_fetch_assoc($result)) {
 <html>
 
     <head>
-        <title>Login</title>
+        <title>Home</title>
         <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
     </head>
 
@@ -77,7 +77,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 </div>
             </div>
             <div class="home__title-wrapper">
-                <h2 class="home__title"> Welkom, <br> <?= $name ?> </h2>
+                <h2 class="home__title"> Welcome, <br> <?= $name ?> </h2>
             </div>
         </div>
 
@@ -85,13 +85,13 @@ while($row = mysqli_fetch_assoc($result)) {
 
             <div class="uitloggen__wrapper">
                 <a class="uitloggen" href="../../logout.php">
-                   Uitloggen
+                   Log out
                 </a>
             </div>
 
               <div class="home__overview">
                   <div class="home__overview-title-wrapper">
-                      <h2 class="home__overview-title"> Overzicht vakantie dagen </h2>
+                      <h2 class="home__overview-title"> Overview vacation days </h2>
                   </div>
 
                  <?php foreach(array_slice($details, 0, 3) as $key => $items) { ?>
@@ -117,7 +117,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
                   <div class="home__link-wrapper">
                       <a class="home__link-link home__link" href="overview.php">
-                           Bekijk alles
+                           View all
                       </a>
                   </div>
 
@@ -141,8 +141,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
                   <div class="home__currenttime-wrapper">
 
-                      <p class="home__currenttime-text"> Je bent momenteel in <?= $timezone ?></p>
-                      <p class="home__currenttime-text"> De datum van vandaag is: <?= $datetimesinglebyte ?>, week <?= $week_number ?>! </p>
+                      <p class="home__currenttime-text"> Today it is: <?= $datetimesinglebyte ?>, week <?= $week_number ?>! </p>
 
 
                   </div>

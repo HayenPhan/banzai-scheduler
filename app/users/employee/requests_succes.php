@@ -72,7 +72,7 @@
  <html>
  <head>
      <meta charset="UTF-8">
-     <title> Aanvragen gelukt </title>
+     <title> Success </title>
 
      <link rel="stylesheet" type="text/css" href="../../../app/dist/css/main.css">
 
@@ -84,7 +84,7 @@
    <div class="requests__top">
        <div class="requests__button-wrapper">
            <a class="current requests__button" href="requests.php" id="aanvraag">
-              Aanvragen
+              Requests
            </a>
        </div>
        <div class="requests__button-wrapper">
@@ -94,7 +94,7 @@
        </div>
        <div class="requests__button-wrapper">
            <a href="overview.php" id="status" class="requests__button">
-             Overzicht
+             Overview
            </a>
        </div>
        <a href="home.php" class="status__add">
@@ -104,12 +104,12 @@
        </a>
        <div class="requests-uitloggen__wrapper">
            <a class="requests-uitloggen" href="../../logout.php">
-              Uitloggen
+              Log out
            </a>
        </div>
    </div>
          <div class="requests__succes">
-            <h2 class="requests__succes-title"> Het aanvragen van je vakantiedag(en) is gelukt! </h2>
+            <h2 class="requests__succes-title"> Your request is successfully submitted  </h2>
           </div>
     </div>
  </body>

@@ -53,7 +53,7 @@
    <div class="status__top">
        <div class="status__button-wrapper">
            <a class="status__button" href="requests.php" id="aanvraag">
-              Aanvragen
+              Requests
            </a>
        </div>
        <div class="status__button-wrapper">
@@ -63,7 +63,7 @@
        </div>
        <div class="requests__button-wrapper">
            <a href="overview.php" id="status" class="requests__button">
-             Overzicht
+             Overview
            </a>
        </div>
        <a href="home.php" class="status__add">
@@ -73,7 +73,7 @@
        </a>
        <div class="status-uitloggen__wrapper">
            <a class="status-uitloggen" href="../../logout.php">
-              Uitloggen
+              Log out
            </a>
        </div>
    </div>
@@ -84,11 +84,11 @@
        $status = '';
 
        if($items['status'] == 0) {
-           $status = '<p class="status__current-status pending"> In behandeling </p>';
+           $status = '<p class="status__current-status pending"> Pending </p>';
        } else if($items['status'] == 1) {
-           $status = '<p class="status__current-status accepted"> Geaccepteerd </p>';
+           $status = '<p class="status__current-status accepted"> Accepted </p>';
        } else if($items['status'] == 2) {
-           $status = '<p class="status__current-status rejected"> Geweigerd </p>';
+           $status = '<p class="status__current-status rejected"> Rejected </p>';
        }
 
        ?>
@@ -96,7 +96,7 @@
                 <div class="status__long-square">
                     <p class="status__name"><?= $items['first_name'] ?></p>
                     <div class="status__content-wrapper">
-                        <p class="status__default"> Aanvraag: </p>
+                        <p class="status__default"> Request: </p>
                         <div class="status__request-wrapper">
                             <p class="status__request"><?= $items['request'] ?></p>
                             <p class="status__date"><?= $items['date'] ?></p>
