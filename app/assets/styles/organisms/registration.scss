@@ -4,4 +4,15 @@
       padding-top: 100px;
       width: 400px;
   }
+
+  &__title {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 25px;
+      color: #CBB4FF;
+      margin-bottom: 20px;
+  }
+
+  &__button {
+      margin-top: 20px;
+  }
 }

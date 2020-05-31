@@ -29,8 +29,8 @@ or die("Error: ". mysqli_connect_error());
       $max = 255;
       $minfirstname = 2;
       $minlastname = 2;
-      $minusername = 6;
-      $minpassword = 12;
+      $minusername = 3;
+      $minpassword = 3;
 
       // Errors
       $errors = [];
@@ -100,6 +100,7 @@ or die("Error: ". mysqli_connect_error());
       <div class="form__wrapper">
       <form method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
 
+        <p class="form__title"> Register new employee </p>
 
         <div class="form-group">
           <!-- Password-->
@@ -131,7 +132,7 @@ or die("Error: ". mysqli_connect_error());
       </div>
 
         <!-- Button -->
-          <button class="btn btn-primary" type="submit" name="submit">Register</button>
+          <button class="btn btn-primary form__button" type="submit" name="submit">Register</button>
 
 
         <?php

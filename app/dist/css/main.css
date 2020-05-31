@@ -1527,6 +1527,15 @@ body {
   padding-top: 100px;
   width: 400px; }
 
+.form__title {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 25px;
+  color: #CBB4FF;
+  margin-bottom: 20px; }
+
+.form__button {
+  margin-top: 20px; }
+
 /* ===============================================
    Breakpoint
    =============================================== */
