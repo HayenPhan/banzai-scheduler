@@ -78,10 +78,12 @@
   cursor: pointer;
   width: 50px;
   height: 50px;
-  display: block; }
+  display: block;
+  background-color: #fff; }
 
 .overview__wrapper {
-  position: relative; }
+  position: relative;
+  padding-bottom: 50px; }
 
 .overview__verified_edit {
   background-image: url("../../assets/images/verified.png");
