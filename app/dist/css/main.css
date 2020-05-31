@@ -1522,9 +1522,10 @@ body {
   border-style: none;
   border-color: #00D1D1 !important; }
 
-.registration__container {
-  position: relative;
-  width: 100%; }
+.form__wrapper {
+  padding-left: 100px;
+  padding-top: 100px;
+  width: 400px; }
 
 /* ===============================================
    Breakpoint

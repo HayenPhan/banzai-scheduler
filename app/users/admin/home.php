@@ -119,6 +119,9 @@ while($row = mysqli_fetch_assoc($result)) {
                       <a class="home__link-link home__link" href="overview.php">
                            View all
                       </a>
+                      <br>
+                      <br>
+                      <a href="registration.php" class="home_link-link home__link"> Register new employee</a>
                   </div>
 
                   <div class="home__bottom">

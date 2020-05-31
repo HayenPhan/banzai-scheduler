@@ -110,7 +110,7 @@ or die("Error: ". mysqli_connect_error());
             }
 
             else if ($username != $row['login_name'] && $password != $row['password_hash'] && $securimage->check($_POST['captcha_code']) == false) {
-                $error = "Combinatie gebruikersnaam/wachtwoord onjuist";
+                $error = "Username or password is not correct";
 
             }
 
@@ -149,10 +149,10 @@ or die("Error: ". mysqli_connect_error());
                   <div class="login__input-container">
                       <div class="login__input-wrapper">
                           <div class="login__input">
-                              <input class="login__username" id="username" type="username" name="username" placeholder="Gebruikersnaam"/>
+                              <input class="login__username" id="username" type="username" name="username" placeholder="Username"/>
                           </div>
                           <div class="login__input">
-                              <input class="login__password" id="password" type="password" name="password" placeholder="Wachtwoord"/>
+                              <input class="login__password" id="password" type="password" name="password" placeholder="Password"/>
                           </div>
 
                           <div class-"requests__captcha">
@@ -166,7 +166,6 @@ or die("Error: ". mysqli_connect_error());
                                   [ Different Image ]
                                   </a>
                               </div>
-
                           </div>
 
                           <div class="login__input">

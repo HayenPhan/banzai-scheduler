@@ -1,3 +1,4 @@
-.registration__container {
-  position: relative;
-  width: 100%; }
+.form__wrapper {
+  padding-left: 100px;
+  padding-top: 100px;
+  width: 400px; }
