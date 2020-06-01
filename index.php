@@ -1,7 +1,7 @@
 <?php
 
-include './includes/database.php';
-require "../vendor/autoload.php";
+include 'app/includes/database.php';
+require "vendor/autoload.php";
 
 use Respect\Validation\Validator as v;
 
@@ -26,7 +26,7 @@ or die("Error: ". mysqli_connect_error());
 
         // Insert phpcaptcha
 
-        include_once $_SERVER['DOCUMENT_ROOT'] . '/banzai-scheduler/securimage/securimage.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/banzai-scheduler/securimage/securimage.php';
 
         $securimage = new Securimage();
 
@@ -37,13 +37,6 @@ or die("Error: ". mysqli_connect_error());
         $password = mysqli_real_escape_string($db, htmlspecialchars($_POST['password']));
         $captchaCode = $_POST['captcha_code'];
 
-
-        //PROBEER PDO TE GEBRUIKEN VOOR SQL INJECTIONS
-
-
-        //$fetch = $db->prepare("SELECT * from users WHERE login_name = '$username' and password_hash = '$password' ");
-
-
         // Store Query in variable
         $usersQuery = "SELECT * from users WHERE login_name = '$username'";
 
@@ -53,21 +46,6 @@ or die("Error: ". mysqli_connect_error());
 
 
         $row = mysqli_fetch_assoc($result);
-        print_r($row);
-
-
-
-        // U can do stricter checks, but for now we're just doing one simple error.
-
-        /* if(empty($username) || empty($password )) {
-
-            $error = v::numeric()->validate($username);
-
-            $usernameValidator =  v::numeric();
-
-
-        } */
-
 
         // Validation
 
@@ -77,11 +55,6 @@ or die("Error: ". mysqli_connect_error());
 
         $noWhiteSpace = v::noWhitespace()->validate($username);
         $noWhiteSpace = v::noWhitespace()->validate($password);
-
-
-        //if($errorUsername || $errorPassword || $noWhiteSpace) {
-            //$error = "Gebruikersnaam of wachtwoord is onjuist";
-        //}
 
 
           // Check if name and password are in database
@@ -99,24 +72,22 @@ or die("Error: ". mysqli_connect_error());
 
 
             if($_SESSION['type'] == 'admin') { // admin word straks een variable die je hebt geconnect met database.
-              header("Location: ./users/admin/home.php");
+              header("Location: app/users/admin/home.php");
               exit;
 
             } else if($_SESSION['type'] == 'employee') {
-              header("Location: ./users/employee/home.php");
+              header("Location: app/users/employee/home.php");
               exit;
             }
 
             }
 
-            else if ($username != $row['login_name'] && $password != $row['password_hash'] && $securimage->check($_POST['captcha_code']) == false) {
+            else {
                 $error = "Username or password is not correct";
 
             }
 
   }
-
-    // Am I loggin in? Please go to secure page
 
 ?>
 
@@ -125,7 +96,7 @@ or die("Error: ". mysqli_connect_error());
 
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../app/dist/css/main.css">
+        <link rel="stylesheet" type="text/css" href="app/dist/css/main.css">
     </head>
 
     <body>
@@ -135,10 +106,10 @@ or die("Error: ". mysqli_connect_error());
         <div class="login__left-square">
             <div class="login__logo-wrapper">
                 <div class="login__logo">
-                    <img class="login__logo-img" src="../app/assets/images/sumo.png" />
+                    <img class="login__logo-img" src="app/assets/images/sumo.png" />
                 </div>
                 <div class="login__logo-white">
-                    <img class="login__logo-white-img" src="../app/assets/images/sumo-white.png" />
+                    <img class="login__logo-white-img" src="app/assets/images/sumo-white.png" />
                 </div>
                 <h2 class="login__logo-title"> Banzai </h2>
             </div>
@@ -157,12 +128,12 @@ or die("Error: ". mysqli_connect_error());
 
                           <div class-"requests__captcha">
 
-                              <img id="captcha" src="../securimage/securimage_show.php" alt="CAPTCHA Image" />
+                              <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" />
 
                               <div class="recaptcha">
                                   <input type="text" class="recaptcha__input" name="captcha_code"/>
                                   <br>
-                                  <a href="#" class="recaptcha__link" onclick="document.getElementById('captcha').src = '../securimage/securimage_show.php?' + Math.random(); return false">
+                                  <a href="#" class="recaptcha__link" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">
                                   [ Different Image ]
                                   </a>
                               </div>

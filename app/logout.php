@@ -7,7 +7,7 @@ session_start();
 session_destroy();
 
 // Redirect after destroying
-header("Location: index.php");
+header("Location: ../index.php");
 exit;
 
 
