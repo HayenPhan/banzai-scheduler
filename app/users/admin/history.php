@@ -105,9 +105,7 @@ if(isset($_POST['revert'])) {
                    $status = '<p class="status__current-status pending"> Pending </p>';
                } else if($items['status'] == 1) {
                    $status = '<p class="status__current-status accepted"> Accepted </p>';
-               } else if($items['status'] == 2) {
-                   $status = '<p class="status__current-status rejected"> Rejected </p>';
-               }
+               } 
          ?>
 
                   <div class="history__long-square">

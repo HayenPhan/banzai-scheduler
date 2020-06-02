@@ -45,7 +45,7 @@ if(isset($_POST['accepted'])) {
 if(isset($_POST['rejected'])) {
 
       $currentId = $_POST['id'];
-      $rejectedQuery = "UPDATE pending_requests SET status = '2' WHERE id = '$currentId'";
+      $rejectedQuery = "DELETE FROM pending_requests WHERE id = '$currentId'";
       $result = mysqli_query($db, $rejectedQuery);
 
       if($result) {
