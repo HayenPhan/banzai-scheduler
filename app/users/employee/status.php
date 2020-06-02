@@ -79,7 +79,7 @@
    </div>
 
 
-     <?php foreach($details as $key => $items) {
+     <?php foreach(array_reverse($details) as $key => $items) {
 
        $status = '';
 

@@ -80,7 +80,7 @@ while($row = mysqli_fetch_assoc($result)) {
 
            <h2 class="overview__title"> Overview </h2>
 
-       <?php foreach($details as $key => $items) {
+       <?php foreach(array_reverse($details) as $key => $items) {
 
 
 

@@ -96,7 +96,7 @@ if(isset($_POST['revert'])) {
          </div>
      </div>
 
-       <?php foreach($requests as $key => $items) { ?>
+       <?php foreach(array_reverse($requests) as $key => $items) { ?>
 
          <?php
              $status = '';
@@ -105,7 +105,7 @@ if(isset($_POST['revert'])) {
                    $status = '<p class="status__current-status pending"> Pending </p>';
                } else if($items['status'] == 1) {
                    $status = '<p class="status__current-status accepted"> Accepted </p>';
-               } 
+               }
          ?>
 
                   <div class="history__long-square">

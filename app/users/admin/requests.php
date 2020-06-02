@@ -101,7 +101,7 @@ if(isset($_POST['rejected'])) {
 
      </div>
 
-       <?php foreach($pending_requests as $key => $items) { ?>
+       <?php foreach(array_reverse($pending_requests) as $key => $items) { ?>
 
                   <div class="requests-admin__long-square">
                       <p class="requests-admin__name"> <?= $items['first_name'] ?> </p>

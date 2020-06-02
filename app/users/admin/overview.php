@@ -100,7 +100,7 @@ if(isset($_POST['insertdata'])) {
 
            <h2 class="overview__title"> Overview </h2>
 
-       <?php foreach($details as $key => $items) { ?>
+       <?php foreach(array_reverse($details) as $key => $items) { ?>
 
             <div class="overview__wrapper">
 

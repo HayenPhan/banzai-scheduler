@@ -143,7 +143,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
 
                   <div class="home__currenttime-wrapper">
-
+                      <p class="home__currenttime-text"> Timezone: <?= $timezone ?></p>
                       <p class="home__currenttime-text"> Today it is: <?= $datetimesinglebyte ?>, week <?= $week_number ?>! </p>
 
 
