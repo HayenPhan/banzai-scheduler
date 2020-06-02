@@ -20,7 +20,7 @@ $queryAll =
  "SELECT pending_requests.first_name, pending_requests.request, pending_requests.date, pending_requests.status
  FROM pending_requests
  INNER JOIN users ON pending_requests.user_id = users.id
- WHERE pending_requests.user_id = $user_id;"; // fix this later, code still works
+ WHERE pending_requests.user_id = $user_id AND status = '1';";
 
 $result = mysqli_query($db, $queryAll);
 
