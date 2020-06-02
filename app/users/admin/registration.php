@@ -63,16 +63,22 @@ or die("Error: ". mysqli_connect_error());
           $errors[] = "Password must be less than 255 characters";
       }
 
+      if($firstnamelen > $minfirstname && $firstnamelen < $max && $lastnamelen > $minlastname && $lastnamelen < $max
+      && $usernamelen > $minusername && $usernamelen < $max && $passwordlen > $minpassword && $passwordlen < $max) {
 
-      // Insert into database
-      $sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
-      VALUES ('$username','$passwordHash','$firstname', '$lastname', 'employee')";
+        // Insert into database
+        $sql = "INSERT INTO users(login_name, password_hash, first_name, last_name, user_type)
+        VALUES ('$username','$passwordHash','$firstname', '$lastname', 'employee')";
 
-      $insert = $msqli->query($sql);
+        $insert = $msqli->query($sql);
 
-      if (!$insert) {
-          echo $msqli->error;
+        if (!$insert) {
+            echo $msqli->error;
+        }
+
       }
+
+
   }
 }
 
