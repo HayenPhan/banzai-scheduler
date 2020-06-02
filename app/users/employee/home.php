@@ -1,7 +1,5 @@
 <?php
 
-
-
 session_start();
 
 require_once '../../includes/database.php';
@@ -24,14 +22,10 @@ $datetime = $time->utc_datetime;
 $datetimesinglebyte = substr($datetime, 0, 10);
 
 
-
-
-
-
 // May I even visit this page?
 
 // If I don't have the login variable then.. i will redirect back to login page.
-if($_SESSION['type'] =! 'employee') {
+if($_SESSION['type'] != 'employee') {
     header("Location: index.php");
     exit;
 } else {

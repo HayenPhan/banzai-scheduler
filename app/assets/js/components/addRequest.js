@@ -5,7 +5,7 @@ const addRequest = () => {
     if (document.getElementById("add_request") !== null){
       document.getElementById("add_request").addEventListener("click", function(){
 
-          document.getElementById("request").innerHTML += '<div class="requests__date-reason-wrapper"><div class="requests__reason-wrapper"><p class="requests__reason"> Reden aanvraag: </p> <br><input type="text" name="request[]"  classname="requests__input"><br><br><br></div><p class="requests__reason"> Kies een datum: </p> <br><input type="text" id="pick-date" name="date[]" class="requests__date-picker"></div>';
+          document.getElementById("request").innerHTML += '<div class="requests__date-reason-wrapper"><div class="requests__reason-wrapper"><p class="requests__reason"> Request: </p> <br><input type="text" name="request[]"  classname="requests__input"><br><br><br></div><p class="requests__reason"> Pick a date: </p> <br><input type="text" id="pick-date" name="date[]" class="requests__date-picker"></div>';
 
           addInputNumber++;
 
